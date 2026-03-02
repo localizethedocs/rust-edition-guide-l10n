@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:41:36Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/cargo-inherited-default-features.md:1
+msgid "Cargo: Reject unused inherited default-features"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:5
+msgid ""
+"`default-features = false` is no longer allowed in an inherited workspace "
+"dependency if the workspace dependency specifies `default-features = true` "
+"(or does not specify `default-features`)."
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:7
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:9
+msgid ""
+"[Workspace inheritance](../../cargo/reference/specifying-dependencies."
+"html#inheriting-a-dependency-from-a-workspace) allows you to specify "
+"dependencies in one place (the workspace), and then to refer to those "
+"workspace dependencies from within a package. There was an inadvertent "
+"interaction with how `default-features` is specified that is no longer "
+"allowed in the 2024 Edition."
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:12
+msgid ""
+"Unless the workspace specifies `default-features = false`, it is no longer "
+"allowed to specify `default-features = false` in an inherited package "
+"dependency. For example, with a workspace that specifies:"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:15
+msgid ""
+"```toml\n"
+"[workspace.dependencies]\n"
+"regex = \"1.10.4\"\n"
+"```"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:20
+msgid "The following is now an error:"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:22
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"version = \"1.0.0\"\n"
+"edition = \"2024\"\n"
+"\n"
+"[dependencies]\n"
+"regex = { workspace = true, default-features = false }  # ERROR\n"
+"```"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:32
+msgid ""
+"The reason for this change is to avoid confusion when specifying `default-"
+"features = false` when the default feature is already enabled, since it has "
+"no effect."
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:34
+msgid ""
+"If you want the flexibility of deciding whether or not a dependency enables "
+"the default-features of a dependency, be sure to set `default-features = "
+"false` in the workspace definition. Just beware that if you build multiple "
+"workspace members at the same time, the features will be unified so that if "
+"one member sets `default-features = true` (which is the default if not "
+"explicitly set), the default-features will be enabled for all members using "
+"that dependency."
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:37
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:39
+msgid ""
+"When using `cargo fix --edition`, Cargo will automatically update your "
+"`Cargo.toml` file to remove `default-features = false` in this situation."
+msgstr ""
+
+#: src/rust-2024/cargo-inherited-default-features.md:41
+msgid ""
+"If you prefer to update your `Cargo.toml` manually, check for any warnings "
+"when running a build and remove the corresponding entries. Previous editions "
+"should display something like:"
+msgstr ""
