@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/let-chains.md:1
+msgid "`let` chains in `if` and `while`"
+msgstr ""
+
+#: src/rust-2024/let-chains.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/let-chains.md:5
+msgid ""
+"Allow chaining of `let` expressions in the condition operand of `if` and "
+"`while`."
+msgstr ""
+
+#: src/rust-2024/let-chains.md:7
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/let-chains.md:9
+msgid ""
+"Starting with the 2024 Edition, it is now allowed to have chaining of `let` "
+"expressions inside `if` and `while` condition operands, where chaining "
+"refers to `&&` chains. The `let` expressions still have to appear at the top "
+"level, so `if (let Some(hi) = foo || let Some(hi) = bar)` is not allowed."
+msgstr ""
+
+#: src/rust-2024/let-chains.md:13
+msgid ""
+"Before 2024, the `let` had to appear directly after the `if` or `while`, "
+"forming a `if let` or `while let` special variant. Now, `if` and `while` "
+"allow chains of one or more `let` expressions, possibly mixed with "
+"expressions that are `bool` typed."
+msgstr ""
+
+#: src/rust-2024/let-chains.md:29
+msgid ""
+"The feature is edition gated due to requiring [if let rescoping](temporary-"
+"if-let-scope.html), which is a Edition 2024 change."
+msgstr ""
+
+#: src/rust-2024/let-chains.md:31
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/let-chains.md:33
+msgid ""
+"The switch to Edition 2024 doesn't neccessitate any migrations due to this "
+"feature, as it creates a true extension of the set of allowed Rust programs."
+msgstr ""
