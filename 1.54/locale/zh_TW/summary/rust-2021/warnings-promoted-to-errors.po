@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:02:24Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/warnings-promoted-to-error.md:1
+msgid "Warnings promoted to errors"
+msgstr ""
+
+#: src/rust-2021/warnings-promoted-to-error.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2021/warnings-promoted-to-error.md:5
+msgid "Details"
+msgstr ""
+
+#: src/rust-2021/warnings-promoted-to-error.md:7
+msgid ""
+"Two existing lints are becoming hard errors in Rust 2021. These lints will "
+"remain warnings in older editions."
+msgstr ""
+
+#: src/rust-2021/warnings-promoted-to-error.md:10
+msgid ""
+"`bare-trait-objects`: The use of the `dyn` keyword to identify [trait "
+"objects](https://doc.rust-lang.org/book/ch17-02-trait-objects.html) will be "
+"mandatory in Rust 2021."
+msgstr ""
+
+#: src/rust-2021/warnings-promoted-to-error.md:14
+msgid ""
+"`ellipsis-inclusive-range-patterns`: The [deprecated `...` syntax](https://"
+"doc.rust-lang.org/stable/reference/patterns.html#range-patterns) for "
+"inclusive range patterns is no longer accepted in Rust 2021. It has been "
+"superseded by `..=`, which is consistent with expressions."
+msgstr ""
