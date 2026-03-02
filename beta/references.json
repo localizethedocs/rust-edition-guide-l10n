@@ -1,0 +1,47 @@
+{
+  "po" : 
+  {
+    "en_US" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_CN" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_TW" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    }
+  },
+  "pot" : 
+  {
+    "branch" : "beta",
+    "commit" : 
+    {
+      "date" : "2026-02-26 23:14:10 +0000",
+      "hash" : "ec6e9883776ff64b7c97a33931f85cc02c31d05f",
+      "title" : "Auto merge of #153150 - cuviper:beta-next, r=cuviper"
+    }
+  },
+  "type" : "branch",
+  "version" : "beta"
+}
