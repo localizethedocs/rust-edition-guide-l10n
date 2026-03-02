@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:1
+msgid "MUSL support for fully static binaries"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:3
+msgid ""
+"![Minimum Rust version: 1.1](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.1-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:5
+msgid ""
+"By default, Rust will statically link all Rust code. However, if you use the "
+"standard library, it will dynamically link to the system's `libc` "
+"implementation."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:9
+msgid ""
+"If you'd like a 100% static binary, the [`MUSL libc`](https://www.musl-libc."
+"org/) can be used on Linux."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:12
+msgid "Installing MUSL support"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:14
+msgid ""
+"To add support for MUSL, you need to choose the correct target. [The forge "
+"has a full list of targets](https://forge.rust-lang.org/platform-support."
+"html) supported, with a number of ones using `musl`."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:19
+msgid ""
+"If you're not sure what you want, it's probably `x86_64-unknown-linux-musl`, "
+"for 64-bit Linux. We'll be using this target in this guide, but the "
+"instructions remain the same for other targets, just change the name "
+"wherever we mention the target."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:24
+msgid "To get support for this target, you use `rustup`:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:30
+msgid ""
+"This will install support for the default toolchain; to install for other "
+"toolchains, add the `--toolchain` flag. For example:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:37
+msgid "Building with MUSL"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:39
+msgid "To use this new target, pass the `--target` flag to Cargo:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.md:45
+msgid "The binary produced will now be built with MUSL!"
+msgstr ""

@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/trait-system/associated-constants.md:1
+msgid "Associated constants"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:3
+msgid ""
+"![Minimum Rust version: 1.20](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.20-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:5
+msgid ""
+"You can define traits, structs, and enums that have “associated functions”:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:12
+msgid "\"foo is an associated function of Struct\""
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:21
+msgid ""
+"These are called “associated functions” because they are functions that are "
+"associated with the type, that is, they’re attached to the type itself, and "
+"not any particular instance."
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:25
+msgid "Rust 1.20 adds the ability to define “associated constants” as well:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:35
+msgid "\"the ID of Struct is: {}\""
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:39
+msgid ""
+"That is, the constant `ID` is associated with `Struct`. Like functions, "
+"associated constants work with traits and enums as well."
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:42
+msgid ""
+"Traits have an extra ability with associated constants that gives them some "
+"extra power. With a trait, you can use an associated constant in the same "
+"way you’d use an associated type: by declaring it, but not giving it a "
+"value. The implementor of the trait then declares its value upon "
+"implementation:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:59
+msgid "\"{}\""
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:63
+msgid ""
+"Before this feature, if you wanted to make a trait that represented floating "
+"point numbers, you’d have to write this:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:70
+#: src/rust-2018/trait-system/associated-constants.md:102
+msgid "// ...\n"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:74
+msgid ""
+"This is slightly unwieldy, but more importantly, because they’re functions, "
+"they cannot be used in constant expressions, even though they only return a "
+"constant. Because of this, a design for `Float` would also have to include "
+"constants as well:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:95
+msgid ""
+"Associated constants let you do this in a much cleaner way. This trait "
+"definition:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:106
+msgid "Leads to this implementation:"
+msgstr ""
+
+#: src/rust-2018/trait-system/associated-constants.md:117
+msgid "much cleaner, and more versatile."
+msgstr ""

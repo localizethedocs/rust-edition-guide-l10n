@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/rustdoc/documentation-tests-can-now-compile-fail.md:1
+msgid "Documentation tests can now compile-fail"
+msgstr ""
+
+#: src/rust-2018/rustdoc/documentation-tests-can-now-compile-fail.md:3
+msgid ""
+"![Minimum Rust version: 1.22](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.22-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/rustdoc/documentation-tests-can-now-compile-fail.md:5
+msgid "You can now create `compile-fail` tests in Rustdoc, like this:"
+msgstr ""
+
+#: src/rust-2018/rustdoc/documentation-tests-can-now-compile-fail.md:7
+msgid ""
+"````\n"
+"/// ```compile_fail\n"
+"/// let x = 5;\n"
+"/// x += 2; // shouldn't compile!\n"
+"/// ```\n"
+"# fn foo() {}\n"
+"````"
+msgstr ""
+
+#: src/rust-2018/rustdoc/documentation-tests-can-now-compile-fail.md:15
+msgid ""
+"Please note that these kinds of tests can be more fragile than others, as "
+"additions to Rust may cause code to compile when it previously would not. "
+"Consider the first release with `?`, for example: code using `?` would fail "
+"to compile on Rust 1.21, but compile successfully on Rust 1.22, causing your "
+"test suite to start failing."
+msgstr ""
