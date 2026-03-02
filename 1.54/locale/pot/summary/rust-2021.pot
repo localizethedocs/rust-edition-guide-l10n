@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:02:24Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/index.md:1
+msgid "Rust 2021"
+msgstr ""
+
+#: src/rust-2021/index.md:3
+msgid ""
+"🚧 The 2021 Edition has not yet been released and hence this section is "
+"still \"under construction\". You can [read more about our plans in this "
+"blog post](https://blog.rust-lang.org/2021/05/11/edition-2021.html)."
+msgstr ""
+
+#: src/rust-2021/index.md:6
+msgid "Info"
+msgstr ""
+
+#: src/rust-2021/index.md:8
+msgid "RFC"
+msgstr ""
+
+#: src/rust-2021/index.md:8
+msgid "[\\#3085](https://github.com/rust-lang/rfcs/pull/3085)"
+msgstr ""
+
+#: src/rust-2021/index.md:9
+msgid "Release version"
+msgstr ""
+
+#: src/rust-2021/index.md:9
+msgid "1.56.0 (anticipated)"
+msgstr ""
+
+#: src/rust-2021/index.md:11
+msgid ""
+"The Rust 2021 Edition is currently slated for release in Rust 1.56.0. Rust "
+"1.56.0 will then be in beta for six weeks, after which it is released as "
+"stable on October 21st."
+msgstr ""
+
+#: src/rust-2021/index.md:15
+msgid ""
+"However, note that Rust is a project run by volunteers. We prioritize the "
+"personal well-being of everyone working on Rust over any deadlines and "
+"expectations we might have set. This could mean delaying the edition a "
+"version if necessary, or dropping a feature that turns out to be too "
+"difficult or stressful to finish in time."
+msgstr ""
+
+#: src/rust-2021/index.md:21
+msgid ""
+"That said, we are on schedule and many of the difficult problems are already "
+"tackled, thanks to all the people contributing to Rust 2021! 💛"
+msgstr ""
