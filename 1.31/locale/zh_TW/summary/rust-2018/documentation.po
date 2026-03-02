@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:49:19Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/documentation/index.md:1
+msgid "Documentation"
+msgstr ""
+
+#: src/rust-2018/documentation/index.md:5
+msgid ""
+"In this chapter of the guide, we discuss a few improvements to "
+"documentation. A notable addition here is the [second edition of \"the "
+"book\"](rust-2018/documentation/new-editions-of-the-book.html)."
+msgstr ""
