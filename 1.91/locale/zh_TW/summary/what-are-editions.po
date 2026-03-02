@@ -5,15 +5,15 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/editions/index.md:1
 msgid "What are Editions?"
-msgstr ""
+msgstr "什麼是版次？"
 
 #: src/editions/index.md:3
 msgid ""
@@ -24,6 +24,10 @@ msgid ""
 "stable](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html), "
 "contributors will continue to support that feature for all future releases."
 msgstr ""
+"在 2015 年 5 月，[Rust 1.0 的發行](https://blog.rust-lang.org/2015/05/15/"
+"Rust-1.0.html)確立了「[穩定而不停滯](https://blog.rust-lang.org/2014/10/30/"
+"Stability.html)」作為 Rust 的核心公理。從那時起，Rust 便致力於一項關鍵規則："
+"一旦某項功能透過穩定版發佈，貢獻者將在未來的所有發行版中持續支援該功能。"
 
 #: src/editions/index.md:5
 msgid ""
@@ -85,7 +89,7 @@ msgstr ""
 
 #: src/editions/index.md:21
 msgid "Edition migration is easy and largely automated"
-msgstr ""
+msgstr "版次遷移很簡單且大部分已自動化"
 
 #: src/editions/index.md:23
 msgid ""
@@ -109,10 +113,12 @@ msgid ""
 "where manual changes are required. It aims to avoid changes to semantics "
 "that could affect the correctness or performance of the code."
 msgstr ""
+"Cargo 的自動遷移並非完美：在某些極端情況下可能仍需要手動修改。其目標是避免對"
+"語義進行任何可能影響程式碼正確性或效能的變更。"
 
 #: src/editions/index.md:29
 msgid "What this guide covers"
-msgstr ""
+msgstr "本指南涵蓋的內容"
 
 #: src/editions/index.md:31
 msgid ""
