@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "The Edition Guide"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:5 src/SUMMARY.md:7
+msgid "What are editions?"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Creating a new project"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Transitioning an existing project to a new edition"
+msgstr ""
+
+#: src/SUMMARY.md:11 src/SUMMARY.md:13
+msgid "Rust 2015"
+msgstr ""
+
+#: src/SUMMARY.md:15 src/SUMMARY.md:17
+msgid "Rust 2018"
+msgstr ""
+
+#: src/SUMMARY.md:18
+msgid "Module system"
+msgstr ""
+
+#: src/SUMMARY.md:19
+msgid "Raw identifiers"
+msgstr ""
+
+#: src/SUMMARY.md:20
+msgid "Path clarity"
+msgstr ""
+
+#: src/SUMMARY.md:21
+msgid "More visibility modifiers"
+msgstr ""
+
+#: src/SUMMARY.md:22
+msgid "Nested imports with `use`"
+msgstr ""
+
+#: src/SUMMARY.md:23
+msgid "Error handling and panics"
+msgstr ""
+
+#: src/SUMMARY.md:24
+msgid "The `?` operator for easier error handling"
+msgstr ""
+
+#: src/SUMMARY.md:25
+msgid "`?` in `main` and tests"
+msgstr ""
+
+#: src/SUMMARY.md:26
+msgid "Controlling panics with `std::panic`"
+msgstr ""
+
+#: src/SUMMARY.md:27
+msgid "Aborting on panic"
+msgstr ""
+
+#: src/SUMMARY.md:28
+msgid "Control flow"
+msgstr ""
+
+#: src/SUMMARY.md:29
+msgid "Loops can `break` with a value"
+msgstr ""
+
+#: src/SUMMARY.md:30
+msgid "`async`/`await` for easier concurrency"
+msgstr ""
+
+#: src/SUMMARY.md:31
+msgid "Trait system"
+msgstr ""
+
+#: src/SUMMARY.md:32
+msgid "`impl Trait` for returning complex types with ease"
+msgstr ""
+
+#: src/SUMMARY.md:33
+msgid "`dyn Trait` for trait objects"
+msgstr ""
+
+#: src/SUMMARY.md:34
+msgid "More container types support trait objects"
+msgstr ""
+
+#: src/SUMMARY.md:35
+msgid "Associated constants"
+msgstr ""
+
+#: src/SUMMARY.md:36
+msgid "No more anonymous parameters"
+msgstr ""
+
+#: src/SUMMARY.md:37
+msgid "Slice patterns"
+msgstr ""
+
+#: src/SUMMARY.md:38
+msgid "Ownership and lifetimes"
+msgstr ""
+
+#: src/SUMMARY.md:39
+msgid "Non-lexical lifetimes"
+msgstr ""
+
+#: src/SUMMARY.md:40
+msgid "Default `match` bindings"
+msgstr ""
+
+#: src/SUMMARY.md:41
+msgid "`'_`, the anonymous lifetime"
+msgstr ""
+
+#: src/SUMMARY.md:42
+msgid "Lifetime elision in `impl`"
+msgstr ""
+
+#: src/SUMMARY.md:43
+msgid "`T: 'a` inference in structs"
+msgstr ""
+
+#: src/SUMMARY.md:44
+msgid "Simpler lifetimes in `static` and `const`"
+msgstr ""
+
+#: src/SUMMARY.md:45
+msgid "Data types"
+msgstr ""
+
+#: src/SUMMARY.md:46
+msgid "Field init shorthand"
+msgstr ""
+
+#: src/SUMMARY.md:47
+msgid "`..=` for inclusive ranges"
+msgstr ""
+
+#: src/SUMMARY.md:48
+msgid "128 bit integers"
+msgstr ""
+
+#: src/SUMMARY.md:49
+msgid "\"Operator-equals\" are now implementable"
+msgstr ""
+
+#: src/SUMMARY.md:50
+msgid "`union` for an unsafe form of `enum`"
+msgstr ""
+
+#: src/SUMMARY.md:51
+msgid "Choosing alignment with the `repr` attribute"
+msgstr ""
+
+#: src/SUMMARY.md:52
+msgid "SIMD for faster computing"
+msgstr ""
+
+#: src/SUMMARY.md:53
+msgid "Macros"
+msgstr ""
+
+#: src/SUMMARY.md:54
+msgid "Custom Derive"
+msgstr ""
+
+#: src/SUMMARY.md:55
+msgid "Macro changes"
+msgstr ""
+
+#: src/SUMMARY.md:56
+msgid "At most one repetition"
+msgstr ""
+
+#: src/SUMMARY.md:57
+msgid "The compiler"
+msgstr ""
+
+#: src/SUMMARY.md:58
+msgid "Improved error messages"
+msgstr ""
+
+#: src/SUMMARY.md:59
+msgid "Incremental Compilation for faster compiles"
+msgstr ""
+
+#: src/SUMMARY.md:60
+msgid "An attribute for deprecation"
+msgstr ""
+
+#: src/SUMMARY.md:61
+msgid "Rustup for managing Rust versions"
+msgstr ""
+
+#: src/SUMMARY.md:62
+msgid "Cargo and crates.io"
+msgstr ""
+
+#: src/SUMMARY.md:63
+msgid "`cargo check` for faster checking"
+msgstr ""
+
+#: src/SUMMARY.md:64
+msgid "`cargo install` for easy installation of tools"
+msgstr ""
+
+#: src/SUMMARY.md:65
+msgid "`cargo new` defaults to a binary project"
+msgstr ""
+
+#: src/SUMMARY.md:66
+msgid "`cargo rustc` for passing arbitrary flags to `rustc`"
+msgstr ""
+
+#: src/SUMMARY.md:67
+msgid "Cargo workspaces for multi-package projects"
+msgstr ""
+
+#: src/SUMMARY.md:68
+msgid "Multi-file `examples`"
+msgstr ""
+
+#: src/SUMMARY.md:69
+msgid "Replacing dependencies with `patch`"
+msgstr ""
+
+#: src/SUMMARY.md:70
+msgid "Cargo can use a local registry replacement"
+msgstr ""
+
+#: src/SUMMARY.md:71
+msgid "Crates.io disallows wildcard dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:72
+msgid "Documentation"
+msgstr ""
+
+#: src/SUMMARY.md:73
+msgid "New editions of the \"the book\""
+msgstr ""
+
+#: src/SUMMARY.md:74
+msgid "The Rust Bookshelf"
+msgstr ""
+
+#: src/SUMMARY.md:75
+msgid "The Rustonomicon"
+msgstr ""
+
+#: src/SUMMARY.md:76
+msgid "Full documentation for `std::os`"
+msgstr ""
+
+#: src/SUMMARY.md:77
+msgid "`rustdoc`"
+msgstr ""
+
+#: src/SUMMARY.md:78
+msgid "Documentation tests can now `compile-fail`"
+msgstr ""
+
+#: src/SUMMARY.md:79
+msgid "Rustdoc uses CommonMark"
+msgstr ""
+
+#: src/SUMMARY.md:80
+msgid "Platform and target support"
+msgstr ""
+
+#: src/SUMMARY.md:81
+msgid "`libcore` for low-level Rust"
+msgstr ""
+
+#: src/SUMMARY.md:82
+msgid "WebAssembly support"
+msgstr ""
+
+#: src/SUMMARY.md:83
+msgid "Global allocators"
+msgstr ""
+
+#: src/SUMMARY.md:84
+msgid "MSVC toolchain support"
+msgstr ""
+
+#: src/SUMMARY.md:85
+msgid "MUSL support for fully static binaries"
+msgstr ""
+
+#: src/SUMMARY.md:86
+msgid "`cdylib` crates for C interoperability"
+msgstr ""

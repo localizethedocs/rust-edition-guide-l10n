@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:1
+msgid "Improved error messages"
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:3
+msgid ""
+"![Minimum Rust version: 1.12](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.12-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:5
+msgid ""
+"We're always working on error improvements, and there are little "
+"improvements in almost every Rust version, but in Rust 1.12, a significant "
+"overhaul of the error message system was created."
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:9
+msgid "For example, here's some code that produces an error:"
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:21
+msgid "Here's the error in Rust 1.11:"
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:33
+msgid "Here's the error in Rust 1.28:"
+msgstr ""
+
+#: src/rust-2018/the-compiler/improved-error-messages.md:48
+msgid ""
+"This error isn't terribly different, but shows off how the format has "
+"changed. It shows off your code in context, rather than just showing the "
+"text of the lines themselves."
+msgstr ""

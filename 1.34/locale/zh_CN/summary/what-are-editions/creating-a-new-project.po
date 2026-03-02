@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/editions/creating-a-new-project.md:1
+msgid "Creating a new project"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:3
+msgid ""
+"When you create a new project with Cargo, it will automatically add "
+"configuration for the latest edition:"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:6
+msgid ""
+"```console\n"
+"> cargo +nightly new foo\n"
+"     Created binary (application) `foo` project\n"
+"> cat .\\foo\\Cargo.toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"your name <you@example.com>\"]\n"
+"edition = \"2018\"\n"
+"\n"
+"[dependencies]\n"
+"```"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:19
+msgid ""
+"That `edition = \"2018\"` setting will configure your package to use Rust "
+"2018. No more configuration needed!"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:22
+msgid ""
+"If you'd prefer to use an older edition, you can change the value in that "
+"key, for example:"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:25
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"your name <you@example.com>\"]\n"
+"edition = \"2015\"\n"
+"\n"
+"[dependencies]\n"
+"```"
+msgstr ""
+
+#: src/editions/creating-a-new-project.md:35
+msgid "This will build your package in Rust 2015."
+msgstr ""

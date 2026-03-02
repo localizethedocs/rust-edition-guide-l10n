@@ -1,0 +1,248 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/macros/macro-changes.md:1
+msgid "Macro changes"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:3
+msgid ""
+"![Minimum Rust version: beta](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-beta-orange.svg)"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:5
+msgid "`macro_rules!` style macros"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:7
+msgid ""
+"In Rust 2018, you can import specific macros from external crates via `use` "
+"statements, rather than the old `#[macro_use]` attribute."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:10
+msgid ""
+"For example, consider a `bar` crate that implements a `baz!` macro. In `src/"
+"lib.rs`:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:20
+msgid "In your crate, you would have written"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:23
+#: src/rust-2018/macros/macro-changes.md:60
+msgid "// Rust 2015\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:33
+msgid "Now, you write:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:36
+#: src/rust-2018/macros/macro-changes.md:71
+msgid "// Rust 2018\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:45
+msgid ""
+"This moves `macro_rules` macros to be a bit closer to other kinds of items."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:47
+msgid ""
+"Note that you'll still need `#[macro_use]` to use macros you've defined in "
+"your own crate; this feature only works for importing macros from external "
+"crates."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:51
+msgid "Procedural macros"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:53
+msgid ""
+"When using procedural macros to derive traits, you will have to name the "
+"macro that provides the custom derive. This generally matches the name of "
+"the trait, but check with the documentation of the crate providing the "
+"derives to be sure."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:57
+msgid "For example, with Serde you would have written"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:68
+msgid "Now, you write instead:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:79
+msgid "More details"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:81
+msgid ""
+"This only works for macros defined in external crates. For macros defined "
+"locally, `#[macro_use] mod foo;` is still required, as it was in Rust 2015."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:84
+msgid "Local helper macros"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:86
+msgid ""
+"Sometimes it is helpful or necessary to have helper macros inside your "
+"module. This can make supporting both versions of rust more complicated."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:89
+msgid ""
+"For example, let's make a simplified (and slightly contrived) version of the "
+"`log` crate in 2015 edition style:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:94
+#: src/rust-2018/macros/macro-changes.md:217
+msgid "/// How important/severe the log message is.\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:105
+#: src/rust-2018/macros/macro-changes.md:228
+msgid "\"warning\""
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:106
+#: src/rust-2018/macros/macro-changes.md:229
+msgid "\"error\""
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:110
+#: src/rust-2018/macros/macro-changes.md:233
+msgid "// A helper macro to log the message.\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:116
+#: src/rust-2018/macros/macro-changes.md:239
+msgid "\"{}: {}\""
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:119
+#: src/rust-2018/macros/macro-changes.md:242
+msgid "/// Warn level log message\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:127
+#: src/rust-2018/macros/macro-changes.md:250
+msgid "/// Error level log message\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:137
+msgid ""
+"Our `__impl_log!` macro is private to our module, but needs to be exported "
+"as it is called by other macros, and in 2015 edition all used macros must be "
+"exported."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:140
+msgid "Now, in 2018 this example will not compile:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:146
+msgid "\"error message\""
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:150
+msgid ""
+"will give an error message about not finding the `__impl_log!` macro. This "
+"is because unlike in the 2015 edition, macros are namespaced and we must "
+"import them. We could do"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:157
+msgid ""
+"which would make our code compile, but `__impl_log` is meant to be an "
+"implementation detail!"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:159
+msgid "Macros with `$crate::` prefix."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:161
+msgid ""
+"The cleanest way to handle this situation is to use the `$crate::` prefix "
+"for macros, the same as you would for any other path. Versions of the "
+"compiler >= 1.30 will handle this in both editions:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:170
+msgid "// ...\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:174
+msgid ""
+"However, this will not work for older versions of the compiler that don't "
+"understand the `$crate::` prefix for macros."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:177
+msgid "Macros using `local_inner_macros`"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:179
+msgid ""
+"We also have the `local_inner_macros` modifier that we can add to our "
+"`#[macro_export]` attribute. This has the advantage of working with older "
+"rustc versions (older versions just ignore the extra modifier). The downside "
+"is that it's a bit messier:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:192
+msgid ""
+"So the code knows to look for any macros used locally. But wait - this won't "
+"compile, because we use the `format_args!` macro that isn't in our local "
+"crate (hence the convoluted example). The solution is to add a level of "
+"indirection: we create a macro that wraps `format_args`, but is local to our "
+"crate. That way everything works in both editions (sadly we have to pollute "
+"the global namespace a bit, but that's ok)."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:199
+msgid ""
+"// I've used the pattern `_<my crate  name>__<macro name>` to name this "
+"macro, hopefully avoiding\n"
+"// name clashes.\n"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:210
+msgid ""
+"Here we're using the most general macro pattern possible, a list of token "
+"trees. We just pass whatever tokens we get to the inner macro, and rely on "
+"it to report errors."
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:213
+msgid "So the full 2015/2018 working example would be:"
+msgstr ""
+
+#: src/rust-2018/macros/macro-changes.md:268
+msgid ""
+"Once everyone is using a rustc version >= 1.30, we can all just use the "
+"`$crate::` method (2015 crates are guaranteed to carry on compiling fine "
+"with later versions of the compiler). We need to wait for package managers "
+"and larger organisations to update their compilers before this happens, so "
+"in the mean time we can use the `local_inner_macros` method to support "
+"everybody. :)"
+msgstr ""
