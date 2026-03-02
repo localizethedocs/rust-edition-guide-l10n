@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/macros/at-most-once.md:1
+msgid "At most one repetition"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:3
+msgid ""
+"![Minimum Rust version: 1.32](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.32-brightgreen.svg) for 2018 edition"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:5
+msgid ""
+"![Minimum Rust version: 1.37](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.37-brightgreen.svg) for 2015 edition"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:7
+msgid ""
+"In Rust 2018, we have made a couple of changes to the macros-by-example "
+"syntax."
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:9
+msgid ""
+"We have added a new Kleene operator `?` which means \"at most one\" "
+"repetition. This operator does not accept a separator token."
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:11
+msgid ""
+"We have disallowed using `?` as a separator to remove ambiguity with `?`."
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:13
+msgid "For example, consider the following Rust 2015 code:"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:15
+msgid ""
+"```rust2018\n"
+"macro_rules! foo {\n"
+"    ($a:ident, $b:expr) => {\n"
+"        println!(\"{}\", $a);\n"
+"        println!(\"{}\", $b);\n"
+"    }\n"
+"    ($a:ident) => {\n"
+"        println!(\"{}\", $a);\n"
+"    }\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:27
+msgid ""
+"Macro `foo` can be called with 1 or 2 arguments; the second one is optional, "
+"but you need a whole other matcher to represent this possibility. This is "
+"annoying if your matchers are long. In Rust 2018, one can simply write the "
+"following:"
+msgstr ""
+
+#: src/rust-2018/macros/at-most-once.md:32
+msgid ""
+"```rust2018\n"
+"macro_rules! foo {\n"
+"    ($a:ident $(, $b:expr)?) => {\n"
+"        println!(\"{}\", $a);\n"
+"\n"
+"        $(\n"
+"            println!(\"{}\", $b);\n"
+"         )?\n"
+"    }\n"
+"}\n"
+"```"
+msgstr ""
