@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:1
+msgid "An attribute for deprecation"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:3
+msgid ""
+"![Minimum Rust version: 1.9](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.9-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:5
+msgid ""
+"If you're writing a library, and you'd like to deprecate something, you can "
+"use the `deprecated` attribute:"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:10
+msgid "\"0.2.1\""
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:11
+msgid "\"Please use the bar function instead\""
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:14
+msgid "// ...\n"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:18
+msgid ""
+"This will give your users a warning if they use the deprecated functionality:"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:20
+msgid ""
+"```text\n"
+"   Compiling playground v0.0.1 (file:///playground)\n"
+"warning: use of deprecated item 'foo': Please use the bar function instead\n"
+"  --> src/main.rs:10:5\n"
+"   |\n"
+"10 |     foo();\n"
+"   |     ^^^\n"
+"   |\n"
+"   = note: #[warn(deprecated)] on by default\n"
+"\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:32
+msgid "Both `since` and `note` are optional."
+msgstr ""
+
+#: src/rust-2018/the-compiler/an-attribute-for-deprecation.md:34
+msgid ""
+"`since` can be in the future; you can put whatever you'd like, and what's "
+"put in there isn't checked."
+msgstr ""
