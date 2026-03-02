@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:57:23Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:1
+msgid "Lifetime elision in impl"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:3
+msgid ""
+"![Minimum Rust version: 1.31](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.31-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:5
+msgid ""
+"When writing `impl` blocks, you can now elide lifetime annotations in some "
+"situations."
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:8
+msgid "Consider a trait like `MyIterator`:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:17
+msgid ""
+"In Rust 2015, if we wanted to implement this iterator for mutable references "
+"to `Iterators`, we'd need to write this:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:29
+msgid "Note all of the `'a` annotations. In Rust 2018, we can write this:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:40
+msgid ""
+"Similarly, lifetime annotations can appear due to a struct that contains "
+"references:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:50
+msgid "In Rust 2015, to implement `Drop` on this struct, we'd write:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/lifetime-elision-in-impl.md:62
+msgid ""
+"But in Rust 2018, we can combine elision with [the anonymous lifetime](the-"
+"anonymous-lifetime.md) and write this instead."
+msgstr ""

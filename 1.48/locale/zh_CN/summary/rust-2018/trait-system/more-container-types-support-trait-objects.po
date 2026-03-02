@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:57:23Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:1
+msgid "More container types support trait objects"
+msgstr ""
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:3
+msgid ""
+"![Minimum Rust version: 1.2](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.2-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:5
+msgid ""
+"In Rust 1.0, only certain, special types could be used to create [trait "
+"objects](https://doc.rust-lang.org/book/ch17-02-trait-objects.html)."
+msgstr ""
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:8
+msgid ""
+"With Rust 1.2, that restriction was lifted, and more types became able to do "
+"this. For example, `Rc<T>`, one of Rust's reference-counted types:"
+msgstr ""
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:25
+msgid "This code would not work with Rust 1.0, but now works."
+msgstr ""
+
+#: src/rust-2018/trait-system/more-container-types-support-trait-objects.md:27
+msgid ""
+"If you haven't seen the `dyn` syntax before, see [the section on it](dyn-"
+"trait-for-trait-objects.md). For versions that do not support it, replace "
+"`Rc<dyn Foo>` with `Rc<Foo>`."
+msgstr ""
