@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:36Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/never-type-fallback.md:1
+msgid "Never type fallback change"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:5
+msgid ""
+"Never type (`!`) to any type (\"never-to-any\") coercions fall back to never "
+"type (`!`) rather than to unit type (`()`)."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:6
+msgid ""
+"The [`never_type_fallback_flowing_into_unsafe`](../../rustc/lints/listing/"
+"warn-by-default.html#never-type-fallback-flowing-into-unsafe) lint is now "
+"`deny` by default."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:10
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:12
+msgid ""
+"When the compiler sees a value of type `!` (never) in a [coercion site]"
+"(../../reference/type-coercions.html#coercion-sites), it implicitly inserts "
+"a coercion to allow the type checker to infer any type:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:15
+#: src/rust-2024/never-type-fallback.md:31
+msgid "// This:\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:18
+msgid "// ...is (essentially) turned by the compiler into:\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:21
+msgid ""
+"// ...where `absurd` is the following function\n"
+"// (it's sound because `!` always marks unreachable code):\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:27
+msgid "This can lead to compilation errors if the type cannot be inferred:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:34
+msgid "// ...gets turned into this:\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:36
+msgid "//~ ERROR can't infer the type of `absurd`\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:39
+msgid ""
+"To prevent such errors, the compiler remembers where it inserted `absurd` "
+"calls, and if it can't infer the type, it uses the fallback type instead:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:44
+msgid "/* An arbitrarily selected type! */"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:48
+msgid "This is what is known as \"never type fallback\"."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:50
+msgid ""
+"Historically, the fallback type has been `()` (unit).  This caused `!` to "
+"spontaneously coerce to `()` even when the compiler would not infer `()` "
+"without the fallback.  That was confusing and has prevented the "
+"stabilization of the `!` type."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:52
+msgid ""
+"In the 2024 edition, the fallback type is now `!`.  (We plan to make this "
+"change across all editions at a later date.)  This makes things work more "
+"intuitively.  Now when you pass `!` and there is no reason to coerce it to "
+"something else, it is kept as `!`."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:54
+msgid ""
+"In some cases your code might depend on the fallback type being `()`, so "
+"this can cause compilation errors or changes in behavior."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:58
+msgid "`never_type_fallback_flowing_into_unsafe`"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:60
+msgid ""
+"The default level of the [`never_type_fallback_flowing_into_unsafe`](../../"
+"rustc/lints/listing/warn-by-default.html#never-type-fallback-flowing-into-"
+"unsafe) lint has been raised from `warn` to `deny` in the 2024 Edition. This "
+"lint helps detect a particular interaction with the fallback to `!` and "
+"`unsafe` code which may lead to undefined behavior. See the link for a "
+"complete description."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:62
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:64
+msgid ""
+"There is no automatic fix, but there is automatic detection of code that "
+"will be broken by the edition change.  While still on a previous edition you "
+"will see warnings if your code will be broken."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:66
+msgid ""
+"The fix is to specify the type explicitly so that the fallback type is not "
+"used.  Unfortunately, it might not be trivial to see which type needs to be "
+"specified."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:68
+msgid ""
+"One of the most common patterns broken by this change is using `f()?;` where "
+"`f` is generic over the `Ok`\\-part of the return type:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:82
+msgid ""
+"You might think that, in this example, type `T` can't be inferred.  However, "
+"due to the current desugaring of the `?` operator, it was inferred as `()`, "
+"and it will now be inferred as `!`."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:84
+msgid "To fix the issue you need to specify the `T` type explicitly:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:92
+#: src/rust-2024/never-type-fallback.md:148
+msgid "// ...or:\n"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:99
+msgid "Another relatively common case is panicking in a closure:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:113
+msgid ""
+"Previously `!` from the `panic!` coerced to `()` which implements `Unit`.  "
+"However now the `!` is kept as `!` so this code fails because `!` doesn't "
+"implement `Unit`.  To fix this you can specify the return type of the "
+"closure:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:126
+msgid ""
+"A similar case to that of `f()?` can be seen when using a `!`\\-typed "
+"expression in one branch and a function with an unconstrained return type in "
+"the other:"
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:137
+msgid ""
+"Previously `()` was inferred as the return type of `Default::default()` "
+"because `!` from `return` was spuriously coerced to `()`.  Now, `!` will be "
+"inferred instead causing this code to not compile because `!` does not "
+"implement `Default`."
+msgstr ""
+
+#: src/rust-2024/never-type-fallback.md:139
+msgid "Again, this can be fixed by specifying the type explicitly:"
+msgstr ""

@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:36Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/cargo-resolver.md:1
+msgid "Cargo: Rust-version aware resolver"
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:5
+msgid ""
+"`edition = \"2024\"` implies `resolver = \"3\"` in `Cargo.toml` which "
+"enables a Rust-version aware dependency resolver."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:7
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:9
+msgid ""
+"Since Rust 1.84.0, Cargo has opt-in support for compatibility with [`package."
+"rust-version`](../../cargo/reference/rust-version.html) to be considered "
+"when selecting dependency versions by setting [`resolver.incompatible-rust-"
+"version = \"fallback\"`](../../cargo/reference/config."
+"html#resolverincompatible-rust-versions) in `.cargo/config.toml`."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:13
+msgid ""
+"Starting in Rust 2024, this will be the default. That is, writing `edition = "
+"\"2024\"` in `Cargo.toml` will imply `resolver = \"3\"` which will imply "
+"[`resolver.incompatible-rust-version = \"fallback\"`](../../cargo/reference/"
+"config.html#resolverincompatible-rust-versions)."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:17
+msgid ""
+"The resolver is a global setting for a [workspace](../../cargo/reference/"
+"workspaces.html), and the setting is ignored in dependencies. The setting is "
+"only honored for the top-level package of the workspace. If you are using a "
+"[virtual workspace](../../cargo/reference/workspaces.html#virtual-"
+"workspace), you will still need to explicitly set the [`resolver` field]"
+"(../../cargo/reference/resolver.html#resolver-versions) in the `[workspace]` "
+"definition if you want to opt in to the new resolver."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:22
+msgid ""
+"For more details on how Rust-version aware dependency resolution works, see "
+"[the Cargo book](../../cargo/reference/resolver.html#rust-version)."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:30
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:32
+msgid ""
+"There are no automated migration tools for updating for the new resolver."
+msgstr ""
+
+#: src/rust-2024/cargo-resolver.md:34
+msgid ""
+"We recommend projects [verify against the latest dependencies in CI](../../"
+"cargo/guide/continuous-integration.html#verifying-latest-dependencies) to "
+"catch bugs in dependencies as soon as possible."
+msgstr ""
