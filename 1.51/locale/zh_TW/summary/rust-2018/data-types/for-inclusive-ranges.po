@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:48:48Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/data-types/inclusive-ranges.md:1
+msgid "`..=` for inclusive ranges"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:3
+msgid ""
+"![Minimum Rust version: 1.26](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.26-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:5
+msgid ""
+"Since well before Rust 1.0, you’ve been able to create exclusive ranges with "
+"`..` like this:"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:10
+#: src/rust-2018/data-types/inclusive-ranges.md:19
+#: src/rust-2018/data-types/inclusive-ranges.md:35
+#: src/rust-2018/data-types/inclusive-ranges.md:66
+msgid "\"i: {}\""
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:14
+msgid ""
+"This will print `i: 1` and then `i: 2`. Today, you can now create an "
+"inclusive range, like this:"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:23
+msgid ""
+"This will print `i: 1` and then `i: 2` like before, but also `i: 3`; the "
+"three is included in the range. Inclusive ranges are especially useful if "
+"you want to iterate over every possible value in a range. For example, this "
+"is a surprising Rust program:"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:30
+#: src/rust-2018/data-types/inclusive-ranges.md:61
+msgid "// ...\n"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:41
+msgid ""
+"What does this program do? The answer: it fails to compile. The error we get "
+"when compiling has a hint:"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:54
+msgid ""
+"That’s right, since `i` is a `u8`, this overflows, and the compiler produces "
+"an error."
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:57
+msgid "We can do this with inclusive ranges, however:"
+msgstr ""
+
+#: src/rust-2018/data-types/inclusive-ranges.md:72
+msgid ""
+"This will produce those 256 lines of output you might have been expecting."
+msgstr ""

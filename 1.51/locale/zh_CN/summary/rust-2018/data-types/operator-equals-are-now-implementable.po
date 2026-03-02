@@ -1,0 +1,37 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:48:48Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/data-types/operator-equals-are-now-implementable.md:1
+msgid "\"Operator-equals\" are now implementable"
+msgstr ""
+
+#: src/rust-2018/data-types/operator-equals-are-now-implementable.md:3
+msgid ""
+"![Minimum Rust version: 1.8](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.8-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/data-types/operator-equals-are-now-implementable.md:5
+msgid ""
+"The various “operator equals” operators, such as `+=` and `-=`, are "
+"implementable via various traits. For example, to implement `+=` on a type "
+"of your own:"
+msgstr ""
+
+#: src/rust-2018/data-types/operator-equals-are-now-implementable.md:29
+msgid "\"{:?}\""
+msgstr ""
+
+#: src/rust-2018/data-types/operator-equals-are-now-implementable.md:33
+msgid "This will print `Count { value: 6 }`."
+msgstr ""
