@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:58:18Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/disjoint-capture-in-closures.md:1
+msgid "Disjoint capture in closures"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:5
+msgid "`|| a.x + 1` now captures only `a.x` instead of `a`."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:6
+msgid ""
+"This can cause things to be dropped at different times or affect whether "
+"closures implement traits like `Send` or `Clone`."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:7
+msgid ""
+"If possible changes are detected, `cargo fix` will insert statements like "
+"`let _ = &a` to force a closure to capture the entire variable."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:9
+msgid "Details"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:11
+msgid ""
+"[Closures](https://doc.rust-lang.org/book/ch13-01-closures.html) "
+"automatically capture anything that you refer to from within their body. For "
+"example, `|| a + 1` automatically captures a reference to `a` from the "
+"surrounding context."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:15
+msgid ""
+"In Rust 2018 and before, closures capture entire variables, even if the "
+"closure only uses one field. For example, `|| a.x + 1` captures a reference "
+"to `a` and not just `a.x`. Capturing `a` in its entirety prevents mutation "
+"or moves from other fields of `a`, so that code like this does not compile:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:21
+msgid "// Move out of one field of the struct\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:22
+#: src/rust-2021/disjoint-capture-in-closures.md:23
+msgid "\"{}\""
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:22
+msgid "// Ok: Still use another field of the struct\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:23
+msgid "// Error: Tries to capture all of `a`\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:27
+msgid ""
+"Starting in Rust 2021, closures captures are more precise. Typically they "
+"will only capture the fields they use (in some cases, they might capture "
+"more than just what they use, see the Rust reference for full details). "
+"Therefore, the above example will compile fine in Rust 2021."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:29
+msgid ""
+"Disjoint capture was proposed as part of [RFC 2229](https://github.com/rust-"
+"lang/rfcs/blob/master/text/2229-capture-disjoint-fields.md) and the RFC "
+"contains details about the motivation."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:31
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:33
+msgid ""
+"As a part of the 2021 edition a migration lint, "
+"`rust_2021_incompatible_closure_captures`, has been added in order to aid in "
+"automatic migration of Rust 2018 codebases to Rust 2021."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:35
+msgid ""
+"In order to have `rustfix` migrate your code to be Rust 2021 Edition "
+"compatible, run:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:41
+msgid ""
+"Below is an examination of how to manually migrate code to use closure "
+"captures that are compatible with Rust 2021 should the automatic migration "
+"fail or you would like to better understand how the migration works."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:44
+msgid ""
+"Changing the variables captured by a closure can cause programs to change "
+"behavior or to stop compiling in two cases:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:46
+msgid ""
+"changes to drop order, or when destructors run ([details](#drop-order));"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:47
+msgid ""
+"changes to which traits a closure implements ([details](#trait-"
+"implementations))."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:49
+msgid ""
+"Whenever any of the scenarios below are detected, `cargo fix` will insert a "
+"\"dummy let\" into your closure to force it to capture the entire variable:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:54
+msgid "// \"Dummy let\" that forces `x` to be captured in its entirety\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:57
+msgid "// Otherwise, only `x.0` would be captured here\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:58
+msgid "\"{:?}\""
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:62
+msgid ""
+"This is a conservative analysis: in many cases, these dummy lets can be "
+"safely removed and your program will work fine."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:64
+msgid "Wild Card Patterns"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:66
+msgid ""
+"Closures now only capture data that needs to be read, which means the "
+"following closures will not capture `x`:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:71
+msgid "// no-op\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:75
+msgid "\"Hello World!\""
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:79
+msgid ""
+"The `let _ = x` statement here is a no-op, since the `_` pattern completely "
+"ignores the right-hand side, and `x` is a reference to a place in memory (in "
+"this case, a variable)."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:81
+msgid ""
+"This change by itself (capturing fewer values) doesn't trigger any "
+"suggestions, but it may do so in conjunction with the \"drop order\" change "
+"below."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:83
+msgid ""
+"**Subtle:** There are other similar expressions, such as the \"dummy lets\" "
+"`let _ = &x` that we insert, which are not no-ops. This is because the right-"
+"hand side (`&x`) is not a reference to a place in memory, but rather an "
+"expression that must first be evaluated (and whose result is then discarded)."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:85
+msgid "Drop Order"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:87
+msgid ""
+"When a closure takes ownership of a value from a variable `t`, that value is "
+"then dropped when the closure is dropped, and not when the variable `t` goes "
+"out of scope:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:95
+msgid "// t is moved here\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:96
+msgid "// c is dropped, which drops the tuple `t` as well\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:97
+msgid "// t goes out of scope here\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:100
+msgid ""
+"The above code will run the same in both Rust 2018 and Rust 2021. However, "
+"in cases where the closure only takes ownership of _part_ of a variable, "
+"there can be differences:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:109
+msgid ""
+"// In Rust 2018, captures all of `t`.\n"
+"            // In Rust 2021, captures only `t.0`\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:114
+msgid ""
+"// In Rust 2018, `c` (and `t`) are both dropped when we\n"
+"        // exit this block.\n"
+"        //\n"
+"        // In Rust 2021, `c` and `t.0` are both dropped when we\n"
+"        // exit this block.\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:120
+msgid ""
+"// In Rust 2018, the value from `t` has been moved and is\n"
+"// not dropped.\n"
+"//\n"
+"// In Rust 2021, the value from `t.0` has been moved, but `t.1`\n"
+"// remains, so it will be dropped here.\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:129
+msgid ""
+"In most cases, dropping values at different times just affects when memory "
+"is freed and is not important. However, some `Drop` impls (aka, destructors) "
+"have side-effects, and changing the drop order in those cases can alter the "
+"semantics of your program. In such cases, the compiler will suggest "
+"inserting a dummy `let` to force the entire variable to be captured."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:131
+msgid "Trait implementations"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:133
+msgid ""
+"Closures automatically implement the following traits based on what values "
+"they capture:"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:135
+msgid ""
+"[`Clone`](https://doc.rust-lang.org/std/clone/trait.Clone.html): if all "
+"captured values are `Clone`."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:136
+msgid ""
+"[Auto traits](https://doc.rust-lang.org/nightly/reference/special-types-and-"
+"traits.html#auto-traits) like [`Send`](https://doc.rust-lang.org/std/marker/"
+"trait.Send.html), [`Sync`](https://doc.rust-lang.org/std/marker/trait.Sync."
+"html), and [`UnwindSafe`](https://doc.rust-lang.org/std/panic/trait."
+"UnwindSafe.html): if all captured values implement the given trait."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:144
+msgid ""
+"In Rust 2021, since different values are being captured, this can affect "
+"what traits a closure will implement. The migration lints test each closure "
+"to see whether it would have implemented a given trait before and whether it "
+"still implements it now; if they find that a trait used to be implemented "
+"but no longer is, then \"dummy lets\" are inserted."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:146
+msgid ""
+"For instance, a common way to allow passing around raw pointers between "
+"threads is to wrap them in a struct and then implement `Send`/`Sync` auto "
+"trait for the wrapper. The closure that is passed to `thread::spawn` uses "
+"the specific fields within the wrapper but the entire wrapper is captured "
+"regardless. Since the wrapper is `Send`/`Sync`, the code is considered safe "
+"and therefore compiles successfully."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:148
+msgid ""
+"With disjoint captures, only the specific field mentioned in the closure "
+"gets captured, which wasn't originally `Send`/`Sync` defeating the purpose "
+"of the wrapper."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:164
+msgid "// Closure captured px.0 which is not Send\n"
+msgstr ""
