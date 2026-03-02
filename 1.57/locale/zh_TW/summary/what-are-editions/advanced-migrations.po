@@ -5,19 +5,19 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/editions/advanced-migrations.md:1
 msgid "Advanced migration strategies"
-msgstr ""
+msgstr "進階遷移策略"
 
 #: src/editions/advanced-migrations.md:3
 msgid "How migrations work"
-msgstr ""
+msgstr "遷移的運作方式"
 
 #: src/editions/advanced-migrations.md:5
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:21
 msgid "Migrating multiple configurations"
-msgstr ""
+msgstr "遷移多個組態"
 
 #: src/editions/advanced-migrations.md:23
 msgid ""
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:72
 msgid "Migrating macros"
-msgstr ""
+msgstr "遷移巨集"
 
 #: src/editions/advanced-migrations.md:74
 msgid ""
@@ -266,7 +266,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:120
 msgid "Documentation tests"
-msgstr ""
+msgstr "文件測試"
 
 #: src/editions/advanced-migrations.md:122
 msgid ""
@@ -301,7 +301,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:134
 msgid "Migrating non-Cargo projects"
-msgstr ""
+msgstr "遷移非 Cargo 專案"
 
 #: src/editions/advanced-migrations.md:136
 msgid ""
@@ -388,19 +388,23 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:171
 msgid "Edition 2018:"
-msgstr ""
+msgstr "2018 版次："
 
 #: src/editions/advanced-migrations.md:172
 msgid ""
 "[`unused-extern-crates`](../../rustc/lints/listing/allowed-by-default."
 "html#unused-extern-crates)"
 msgstr ""
+"[`unused-extern-crates`](../../rustc/lints/listing/allowed-by-default."
+"html#unused-extern-crates)"
 
 #: src/editions/advanced-migrations.md:173
 msgid ""
 "[`explicit-outlives-requirements`](../../rustc/lints/listing/allowed-by-"
 "default.html#explicit-outlives-requirements)"
 msgstr ""
+"[`explicit-outlives-requirements`](../../rustc/lints/listing/allowed-by-"
+"default.html#explicit-outlives-requirements)"
 
 #: src/editions/advanced-migrations.md:174
 msgid "Edition 2021 does not have any idiom lints."
