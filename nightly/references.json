@@ -1,0 +1,47 @@
+{
+  "po" : 
+  {
+    "en_US" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_CN" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_TW" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    }
+  },
+  "pot" : 
+  {
+    "branch" : "main",
+    "commit" : 
+    {
+      "date" : "2026-03-02 02:41:00 +0000",
+      "hash" : "ddd36bd57051f796850345b76c17e9402e28a9e4",
+      "title" : "Auto merge of #153157 - madsmtm:fix-eq-derive-comptime-regression, r=JonathanBrouwer"
+    }
+  },
+  "type" : "branch",
+  "version" : "nightly"
+}
