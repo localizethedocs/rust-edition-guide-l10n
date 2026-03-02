@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:52:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/cargo.md:1
+msgid "Cargo changes"
+msgstr ""
+
+#: src/rust-2018/cargo.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2018/cargo.md:5
+msgid ""
+"If there is a target definition in a `Cargo.toml` manifest, it no longer "
+"automatically disables automatic discovery of other targets."
+msgstr ""
+
+#: src/rust-2018/cargo.md:7
+msgid ""
+"Target paths of the form `src/{target_name}.rs` are no longer inferred for "
+"targets where the `path` field is not set."
+msgstr ""
+
+#: src/rust-2018/cargo.md:9
+msgid ""
+"`cargo install` for the current directory is no longer allowed, you must "
+"specify `cargo install --path .` to install the current package."
+msgstr ""
