@@ -1,0 +1,194 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:41:27Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-next/const-fn.md:1
+msgid "`const fn`"
+msgstr ""
+
+#: src/rust-next/const-fn.md:3
+msgid ""
+"Initially added: ![Minimum Rust version: 1.31](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.31-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/const-fn.md:5
+msgid "Expanded in many releases, see each aspect below for more details."
+msgstr ""
+
+#: src/rust-next/const-fn.md:7
+msgid ""
+"A `const fn` allows you to execute code in a \"const context.\" For example:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:17
+msgid ""
+"You cannot execute arbitrary code; the reasons why boil down to \"you can "
+"destroy the type system.\" The details are a bit too much to put here, but "
+"the core idea is that `const fn` started off allowing the absolutely minimal "
+"subset of the language, and has slowly added more abilities over time. "
+"Therefore, while you can create a `const fn` in Rust 1.31, you cannot do "
+"much with it. This is why we didn't add `const fn` to the Rust 2018 section; "
+"it truly didn't become useful until after the release of the 2018 edition. "
+"This means that if you read this document top to bottom, the earlier "
+"versions may describe restrictions that are relaxed in later versions."
+msgstr ""
+
+#: src/rust-next/const-fn.md:27
+msgid ""
+"Additionally, this has allowed more and more of the standard library to be "
+"made `const`, we won't put all of those changes here, but you should know "
+"that it is becoming more `const` over time."
+msgstr ""
+
+#: src/rust-next/const-fn.md:31
+msgid "Arithmetic and comparison operators on integers"
+msgstr ""
+
+#: src/rust-next/const-fn.md:33 src/rust-next/const-fn.md:45
+#: src/rust-next/const-fn.md:59 src/rust-next/const-fn.md:90
+#: src/rust-next/const-fn.md:107 src/rust-next/const-fn.md:121
+#: src/rust-next/const-fn.md:146 src/rust-next/const-fn.md:162
+#: src/rust-next/const-fn.md:176
+msgid ""
+"![Minimum Rust version: 1.31](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.31-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/const-fn.md:35
+msgid "You can do arithmetic on integer literals:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:43
+msgid "Many boolean operators"
+msgstr ""
+
+#: src/rust-next/const-fn.md:47
+msgid ""
+"You can use boolean operators other than `&&` and `||`, because they short-"
+"circut evaluation:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:57
+msgid "Constructing arrays, structs, enums, and tuples"
+msgstr ""
+
+#: src/rust-next/const-fn.md:61
+msgid "You can create arrays, structs, enums, and tuples:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:88
+msgid "Calls to other const fns"
+msgstr ""
+
+#: src/rust-next/const-fn.md:92
+msgid "You can call `const fn` from a `const fn`:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:105
+msgid "Index expressions on arrays and slices"
+msgstr ""
+
+#: src/rust-next/const-fn.md:109
+msgid "You can index into an array or slice:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:119
+msgid "Field accesses on structs and tuples"
+msgstr ""
+
+#: src/rust-next/const-fn.md:123
+msgid "You can access parts of a struct or tuple:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:144
+msgid "Reading from constants"
+msgstr ""
+
+#: src/rust-next/const-fn.md:148
+msgid "You can read from a constant:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:158
+msgid "Note that this is _only_ `const`, not `static`."
+msgstr ""
+
+#: src/rust-next/const-fn.md:160
+msgid "& and * of references"
+msgstr ""
+
+#: src/rust-next/const-fn.md:164
+msgid "You can create and de-reference references:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:174
+msgid "Casts, except for raw pointer to integer casts"
+msgstr ""
+
+#: src/rust-next/const-fn.md:178
+msgid ""
+"You may cast things, except for raw pointers may not be casted to an integer:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:188
+msgid "Irrefutable destructuring patterns"
+msgstr ""
+
+#: src/rust-next/const-fn.md:190 src/rust-next/const-fn.md:205
+#: src/rust-next/const-fn.md:218 src/rust-next/const-fn.md:231
+msgid ""
+"![Minimum Rust version: 1.33](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.33-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/const-fn.md:192
+msgid "You can use irrefutable patterns that destructure values. For example:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:194
+msgid ""
+"```\n"
+"const fn foo((x, y): (u8, u8)) {\n"
+"    // ...\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/rust-next/const-fn.md:200
+msgid ""
+"Here, `foo` destructures the tuple into `x` and `y`. `if let` is another "
+"place that uses irrefutable patterns."
+msgstr ""
+
+#: src/rust-next/const-fn.md:203
+msgid "`let` bindings"
+msgstr ""
+
+#: src/rust-next/const-fn.md:207
+msgid "You can use both mutable and immutable `let` bindings:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:216
+msgid "Assignment"
+msgstr ""
+
+#: src/rust-next/const-fn.md:220
+msgid "You can use assignment and assignment operators:"
+msgstr ""
+
+#: src/rust-next/const-fn.md:229
+msgid "Calling `unsafe fn`"
+msgstr ""
+
+#: src/rust-next/const-fn.md:233
+msgid "YOu can call an `unsafe fn` inside a `const fn`:"
+msgstr ""
