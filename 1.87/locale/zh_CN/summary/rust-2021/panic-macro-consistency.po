@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/panic-macro-consistency.md:1
+msgid "Panic macro consistency"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:5
+msgid ""
+"`panic!(..)` now always uses `format_args!(..)`, just like `println!()`."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:6
+msgid ""
+"`panic!(\"{\")` is no longer accepted, without escaping the `{` as `{{`."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:7
+msgid "`panic!(x)` is no longer accepted if `x` is not a string literal."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:8
+msgid "Use `std::panic::panic_any(x)` to panic with a non-string payload."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:9
+msgid "Or use `panic!(\"{}\", x)` to use `x`'s `Display` implementation."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:10
+msgid "The same applies to `assert!(expr, ..)`."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:12
+msgid "Details"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:14
+msgid ""
+"The `panic!()` macro is one of Rust's most well known macros. However, it "
+"has [some subtle surprises](https://github.com/rust-lang/rfcs/blob/master/"
+"text/3007-panic-plan.md) that we can't just change due to backwards "
+"compatibility."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:19
+#: src/rust-2021/panic-macro-consistency.md:28
+msgid "// Rust 2018\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:20
+#: src/rust-2021/panic-macro-consistency.md:21
+#: src/rust-2021/panic-macro-consistency.md:53
+#: src/rust-2021/panic-macro-consistency.md:54
+msgid "\"{}\""
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:20
+#: src/rust-2021/panic-macro-consistency.md:53
+msgid "// Ok, panics with the message \"1\"\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:21
+msgid "// Ok, panics with the message \"{}\"\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:24
+msgid ""
+"The `panic!()` macro only uses string formatting when it's invoked with more "
+"than one argument. When invoked with a single argument, it doesn't even look "
+"at that argument."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:29
+msgid "\"{\""
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:30
+msgid "// Error: First argument must be a format string literal\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:31
+msgid "// Ok: The panic macro doesn't care\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:34
+msgid ""
+"It even accepts non-strings such as `panic!(123)`, which is uncommon and "
+"rarely useful since it produces a surprisingly unhelpful message: `panicked "
+"at 'Box<Any>'`."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:37
+msgid ""
+"This will especially be a problem once [implicit format arguments](https://"
+"rust-lang.github.io/rfcs/2795-format-args-implicit-identifiers.html) are "
+"stabilized. That feature will make `println!(\"hello {name}\")` a short-hand "
+"for `println!(\"hello {}\", name)`. However, `panic!(\"hello {name}\")` "
+"would not work as expected, since `panic!()` doesn't process a single "
+"argument as format string."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:44
+msgid ""
+"To avoid that confusing situation, Rust 2021 features a more consistent "
+"`panic!()` macro. The new `panic!()` macro will no longer accept arbitrary "
+"expressions as the only argument. It will, just like `println!()`, always "
+"process the first argument as format string. Since `panic!()` will no longer "
+"accept arbitrary payloads, [`panic_any()`](https://doc.rust-lang.org/stable/"
+"std/panic/fn.panic_any.html) will be the only way to panic with something "
+"other than a formatted string."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:52
+msgid "// Rust 2021\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:54
+msgid "// Error, missing argument\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:55
+msgid "// Error, must be a string literal\n"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:58
+msgid ""
+"In addition, `core::panic!()` and `std::panic!()` will be identical in Rust "
+"2021. Currently, there are some historical differences between those two, "
+"which can be noticeable when switching `#![no_std]` on or off."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:62
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:64
+msgid ""
+"A lint, `non_fmt_panics`, gets triggered whenever there is some call to "
+"`panic` that uses some deprecated behavior that will error in Rust 2021. The "
+"`non_fmt_panics` lint has already been a warning by default on all editions "
+"since the 1.50 release (with several enhancements made in later releases). "
+"If your code is already warning free, then it should already be ready to go "
+"for Rust 2021!"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:69
+msgid ""
+"You can automatically migrate your code to be Rust 2021 Edition compatible "
+"or ensure it is already compatible by running:"
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:76
+msgid ""
+"Should you choose or need to manually migrate, you'll need to update all "
+"panic invocations to either use the same formatting as `println` or use "
+"`std::panic::panic_any` to panic with non-string data."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:79
+msgid ""
+"For example, in the case of `panic!(MyStruct)`, you'll need to convert to "
+"using `std::panic::panic_any` (note that this is a function not a macro): "
+"`std::panic::panic_any(MyStruct)`."
+msgstr ""
+
+#: src/rust-2021/panic-macro-consistency.md:82
+msgid ""
+"In the case of panic messages that include curly braces but the wrong number "
+"of arguments (e.g., `panic!(\"Some curlies: {}\")`), you can panic with the "
+"string literal by either using the same syntax as `println!` (i.e., `panic!"
+"(\"{}\", \"Some curlies: {}\")`) or by escaping the curly braces (i.e., "
+"`panic!(\"Some curlies: {{}}\")`)."
+msgstr ""

@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/gen-keyword.md:1
+msgid "`gen` keyword"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:5
+msgid ""
+"`gen` is a [reserved keyword](../../reference/keywords.html#reserved-"
+"keywords)."
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:9
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:11
+msgid ""
+"The `gen` keyword has been reserved as part of [RFC #3513](https://rust-lang."
+"github.io/rfcs/3513-gen-blocks.html) to introduce \"gen blocks\" in a future "
+"release of Rust. `gen` blocks will provide a way to make it easier to write "
+"certain kinds of iterators. Reserving the keyword now will make it easier to "
+"stabilize `gen` blocks before the next edition."
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:15
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:17
+msgid ""
+"Introducing the `gen` keyword can cause a problem for any identifiers that "
+"are already called `gen`. For example, any variable or function name called "
+"`gen` would clash with the new keyword. To overcome this, Rust supports the "
+"`r#` prefix for a [raw identifier](../../reference/identifiers.html#raw-"
+"identifiers), which allows identifiers to overlap with keywords."
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:19
+msgid ""
+"The [`keyword_idents_2024`](../../rustc/lints/listing/allowed-by-default."
+"html#keyword-idents-2024) lint will automatically modify any identifier "
+"named `gen` to be `r#gen` so that code continues to work on both editions. "
+"This lint is part of the `rust-2024-compatibility` lint group, which will "
+"automatically be applied when running `cargo fix --edition`. To migrate your "
+"code to be Rust 2024 Edition compatible, run:"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:25
+msgid "For example, this will change:"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:29 src/rust-2024/gen-keyword.md:41
+msgid "\"generating!\""
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:37
+msgid "to be:"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:49
+msgid ""
+"Alternatively, you can manually enable the lint to find places where `gen` "
+"identifiers need to be modified to `r#gen`:"
+msgstr ""
+
+#: src/rust-2024/gen-keyword.md:52
+msgid "// Add this to the root of your crate to do a manual migration.\n"
+msgstr ""
