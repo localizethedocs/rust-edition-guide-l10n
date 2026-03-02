@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:56:17Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:1
+msgid "Replacing dependencies with patch"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:3
+msgid ""
+"![Minimum Rust version: 1.21](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.21-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:5
+msgid ""
+"The `[patch]` section of your `Cargo.toml` can be used when you want to "
+"override certain parts of your dependency graph."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:8
+msgid ""
+"Cargo has a `[replace]` feature that is similar; while we don't intend to "
+"deprecate or remove `[replace]`, you should prefer `[patch]` in all "
+"circumstances."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:11
+msgid ""
+"So what’s it look like? Let’s say we have a Cargo.toml that looks like this:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:13
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"foo = \"1.2.3\"\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:18
+msgid ""
+"In addition, our `foo` package depends on a `bar` crate, and we find a bug "
+"in `bar`. To test this out, we’d download the source code for `bar`, and "
+"then update our `Cargo.toml`:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:22
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"foo = \"1.2.3\"\n"
+"\n"
+"[patch.crates-io]\n"
+"bar = { path = '/path/to/bar' }\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:30
+msgid ""
+"Now, when you `cargo build`, it will use the local version of `bar`, rather "
+"than the one from crates.io that `foo` depends on. You can then try out your "
+"changes, and fix that bug!"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/replacing-dependencies-with-patch.md:34
+msgid ""
+"For more details, see [the documentation for `patch`](https://doc.rust-lang."
+"org/cargo/reference/manifest.html#the-patch-section)."
+msgstr ""
