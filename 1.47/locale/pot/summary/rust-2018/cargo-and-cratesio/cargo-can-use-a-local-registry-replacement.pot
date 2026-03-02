@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:41:27Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:1
+msgid "Cargo can use a local registry replacement"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:3
+msgid ""
+"![Minimum Rust version: 1.12](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.12-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:5
+msgid ""
+"Cargo finds its packages in a \"source\". The default source is [crates.io]"
+"(https://crates.io). However, you can choose a different source in your `."
+"cargo/config`:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:8
+msgid ""
+"```toml\n"
+"[source.crates-io]\n"
+"replace-with = 'my-awesome-registry'\n"
+"\n"
+"[source.my-awesome-registry]\n"
+"registry = 'https://github.com/my-awesome/registry-index'\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:16
+msgid ""
+"This configuration means that instead of using crates.io, Cargo will query "
+"the `my-awesome-registry` source instead (configured to a different index "
+"here). This alternate source _must be the exact same_ as the crates.io "
+"index. Cargo assumes that replacement sources are exact 1:1 mirrors in this "
+"respect, and the following support is designed around that assumption."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:22
+msgid ""
+"When generating a lock file for crate using a replacement registry, the "
+"original registry will be encoded into the lock file. For example in the "
+"configuration above, all lock files will still mention crates.io as the "
+"registry that packages originated from. This semantically represents how "
+"crates.io is the source of truth for all crates, and this is upheld because "
+"all replacements have a 1:1 correspondance."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:29
+msgid ""
+"Overall, this means that no matter what replacement source you're working "
+"with, you can ship your lock file to anyone else and you'll all still have "
+"verifiably reproducible builds!"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-can-use-a-local-registry-replacement.md:33
+msgid ""
+"This has enabled tools like [`cargo-vendor`](https://github.com/alexcrichton/"
+"cargo-vendor) and [`cargo-local-registry`](https://github.com/alexcrichton/"
+"cargo-local-registry), which are often useful for \"offline builds.\" They "
+"prepare the list of all Rust dependencies ahead of time, which lets you ship "
+"them to a build machine with ease."
+msgstr ""
