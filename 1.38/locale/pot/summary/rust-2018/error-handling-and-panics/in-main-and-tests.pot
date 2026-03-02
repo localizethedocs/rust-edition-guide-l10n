@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:59:31Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:1
+msgid "`?` in `main` and tests"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:3
+msgid ""
+"![Minimum Rust version: 1.26](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.26-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:5
+msgid ""
+"Rust's error handling revolves around returning `Result<T, E>` and using `?` "
+"to propagate errors. For those who write many small programs and, hopefully, "
+"many tests, one common paper cut has been mixing entry points such as `main` "
+"and `#[test]`s with error handling."
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:10
+msgid "As an example, you might have tried to write:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:16
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:29
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:70
+msgid "\"bar.txt\""
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:20
+msgid ""
+"Since `?` works by propagating the `Result` with an early return to the "
+"enclosing function, the snippet above does not work, and results today in "
+"the following error:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:36
+msgid ""
+"To solve this problem in Rust 2015, you might have written something like:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:39
+msgid "// Rust 2015\n"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:45
+msgid "// real logic..\n"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:51
+msgid "\"Application error: {}\""
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:57
+msgid ""
+"However, in this case, the `run` function has all the interesting logic and "
+"`main` is just boilerplate. The problem is even worse for `#[test]`s, since "
+"there tend to be a lot more of them."
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:61
+msgid ""
+"In Rust 2018 you can instead let your `#[test]`s and `main` functions return "
+"a `Result`:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:65
+msgid "// Rust 2018\n"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:76
+msgid ""
+"In this case, if say the file doesn't exist and there is an `Err(err)` "
+"somewhere, then `main` will exit with an error code (not `0`) and print out "
+"a `Debug` representation of `err`."
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:80
+msgid "More details"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:82
+msgid ""
+"Getting `-> Result<..>` to work in the context of `main` and `#[test]`s is "
+"not magic. It is all backed up by a `Termination` trait which all valid "
+"return types of `main` and testing functions must implement. The trait is "
+"defined as:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:92
+msgid ""
+"When setting up the entry point for your application, the compiler will use "
+"this trait and call `.report()` on the `Result` of the `main` function you "
+"have written."
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:95
+msgid ""
+"Two simplified example implementations of this trait for `Result` and `()` "
+"are:"
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:116
+msgid "\"Error: {:?}\""
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:125
+msgid ""
+"As you can see in the case of `()`, a success code is simply returned. In "
+"the case of `Result`, the success case delegates to the implementation for "
+"`()` but prints out an error message and a failure exit code on `Err(..)`."
+msgstr ""
+
+#: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:129
+msgid ""
+"To learn more about the finer details, consult either [the tracking issue]"
+"(https://github.com/rust-lang/rust/issues/43301) or [the RFC](https://github."
+"com/rust-lang/rfcs/blob/master/text/1937-ques-in-main.md)."
+msgstr ""
