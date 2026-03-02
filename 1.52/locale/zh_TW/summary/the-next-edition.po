@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:58:09Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-next/index.md:1
+msgid "The Next Edition"
+msgstr ""
+
+#: src/rust-next/index.md:3
+msgid ""
+"We have not decided if and when the next edition will ship; there is talk of "
+"a 2021 edition to keep up the three-year schedule, but that has not been "
+"formally decided."
+msgstr ""
+
+#: src/rust-next/index.md:7
+msgid ""
+"Until we do, this section keeps track of changes that landed after Rust 2018."
+msgstr ""
