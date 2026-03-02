@@ -5,15 +5,15 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/introduction.md:1
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: src/introduction.md:3
 msgid ""
@@ -23,11 +23,11 @@ msgstr ""
 
 #: src/introduction.md:6
 msgid "In this guide, we'll discuss:"
-msgstr ""
+msgstr "在這份指南中，我們將會討論："
 
 #: src/introduction.md:8
 msgid "What editions are"
-msgstr ""
+msgstr "版次是什麼"
 
 #: src/introduction.md:9
 msgid "What each edition is about"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/introduction.md:10
 msgid "How to migrate your code from one edition to another"
-msgstr ""
+msgstr "如何將您的程式碼從一個版次遷移到另一個版次"
 
 #: src/introduction.md:12
 msgid ""
