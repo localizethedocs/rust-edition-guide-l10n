@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/index.md:1
+msgid "Rust 2021"
+msgstr ""
+
+#: src/rust-2021/index.md:3
+msgid "Info"
+msgstr ""
+
+#: src/rust-2021/index.md:5
+msgid "RFC"
+msgstr ""
+
+#: src/rust-2021/index.md:5
+msgid "[\\#3085](https://github.com/rust-lang/rfcs/pull/3085)"
+msgstr ""
+
+#: src/rust-2021/index.md:6
+msgid "Release version"
+msgstr ""
+
+#: src/rust-2021/index.md:6
+msgid "1.56.0"
+msgstr ""
+
+#: src/rust-2021/index.md:8
+msgid ""
+"The Rust 2021 Edition contains several changes that bring new capabilities "
+"and more consistency to the language, and opens up room for expansion in the "
+"future. The following chapters dive into the details of each change, and "
+"they include guidance on migrating your existing code."
+msgstr ""
