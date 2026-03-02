@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:59:31Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/macros/custom-derive.md:1
+msgid "Custom Derive"
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:3
+msgid ""
+"![Minimum Rust version: 1.15](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.15-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:5
+msgid ""
+"In Rust, you’ve always been able to automatically implement some traits "
+"through the derive attribute:"
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:15
+msgid ""
+"The `Debug` trait is then implemented for `Pet`, with vastly less "
+"boilerplate. For example, without `derive`, you'd have to write this:"
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:29
+msgid "\"Pet\""
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:31
+msgid "\"name\""
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:40
+msgid "Whew!"
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:42
+msgid ""
+"However, this only worked for traits provided as part of the standard "
+"library; it was not customizable. But now, you can tell Rust what to do when "
+"someone wants to derive your trait. This is used heavily in popular crates "
+"like [serde](https://serde.rs/) and [Diesel](http://diesel.rs/)."
+msgstr ""
+
+#: src/rust-2018/macros/custom-derive.md:47
+msgid ""
+"For more, including learning how to build your own custom derive, see [The "
+"Rust Programming Language](https://doc.rust-lang.org/book/ch19-06-macros."
+"html#how-to-write-a-custom-derive-macro)."
+msgstr ""
