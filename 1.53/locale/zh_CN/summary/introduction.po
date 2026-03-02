@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:18Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/introduction.md:1
+msgid "Introduction"
+msgstr ""
+
+#: src/introduction.md:3
+msgid ""
+"Welcome to the Rust Edition Guide! \"Editions\" are Rust's way of "
+"communicating large changes in the way that it feels to write Rust code."
+msgstr ""
+
+#: src/introduction.md:6
+msgid "In this guide, we'll discuss:"
+msgstr ""
+
+#: src/introduction.md:8
+msgid "What editions are"
+msgstr ""
+
+#: src/introduction.md:9
+msgid "What each edition is about"
+msgstr ""
+
+#: src/introduction.md:10
+msgid "How to migrate your code from one edition to another"
+msgstr ""
+
+#: src/introduction.md:12
+msgid ""
+"Note that the standard library grows with each Rust release; there are "
+"_many_ additions to the standard library that are not called out in this "
+"guide. Only the major ones are, but there's tons of medium and small things "
+"that are great too. You may want to check out [the standard library "
+"documentation](https://doc.rust-lang.org/std/) as well."
+msgstr ""

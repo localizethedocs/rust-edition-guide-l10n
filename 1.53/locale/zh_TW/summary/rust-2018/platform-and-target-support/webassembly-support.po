@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:18Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:1
+msgid "WebAssembly support"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:3
+msgid ""
+"![Minimum Rust version: 1.14](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.14-brightgreen.svg) for `emscripten`"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:5
+msgid ""
+"![Minimum Rust version: nightly](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-nightly-red.svg) for `wasm32-unknown-unknown`"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:7
+msgid ""
+"Rust has gained support for [WebAssembly](https://webassembly.org/), meaning "
+"that you can run Rust code in your browser, client-side."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:10
+msgid ""
+"In Rust 1.14, we gained support through [emscripten](http://kripken.github."
+"io/emscripten-site/index.html). With it installed, you can write Rust code "
+"and have it produce [asm.js](http://asmjs.org/) (the precusor to wasm) and/"
+"or WebAssembly."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:15
+msgid "Here's an example of using this support:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:17
+msgid ""
+"```console\n"
+"$ rustup target add wasm32-unknown-emscripten\n"
+"$ echo 'fn main() { println!(\"Hello, Emscripten!\"); }' > hello.rs\n"
+"$ rustc --target=wasm32-unknown-emscripten hello.rs\n"
+"$ node hello.js\n"
+"```"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/webassembly-support.md:24
+msgid ""
+"However, in the meantime, Rust has also grown its own support, independent "
+"from Emscripten. This is known as \"the unknown target\", because instead of "
+"`wasm32-unknown-emscripten`, it's `wasm32-unknown-unknown`. This will be the "
+"preferred target to use once it's ready, but for now, it's really only well-"
+"supported in nightly."
+msgstr ""
