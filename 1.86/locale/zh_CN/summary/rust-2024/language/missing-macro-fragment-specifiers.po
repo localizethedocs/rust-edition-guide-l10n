@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:19Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:1
+msgid "Missing macro fragment specifiers"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:5
+msgid ""
+"The [`missing_fragment_specifier`](../../rustc/lints/listing/deny-by-default."
+"html#missing-fragment-specifier) lint is now a hard error."
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:9
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:11
+msgid ""
+"The [`missing_fragment_specifier`](../../rustc/lints/listing/deny-by-default."
+"html#missing-fragment-specifier) lint detects a situation when an **unused** "
+"pattern in a `macro_rules!` macro definition has a meta-variable (e.g. `$e`) "
+"that is not followed by a fragment specifier (e.g. `:expr`). This is now a "
+"hard error in the 2024 Edition."
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:16
+msgid "// ERROR: missing fragment specifier\n"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:24
+msgid ""
+"Calling the macro with arguments that would match a rule with a missing "
+"specifier (e.g., `foo!($name)`) is a hard error in all editions. However, "
+"simply defining a macro with missing fragment specifiers is not, though we "
+"did add a lint in Rust 1.17."
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:26
+msgid ""
+"We'd like to make this a hard error in all editions, but there would be too "
+"much breakage right now. So we're starting by making this a hard error in "
+"Rust 2024.[^future-incompat]"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:28
+msgid ""
+"The lint is marked as a \"future-incompatible\" warning to indicate that it "
+"may become a hard error in all editions in a future release. See [\\#40107]"
+"(https://github.com/rust-lang/rust/issues/40107) for more information."
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:32
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:34
+msgid ""
+"To migrate your code to the 2024 Edition, remove the unused matcher rule "
+"from the macro. The [`missing_fragment_specifier`](../../rustc/lints/listing/"
+"deny-by-default.html#missing-fragment-specifier) lint is on by default in "
+"all editions, and should alert you to macros with this issue."
+msgstr ""
+
+#: src/rust-2024/missing-macro-fragment-specifiers.md:36
+msgid ""
+"There is no automatic migration for this change. We expect that this style "
+"of macro is extremely rare. The lint has been a future-incompatibility lint "
+"since Rust 1.17, a deny-by-default lint since Rust 1.20, and since Rust "
+"1.82, it has warned about dependencies that are using this pattern."
+msgstr ""
