@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:56:08Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/index.md:1
+msgid "Rust 2024"
+msgstr ""
+
+#: src/rust-2024/index.md:3
+msgid ""
+"🚧 The 2024 Edition has not yet been released and hence this section is "
+"still \"under construction\"."
+msgstr ""
+
+#: src/rust-2024/index.md:5
+msgid "Info"
+msgstr ""
+
+#: src/rust-2024/index.md:7
+msgid "RFC"
+msgstr ""
+
+#: src/rust-2024/index.md:7
+msgid "[\\#3501](https://rust-lang.github.io/rfcs/3501-edition-2024.html)"
+msgstr ""
+
+#: src/rust-2024/index.md:8
+msgid "Release version"
+msgstr ""
+
+#: src/rust-2024/index.md:8
+msgid "1.85.0 (anticipated)"
+msgstr ""
+
+#: src/rust-2024/index.md:10
+msgid ""
+"The Rust 2024 Edition is scheduled to be frozen on 2024-10-17, stabilized on "
+"nightly on 2024-11-28, and released as stable with Rust 1.85.0 on "
+"2025-02-20.  In more detail, the currently anticipated release schedule is:"
+msgstr ""
+
+#: src/rust-2024/index.md:12
+msgid "Date"
+msgstr ""
+
+#: src/rust-2024/index.md:12
+msgid "Version"
+msgstr ""
+
+#: src/rust-2024/index.md:12
+msgid "Edition stage"
+msgstr ""
+
+#: src/rust-2024/index.md:14
+msgid "2024-10-11"
+msgstr ""
+
+#: src/rust-2024/index.md:14
+msgid "Branch  v1.83"
+msgstr ""
+
+#: src/rust-2024/index.md:14
+msgid "Go / no go on all items"
+msgstr ""
+
+#: src/rust-2024/index.md:15
+msgid "2024-10-17"
+msgstr ""
+
+#: src/rust-2024/index.md:15
+msgid "Release v1.82"
+msgstr ""
+
+#: src/rust-2024/index.md:15
+msgid "Rust 2024 nightly beta"
+msgstr ""
+
+#: src/rust-2024/index.md:16
+msgid "2024-11-22"
+msgstr ""
+
+#: src/rust-2024/index.md:16
+msgid "Branch  v1.84"
+msgstr ""
+
+#: src/rust-2024/index.md:16
+msgid "Prepare to stabilize..."
+msgstr ""
+
+#: src/rust-2024/index.md:17
+msgid "2024-11-28"
+msgstr ""
+
+#: src/rust-2024/index.md:17
+msgid "Release v1.83"
+msgstr ""
+
+#: src/rust-2024/index.md:17
+msgid "Stabilize Rust 2024 on master"
+msgstr ""
+
+#: src/rust-2024/index.md:18
+msgid "2025-01-03"
+msgstr ""
+
+#: src/rust-2024/index.md:18
+msgid "Branch  v1.85"
+msgstr ""
+
+#: src/rust-2024/index.md:18
+msgid "Cut Rust 2024 to beta"
+msgstr ""
+
+#: src/rust-2024/index.md:19
+msgid "2025-01-09"
+msgstr ""
+
+#: src/rust-2024/index.md:19
+msgid "Release v1.84"
+msgstr ""
+
+#: src/rust-2024/index.md:19
+msgid "Announce Rust 2024 is pending!"
+msgstr ""
+
+#: src/rust-2024/index.md:20
+msgid "2025-02-20"
+msgstr ""
+
+#: src/rust-2024/index.md:20
+msgid "Release v1.85"
+msgstr ""
+
+#: src/rust-2024/index.md:20
+msgid "Release Rust 2024"
+msgstr ""
+
+#: src/rust-2024/index.md:22
+msgid "Our motivating priorities for this edition are to:"
+msgstr ""
+
+#: src/rust-2024/index.md:24
+msgid "Make _this_ edition a success."
+msgstr ""
+
+#: src/rust-2024/index.md:25
+msgid "Do so without requiring heroics from anyone."
+msgstr ""
+
+#: src/rust-2024/index.md:26
+msgid "...or stressing anyone or everyone out."
+msgstr ""
+
+#: src/rust-2024/index.md:28
+msgid ""
+"Consequently, it's possible that things could change if needed so as to "
+"better adhere to those guiding priorities.  This is a project run by "
+"volunteers."
+msgstr ""
+
+#: src/rust-2024/index.md:30
+msgid "However, at the moment, **the edition is on track**."
+msgstr ""
