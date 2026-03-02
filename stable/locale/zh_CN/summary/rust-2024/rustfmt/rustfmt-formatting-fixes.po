@@ -1,0 +1,424 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:41:59Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:1
+msgid "Rustfmt: Formatting fixes"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:5
+msgid "Fixes to various formatting scenarios."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:7
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:9
+msgid ""
+"The 2024 style edition introduces several fixes to various formatting "
+"scenarios."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:11
+msgid ""
+"Don't align unrelated trailing comments after items or at the end of blocks"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:17
+msgid ""
+"Previously rustfmt would assume that a comment on a line following an item "
+"with a trailing comment should be indented to match the trailing comment. "
+"This has been changed so that those comments are not indented."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:19
+#: src/rust-2024/rustfmt-formatting-fixes.md:94
+#: src/rust-2024/rustfmt-formatting-fixes.md:120
+#: src/rust-2024/rustfmt-formatting-fixes.md:160
+#: src/rust-2024/rustfmt-formatting-fixes.md:198
+#: src/rust-2024/rustfmt-formatting-fixes.md:238
+#: src/rust-2024/rustfmt-formatting-fixes.md:263
+#: src/rust-2024/rustfmt-formatting-fixes.md:297
+#: src/rust-2024/rustfmt-formatting-fixes.md:328
+#: src/rust-2024/rustfmt-formatting-fixes.md:366
+#: src/rust-2024/rustfmt-formatting-fixes.md:412
+#: src/rust-2024/rustfmt-formatting-fixes.md:442
+#: src/rust-2024/rustfmt-formatting-fixes.md:473
+#: src/rust-2024/rustfmt-formatting-fixes.md:519
+#: src/rust-2024/rustfmt-formatting-fixes.md:550
+#: src/rust-2024/rustfmt-formatting-fixes.md:580
+#: src/rust-2024/rustfmt-formatting-fixes.md:616
+msgid "**Style edition 2021:**"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:22
+msgid ""
+"// Supports multicast\n"
+"                                                 // Multicast using "
+"broadcst. add.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:25
+#: src/rust-2024/rustfmt-formatting-fixes.md:50
+msgid "// CREATE TABLE\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:26
+#: src/rust-2024/rustfmt-formatting-fixes.md:51
+msgid "// DROP TABLE\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:27
+msgid ""
+"// CREATE INDEX\n"
+"                                   //const SQ_DRPIDX: u16 = 0x0011; // DROP "
+"INDEX\n"
+"                                   //const SQ_GRANT: u16 = 0x0012;  // "
+"GRANT\n"
+"                                   //const SQ_REVOKE: u16 = 0x0013; // "
+"REVOKE\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:33
+msgid ""
+"// Donec consequat mi. Quisque vitae dolor. Integer lobortis. Maecenas id "
+"nulla. Lorem.\n"
+"                   // Id turpis. Nam posuere lectus vitae nibh. Etiam tortor "
+"orci, sagittis\n"
+"                   // malesuada, rhoncus quis, hendrerit eget, libero. "
+"Quisque commodo nulla at\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:38
+msgid ""
+"// [-1.0, 1.0]\n"
+"                                                                   // "
+"TODO(emilio): It may make sense to make this range [.01, 10.0], to align\n"
+"                                                                   // with "
+"css-fonts-4's range of [1, 1000].\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:44
+#: src/rust-2024/rustfmt-formatting-fixes.md:107
+#: src/rust-2024/rustfmt-formatting-fixes.md:133
+#: src/rust-2024/rustfmt-formatting-fixes.md:175
+#: src/rust-2024/rustfmt-formatting-fixes.md:213
+#: src/rust-2024/rustfmt-formatting-fixes.md:246
+#: src/rust-2024/rustfmt-formatting-fixes.md:276
+#: src/rust-2024/rustfmt-formatting-fixes.md:306
+#: src/rust-2024/rustfmt-formatting-fixes.md:346
+#: src/rust-2024/rustfmt-formatting-fixes.md:384
+#: src/rust-2024/rustfmt-formatting-fixes.md:422
+#: src/rust-2024/rustfmt-formatting-fixes.md:454
+#: src/rust-2024/rustfmt-formatting-fixes.md:488
+#: src/rust-2024/rustfmt-formatting-fixes.md:531
+#: src/rust-2024/rustfmt-formatting-fixes.md:560
+#: src/rust-2024/rustfmt-formatting-fixes.md:594
+#: src/rust-2024/rustfmt-formatting-fixes.md:628
+msgid "**Style edition 2024:**"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:47
+msgid ""
+"// Supports multicast\n"
+"// Multicast using broadcst. add.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:52
+msgid ""
+"// CREATE INDEX\n"
+"//const SQ_DRPIDX: u16 = 0x0011; // DROP INDEX\n"
+"//const SQ_GRANT: u16 = 0x0012;  // GRANT\n"
+"//const SQ_REVOKE: u16 = 0x0013; // REVOKE\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:58
+msgid ""
+"// Donec consequat mi. Quisque vitae dolor. Integer lobortis. Maecenas id "
+"nulla. Lorem.\n"
+"    // Id turpis. Nam posuere lectus vitae nibh. Etiam tortor orci, "
+"sagittis\n"
+"    // malesuada, rhoncus quis, hendrerit eget, libero. Quisque commodo "
+"nulla at\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:63
+msgid ""
+"// [-1.0, 1.0]\n"
+"    // TODO(emilio): It may make sense to make this range [.01, 10.0], to "
+"align\n"
+"    // with css-fonts-4's range of [1, 1000].\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:69
+msgid "Don't indent strings in comments"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:79
+msgid ""
+"Previously rustfmt would incorrectly attempt to format strings in comments."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:81
+#: src/rust-2024/rustfmt-formatting-fixes.md:508
+msgid "**Original:**"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:85
+msgid ""
+"/*   let s = String::from(\n"
+"        \"\n"
+"hello\n"
+"world\n"
+"\",\n"
+"    ); */"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:98
+msgid ""
+"/*   let s = String::from(\n"
+"            \"\n"
+"    hello\n"
+"    world\n"
+"    \",\n"
+"        ); */"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:109
+msgid "No change from original."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:111
+msgid "Long strings don't prevent formatting expressions"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:118
+msgid ""
+"In some situations, long strings would previously prevent the expression "
+"from being formatted."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:124
+#: src/rust-2024/rustfmt-formatting-fixes.md:138
+msgid ""
+"\"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia "
+"deserunt mollit anim id est laborum.\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:127
+#: src/rust-2024/rustfmt-formatting-fixes.md:146
+msgid "\"long_long_long_long_long_long_long_lo_long_long_long_long_long_long__long_long_long_long_long_long_\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:128
+#: src/rust-2024/rustfmt-formatting-fixes.md:147
+msgid "\"long_long_long_long_long_long_long_long_long_long_lo_long_long_lolong_long_long_lo_long_long_lolong_long_long_lo_long_long_lo\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:152
+msgid "Fixed indentation of generics in impl blocks"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:158
+msgid "Generics in `impl` items had excessive indentation."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:190
+msgid "Use correct indentation when formatting a complex `fn`"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:196
+msgid ""
+"In some cases, a complex `fn` signature could end up with an unusual "
+"indentation that is now fixed."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:230
+msgid "Avoid extra space in nested tuple indexing expression"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:236
+msgid ""
+"Nested tuple indexing expressions would incorrectly include an extra space."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:254
+msgid "End return/break/continue inside a block in a match with a semicolon"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:261
+msgid ""
+"A `return`, `break`, or `continue` inside a block in a match arm was "
+"incorrectly missing a semicolon."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:271
+#: src/rust-2024/rustfmt-formatting-fixes.md:284
+msgid "\"\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:289
+msgid "Long array and slice patterns are now wrapped"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:295
+msgid "Long array and slice patterns were not getting wrapped properly."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:319
+msgid "Format the last expression-statement as an expression"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:326
+msgid ""
+"The last statement in a block which is an expression is now formatted as an "
+"expression."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:358
+msgid "Same formatting between function and macro calls"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:364
+msgid ""
+"Some formatting is now the same in a macro invocation as it is in a function "
+"call."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:404
+msgid "Force block closures for closures with a single loop body"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:410
+msgid "Closures with a single loop are now formatted as a block expression."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:417
+#: src/rust-2024/rustfmt-formatting-fixes.md:428
+msgid "\"iteration\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:434
+msgid "Empty lines in where clauses are now removed"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:440
+msgid "Empty lines in a `where` clause are now removed."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:465
+msgid "Fixed formatting of a let-else statement with an attribute"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:471
+msgid ""
+"If a let-else statement had an attribute, then it would cause the `else` "
+"clause to incorrectly wrap the `else` part separately."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:477
+#: src/rust-2024/rustfmt-formatting-fixes.md:492
+msgid "\"linux\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:483
+#: src/rust-2024/rustfmt-formatting-fixes.md:495
+msgid "// This is the same without an attribute.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:500
+msgid "Off-by-one error for wrapping enum variant doc comments"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:506
+msgid ""
+"When using the `wrap_comments` feature, the comments were being wrapped at a "
+"column width off-by-one."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:512
+#: src/rust-2024/rustfmt-formatting-fixes.md:535
+msgid ""
+"/// But here, this comment is 120 columns wide and the formatter wants to "
+"split it up onto two separate lines still.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:514
+#: src/rust-2024/rustfmt-formatting-fixes.md:526
+#: src/rust-2024/rustfmt-formatting-fixes.md:537
+msgid ""
+"/// This comment is 119 columns wide and works perfectly. Lorem ipsum. lorem "
+"ipsum. lorem ipsum. lorem ipsum lorem.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:523
+msgid ""
+"/// But here, this comment is 120 columns wide and the formatter wants to "
+"split it up onto two separate lines\n"
+"    /// still.\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:542
+msgid "Off-by-one error for `format_macro_matchers`"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:548
+msgid ""
+"When using the `format_macro_matchers` feature, the matcher was being "
+"wrapped at a column width off-by-one."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:572
+msgid "Fixed failure with `=>` in comment after match `=>`"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:578
+msgid ""
+"In certain circumstances if a comment contained a `=>` after the `=>` in a "
+"match expression, this would cause a failure to format correctly."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:586
+#: src/rust-2024/rustfmt-formatting-fixes.md:600
+msgid "// comment with =>\n"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:588
+#: src/rust-2024/rustfmt-formatting-fixes.md:602
+msgid "\"A\""
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:608
+msgid "Multiple inner attributes in a match expression indented incorrectly"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:614
+msgid ""
+"Multiple inner attributes in a match expression were being indented "
+"incorrectly."
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:640
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/rustfmt-formatting-fixes.md:642
+msgid ""
+"The change can be applied automatically by running `cargo fmt` or `rustfmt` "
+"with the 2024 Edition. See the [Style edition](rustfmt-style-edition.md) "
+"chapter for more information on migrating and how style editions work."
+msgstr ""
