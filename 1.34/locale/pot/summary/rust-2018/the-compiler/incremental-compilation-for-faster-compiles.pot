@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:1
+msgid "Incremental Compilation"
+msgstr ""
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:3
+msgid ""
+"![Minimum Rust version: 1.24](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.24-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:5
+msgid ""
+"Back in September of 2016, we [blogged about Incremental Compilation]"
+"(https://blog.rust-lang.org/2016/09/08/incremental.html). While that post "
+"goes into the details, the idea is basically this: when you’re working on a "
+"project, you often compile it, then change something small, then compile "
+"again. Historically, the compiler has compiled your entire project, no "
+"matter how little you’ve changed the code. The idea with incremental "
+"compilation is that you only need to compile the code you’ve actually "
+"changed, which means that that second build is faster."
+msgstr ""
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:14
+msgid ""
+"This is now turned on by default. This means that your builds should be "
+"faster! Don’t forget about cargo check when trying to get the lowest "
+"possible build times."
+msgstr ""
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:18
+msgid ""
+"This is still not the end story for compiler performance generally, nor "
+"incremental compilation specifically. We have a lot more work planned in the "
+"future."
+msgstr ""
+
+#: src/rust-2018/the-compiler/incremental-compilation-for-faster-compiles.md:22
+msgid ""
+"One small note about this change: it makes builds faster, but makes the "
+"final binary a bit slower. For this reason, it's not turned on in release "
+"builds."
+msgstr ""
