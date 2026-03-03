@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:1
+msgid "`T: 'a` inference in structs"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:3
+msgid ""
+"![Minimum Rust version: 1.31](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.31-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:5
+msgid ""
+"An annotation in the form of `T: 'a`, where `T` is either a type or another "
+"lifetime, is called an _\"outlives\"_ requirement. Note that _\"outlives\"_ "
+"also implies `'a: 'a`."
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:9
+msgid ""
+"One way in which edition 2018 helps you out in maintaining flow when writing "
+"programs is by removing the need to explicitly annotate these `T: 'a` "
+"outlives requirements in `struct` definitions. Instead, the requirements "
+"will be inferred from the fields present in the definitions."
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:14
+msgid "Consider the following `struct` definitions in Rust 2015:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:17
+msgid "// Rust 2015\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:22
+msgid "// or written with a `where` clause:\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:28
+msgid "// with nested references:\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:34
+msgid "// using an associated type:\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:45
+msgid ""
+"In Rust 2018, since the requirements are inferred, you can instead write:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:48
+msgid "// Rust 2018\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:67
+msgid ""
+"If you prefer to be more explicit in some cases, that is still possible."
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:69
+msgid "More details"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:71
+msgid ""
+"For more details, see [the tracking issue](https://github.com/rust-lang/rust/"
+"issues/44493) and [the RFC](https://github.com/rust-lang/rfcs/pull/2093)."
+msgstr ""
