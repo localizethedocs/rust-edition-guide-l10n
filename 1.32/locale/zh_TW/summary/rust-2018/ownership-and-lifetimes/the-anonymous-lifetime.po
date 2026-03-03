@@ -55,7 +55,7 @@ msgstr ""
 
 #: src/rust-2018/ownership-and-lifetimes/the-anonymous-lifetime.md:57
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/ownership-and-lifetimes/the-anonymous-lifetime.md:59
 msgid ""
