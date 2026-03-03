@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/rust-2021/raw-lifetimes.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/raw-lifetimes.md:9
 msgid ""

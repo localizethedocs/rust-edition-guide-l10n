@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2018/cargo.md:1
 msgid "Cargo changes"
-msgstr ""
+msgstr "Cargo 變更"
 
 #: src/rust-2018/cargo.md:3
 msgid "Summary"
