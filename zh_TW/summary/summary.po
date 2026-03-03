@@ -1,0 +1,232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "The Rust Edition Guide"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr "介紹"
+
+#: src/SUMMARY.md:5 src/SUMMARY.md:7
+msgid "What are editions?"
+msgstr "什麼是版次？"
+
+#: src/SUMMARY.md:8
+msgid "Creating a new project"
+msgstr "建立一個新專案"
+
+#: src/SUMMARY.md:9
+msgid "Transitioning an existing project to a new edition"
+msgstr ""
+
+#: src/SUMMARY.md:10
+msgid "Advanced migrations"
+msgstr "進階遷移"
+
+#: src/SUMMARY.md:12 src/SUMMARY.md:14
+msgid "Rust 2015"
+msgstr ""
+
+#: src/SUMMARY.md:16 src/SUMMARY.md:18
+msgid "Rust 2018"
+msgstr ""
+
+#: src/SUMMARY.md:19
+msgid "Path and module system changes"
+msgstr "路徑與模組系統變更"
+
+#: src/SUMMARY.md:20
+msgid "Anonymous trait function parameters deprecated"
+msgstr ""
+
+#: src/SUMMARY.md:21
+msgid "New keywords"
+msgstr "新關鍵字"
+
+#: src/SUMMARY.md:22
+msgid "Method dispatch for raw pointers to inference variables"
+msgstr ""
+
+#: src/SUMMARY.md:23
+msgid "Cargo changes"
+msgstr "Cargo 變更"
+
+#: src/SUMMARY.md:25 src/SUMMARY.md:27
+msgid "Rust 2021"
+msgstr ""
+
+#: src/SUMMARY.md:28
+msgid "Additions to the prelude"
+msgstr ""
+
+#: src/SUMMARY.md:29
+msgid "Default Cargo feature resolver"
+msgstr ""
+
+#: src/SUMMARY.md:30
+msgid "IntoIterator for arrays"
+msgstr ""
+
+#: src/SUMMARY.md:31
+msgid "Disjoint capture in closures"
+msgstr ""
+
+#: src/SUMMARY.md:32
+msgid "Panic macro consistency"
+msgstr ""
+
+#: src/SUMMARY.md:33 src/SUMMARY.md:56
+msgid "Reserved syntax"
+msgstr "保留語法"
+
+#: src/SUMMARY.md:34
+msgid "Raw lifetimes"
+msgstr ""
+
+#: src/SUMMARY.md:35
+msgid "Warnings promoted to errors"
+msgstr ""
+
+#: src/SUMMARY.md:36
+msgid "Or patterns in macro-rules"
+msgstr ""
+
+#: src/SUMMARY.md:37
+msgid "C-string literals"
+msgstr ""
+
+#: src/SUMMARY.md:39 src/SUMMARY.md:41
+msgid "Rust 2024"
+msgstr ""
+
+#: src/SUMMARY.md:42
+msgid "Language"
+msgstr "語言"
+
+#: src/SUMMARY.md:43
+msgid "RPIT lifetime capture rules"
+msgstr ""
+
+#: src/SUMMARY.md:44
+msgid "`if let` temporary scope"
+msgstr ""
+
+#: src/SUMMARY.md:45
+msgid "`let` chains in `if` and `while`"
+msgstr ""
+
+#: src/SUMMARY.md:46
+msgid "Tail expression temporary scope"
+msgstr ""
+
+#: src/SUMMARY.md:47
+msgid "Match ergonomics reservations"
+msgstr ""
+
+#: src/SUMMARY.md:48
+msgid "Unsafe `extern` blocks"
+msgstr ""
+
+#: src/SUMMARY.md:49
+msgid "Unsafe attributes"
+msgstr ""
+
+#: src/SUMMARY.md:50
+msgid "`unsafe_op_in_unsafe_fn` warning"
+msgstr ""
+
+#: src/SUMMARY.md:51
+msgid "Disallow references to `static mut`"
+msgstr ""
+
+#: src/SUMMARY.md:52
+msgid "Never type fallback change"
+msgstr ""
+
+#: src/SUMMARY.md:53
+msgid "Macro fragment specifiers"
+msgstr ""
+
+#: src/SUMMARY.md:54
+msgid "Missing macro fragment specifiers"
+msgstr ""
+
+#: src/SUMMARY.md:55
+msgid "`gen` keyword"
+msgstr "`gen` 關鍵字"
+
+#: src/SUMMARY.md:57
+msgid "Standard library"
+msgstr ""
+
+#: src/SUMMARY.md:58
+msgid "Changes to the prelude"
+msgstr ""
+
+#: src/SUMMARY.md:59
+msgid "Add `IntoIterator` for `Box<[T]>`"
+msgstr ""
+
+#: src/SUMMARY.md:60
+msgid "Newly unsafe functions"
+msgstr ""
+
+#: src/SUMMARY.md:61
+msgid "Cargo"
+msgstr "Cargo"
+
+#: src/SUMMARY.md:62
+msgid "Cargo: Rust-version aware resolver"
+msgstr ""
+
+#: src/SUMMARY.md:63
+msgid "Cargo: Table and key name consistency"
+msgstr ""
+
+#: src/SUMMARY.md:64
+msgid "Cargo: Reject unused inherited default-features"
+msgstr ""
+
+#: src/SUMMARY.md:65
+msgid "Rustdoc"
+msgstr "Rustdoc"
+
+#: src/SUMMARY.md:66
+msgid "Rustdoc combined tests"
+msgstr ""
+
+#: src/SUMMARY.md:67
+msgid "Rustdoc nested `include!` change"
+msgstr ""
+
+#: src/SUMMARY.md:68
+msgid "Rustfmt"
+msgstr ""
+
+#: src/SUMMARY.md:69
+msgid "Rustfmt: Style edition"
+msgstr ""
+
+#: src/SUMMARY.md:70
+msgid "Rustfmt: Formatting fixes"
+msgstr ""
+
+#: src/SUMMARY.md:71
+msgid "Rustfmt: Raw identifier sorting"
+msgstr ""
+
+#: src/SUMMARY.md:72
+msgid "Rustfmt: Version sorting"
+msgstr ""

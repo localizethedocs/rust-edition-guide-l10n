@@ -1,0 +1,386 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/static-mut-references.md:1
+msgid "Disallow references to static mut"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2024/static-mut-references.md:5
+msgid ""
+"The [`static_mut_refs`](../../rustc/lints/listing/warn-by-default."
+"html#static-mut-refs) lint level is now `deny` by default. This checks for "
+"taking a shared or mutable reference to a `static mut`."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:10
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2024/static-mut-references.md:12
+msgid ""
+"The [`static_mut_refs`](../../rustc/lints/listing/warn-by-default."
+"html#static-mut-refs) lint detects taking a reference to a [`static mut`]"
+"(../../reference/items/static-items.html#mutable-statics). In the 2024 "
+"Edition, this lint is now `deny` by default to emphasize that you should "
+"avoid making these references."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:20
+#: src/rust-2024/static-mut-references.md:21
+#: src/rust-2024/static-mut-references.md:22
+#: src/rust-2024/static-mut-references.md:35
+#: src/rust-2024/static-mut-references.md:36
+msgid "// ERROR: shared reference to mutable static\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:26
+msgid ""
+"Merely taking such a reference in violation of Rust's mutability XOR "
+"aliasing requirement has always been _instantaneous_ [undefined behavior]"
+"(../../reference/behavior-considered-undefined.html), **even if the "
+"reference is never read from or written to**.  Furthermore, upholding "
+"mutability XOR aliasing for a `static mut` requires _reasoning about your "
+"code globally_, which can be particularly difficult in the face of "
+"reentrancy and/or multithreading."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:28
+msgid ""
+"Note that there are some cases where implicit references are automatically "
+"created without a visible `&` operator. For example, these situations will "
+"also trigger the lint:"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:35
+msgid "\"{NUMS:?}\""
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:40
+msgid "Alternatives"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:42
+msgid ""
+"Wherever possible, it is **strongly recommended** to use instead an "
+"_immutable_ `static` of a type that provides _interior mutability_ behind "
+"some _locally-reasoned abstraction_ (which greatly reduces the complexity of "
+"ensuring that Rust's mutability XOR aliasing requirement is upheld)."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:44
+msgid ""
+"In situations where no locally-reasoned abstraction is possible and you are "
+"therefore compelled still to reason globally about accesses to your `static` "
+"variable, you must now use raw pointers such as can be obtained via the "
+"[`&raw const` or `&raw mut` operators](../../reference/expressions/operator-"
+"expr.html#raw-borrow-operators).  By first obtaining a raw pointer rather "
+"than directly taking a reference, (the safety requirements of) accesses "
+"through that pointer will be more familiar to `unsafe` developers and can be "
+"deferred until/limited to smaller regions of code."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:51
+msgid ""
+"Note that the following examples are just illustrations and are not intended "
+"as full-fledged implementations. Do not copy these as-is. There are details "
+"for your specific situation that may require alterations to fit your needs. "
+"These are intended to help you see different ways to approach your problem."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:53
+msgid ""
+"It is recommended to read the documentation for the specific types in the "
+"standard library, the reference on [undefined behavior](../../reference/"
+"behavior-considered-undefined.html), the [Rustonomicon](../../nomicon/index."
+"html), and if you are having questions to reach out on one of the Rust "
+"forums such as the [Users Forum](https://users.rust-lang.org/)."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:59
+msgid "Don't use globals"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:61
+msgid ""
+"This is probably something you already know, but if possible it is best to "
+"avoid mutable global state. Of course this can be a little more awkward or "
+"difficult at times, particularly if you need to pass a mutable reference "
+"around between many functions."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:63
+msgid "Atomics"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:65
+msgid ""
+"The [atomic types](../../std/sync/atomic/index.html) provide integers, "
+"pointers, and booleans that can be used in a `static` (without `mut`)."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:70
+msgid ""
+"// Change from this:\n"
+"//   static mut COUNTER: u64 = 0;\n"
+"// to this:\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:77
+msgid ""
+"// Be sure to analyze your use case to determine the correct Ordering to "
+"use.\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:84
+msgid "Mutex or RwLock"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:86
+msgid ""
+"When your type is more complex than an atomic, consider using a [`Mutex`]"
+"(../../std/sync/struct.Mutex.html) or [`RwLock`](../../std/sync/struct."
+"RwLock.html) to ensure proper access to the global value."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:91
+msgid ""
+"// Change from this:\n"
+"//     static mut QUEUE: VecDeque<String> = VecDeque::new();\n"
+"// to this:\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:98
+msgid "\"abc\""
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:106
+msgid "OnceLock or LazyLock"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:108
+msgid ""
+"If you are using a `static mut` because you need to do some one-time "
+"initialization that can't be `const`, you can instead reach for [`OnceLock`]"
+"(../../std/sync/struct.OnceLock.html) or [`LazyLock`](../../std/sync/struct."
+"LazyLock.html) instead."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:121
+msgid ""
+"// Instead of some temporary or uninitialized type like:\n"
+"//     static mut STATE: Option<GlobalState> = None;\n"
+"// use this instead:\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:134
+msgid ""
+"[`OnceLock`](../../std/sync/struct.OnceLock.html) is similar to [`LazyLock`]"
+"(../../std/sync/struct.LazyLock.html), but can be used if you need to pass "
+"information into the constructor, which can work well with single "
+"initialization points (like `main`), or if the inputs are available wherever "
+"you access the global."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:161
+#: src/rust-2024/static-mut-references.md:238
+msgid "// ...\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:169
+msgid "`no_std` one-time initialization"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:171
+msgid ""
+"This example is similar to [`OnceLock`](../../std/sync/struct.OnceLock.html) "
+"in that it provides one-time initialization of a global, but it does not "
+"require `std` which is useful in a `no_std` context. Assuming your target "
+"supports atomics, then you can use an atomic to check for the initialization "
+"of the global. The pattern might look something like this:"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:215
+msgid ""
+"// SAFETY: The reads and writes to STATE are guarded with the INITIALIZED "
+"guard.\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:221
+msgid "\"already initialized, or concurrent initialization\""
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:227
+msgid "\"not initialized\""
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:229
+msgid ""
+"// SAFETY: Mutable access is not possible after state has been initialized.\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:244
+msgid ""
+"This example assumes you can put some default value in the static before it "
+"is initialized (the const `default` constructor in this example). If that is "
+"not possible, consider using either [`MaybeUninit`](../../core/mem/union."
+"MaybeUninit.html), or dynamic trait dispatch (with a dummy type that "
+"implements a trait), or some other approach to have a default placeholder."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:246
+msgid ""
+"There are community-provided crates that can provide similar one-time "
+"initialization, such as the [`static-cell`](https://crates.io/crates/"
+"static_cell) crate (which supports targets that do not have atomics by using "
+"[`portable-atomic`](https://crates.io/crates/portable-atomic))."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:252
+msgid "Raw pointers"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:254
+msgid ""
+"In some cases you can continue to use `static mut`, but avoid creating "
+"references. For example, if you just need to pass [raw pointers](../../"
+"reference/types/pointer.html#raw-pointers-const-and-mut) into a C library, "
+"don't create an intermediate reference. Instead you can use [raw borrow "
+"operators](../../reference/expressions/operator-expr.html#raw-borrow-"
+"operators), like in the following example:"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:270
+msgid "\"C\""
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:276
+msgid ""
+"// Change from this:\n"
+"        //     example_ffi(&mut STATE as *mut GlobalState);\n"
+"        // to this:\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:284
+msgid ""
+"Just beware that you still need to uphold the aliasing constraints around "
+"mutable pointers. This may require some internal or external synchronization "
+"or proofs about how it is used across threads, interrupt handlers, and "
+"reentrancy."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:289
+msgid "`UnsafeCell` with `Sync`"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:291
+msgid ""
+"[`UnsafeCell`](../../std/cell/struct.UnsafeCell.html) does not impl `Sync`, "
+"so it cannot be used in a `static`. You can create your own wrapper around "
+"[`UnsafeCell`](../../std/cell/struct.UnsafeCell.html) to add a `Sync` impl "
+"so that it can be used in a `static` to implement interior mutability. This "
+"approach can be useful if you have external locks or other guarantees that "
+"uphold the safety invariants required for mutable pointers."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:293
+msgid ""
+"Note that this is largely the same as the [raw pointers](#raw-pointers) "
+"example. The wrapper helps to emphasize how you are using the type, and "
+"focus on which safety requirements you should be careful of. But otherwise "
+"they are roughly the same."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:299
+msgid "// A real example would disable interrupts.\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:325
+msgid ""
+"// SAFETY: This value is only ever read in our interrupt handler,\n"
+"            // and interrupts are disabled, and we only use this in one "
+"thread.\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:333
+msgid ""
+"The standard library has a nightly-only (unstable) variant of [`UnsafeCell`]"
+"(../../std/cell/struct.UnsafeCell.html) called [`SyncUnsafeCell`](../../std/"
+"cell/struct.SyncUnsafeCell.html). This example above shows a very simplified "
+"version of the standard library type, but would be used roughly the same "
+"way. It can provide even better isolation, so do check out its "
+"implementation for more details."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:335
+msgid ""
+"This example includes a fictional `with_interrupts_disabled` function which "
+"is the type of thing you might see in an embedded environment. For example, "
+"the [`critical-section`](https://crates.io/crates/critical-section) crate "
+"provides a similar kind of functionality that could be used for an embedded "
+"environment."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:341
+msgid "Safe references"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:343
+msgid ""
+"In some cases it may be safe to create a reference of a `static mut`. The "
+"whole point of the [`static_mut_refs`](../../rustc/lints/listing/warn-by-"
+"default.html#static-mut-refs) lint is that this is very hard to do "
+"correctly! However, that's not to say it is _impossible_. If you have a "
+"situation where you can guarantee that the aliasing requirements are upheld, "
+"such as guaranteeing the static is narrowly scoped (only used in a small "
+"module or function), has some internal or external synchronization, accounts "
+"for interrupt handlers and reentrancy, panic safety, drop handlers, etc., "
+"then taking a reference may be fine."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:345
+msgid ""
+"There are two approaches you can take for this. You can either allow the "
+"[`static_mut_refs`](../../rustc/lints/listing/warn-by-default.html#static-"
+"mut-refs) lint (preferably as narrowly as you can), or convert raw pointers "
+"to a reference, as with `&mut *&raw mut MY_STATIC`."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:349
+msgid "Short-lived references"
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:351
+msgid ""
+"If you must create a reference to a `static mut`, then it is recommended to "
+"minimize the scope of how long that reference exists. Avoid squirreling the "
+"reference away somewhere, or keeping it alive through a large section of "
+"code. Keeping it short-lived helps with auditing, and verifying that "
+"exclusive access is maintained for the duration. Using pointers should be "
+"your default unit, and only convert the pointer to a reference on demand "
+"when absolutely required."
+msgstr ""
+
+#: src/rust-2024/static-mut-references.md:353
+msgid "Migration"
+msgstr "遷移"
+
+#: src/rust-2024/static-mut-references.md:355
+msgid ""
+"There is no automatic migration to fix these references to `static mut`. To "
+"avoid undefined behavior you must rewrite your code to use a different "
+"approach as recommended in the [Alternatives](#alternatives) section."
+msgstr ""
