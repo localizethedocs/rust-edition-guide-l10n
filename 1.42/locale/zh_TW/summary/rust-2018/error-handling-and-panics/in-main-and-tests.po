@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:80
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/error-handling-and-panics/question-mark-in-main-and-tests.md:82
 msgid ""
