@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/editions/index.md:29
 msgid "Editions do not split the ecosystem"
-msgstr ""
+msgstr "版次不會分裂生態系統"
 
 #: src/editions/index.md:31
 msgid ""
