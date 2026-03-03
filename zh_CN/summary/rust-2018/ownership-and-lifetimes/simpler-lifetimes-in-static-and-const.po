@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:02:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:1
+msgid "Simpler lifetimes in `static` and `const`"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:3
+msgid ""
+"![Minimum Rust version: 1.17](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.17-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:5
+msgid ""
+"In older Rust, you had to explicitly write the `'static` lifetime in any "
+"`static` or `const` that needed a lifetime:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:10
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:13
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:22
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:25
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:34
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:39
+msgid "\"Ferris\""
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:17
+msgid ""
+"But `'static` is the only possible lifetime there. So Rust now assumes the "
+"`'static` lifetime, and you don't have to write it out:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:29
+msgid "In some situations, this can remove a _lot_ of boilerplate:"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:32
+msgid "// old\n"
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:34
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:39
+msgid "\"Bors\""
+msgstr ""
+
+#: src/rust-2018/ownership-and-lifetimes/simpler-lifetimes-in-static-and-const.md:37
+msgid "// new\n"
+msgstr ""
