@@ -21,7 +21,7 @@ msgstr "介紹"
 
 #: src/SUMMARY.md:5 src/SUMMARY.md:7
 msgid "What are editions?"
-msgstr ""
+msgstr "什麼是版次？"
 
 #: src/SUMMARY.md:8
 msgid "Creating a new project"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/SUMMARY.md:20
 msgid "New keywords"
-msgstr ""
+msgstr "新關鍵字"
 
 #: src/SUMMARY.md:21
 msgid "Method dispatch for raw pointers to inference variables"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/SUMMARY.md:22
 msgid "Cargo changes"
-msgstr ""
+msgstr "Cargo 變更"
 
 #: src/SUMMARY.md:24
 msgid "Rust 2021"

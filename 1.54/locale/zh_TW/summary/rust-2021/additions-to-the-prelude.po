@@ -21,7 +21,7 @@ msgstr "摘要"
 
 #: src/rust-2021/prelude.md:5
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/prelude.md:7
 msgid ""
