@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/rust-2024/cargo-inherited-default-features.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/cargo-inherited-default-features.md:9
 msgid ""
