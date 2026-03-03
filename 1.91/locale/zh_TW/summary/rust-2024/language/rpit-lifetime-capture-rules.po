@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/rust-2024/rpit-lifetime-capture.md:13
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/rpit-lifetime-capture.md:15
 msgid "Capturing"

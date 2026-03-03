@@ -39,7 +39,7 @@ msgstr ""
 
 #: src/rust-2021/or-patterns-macro-rules.md:10
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/or-patterns-macro-rules.md:12
 msgid ""
