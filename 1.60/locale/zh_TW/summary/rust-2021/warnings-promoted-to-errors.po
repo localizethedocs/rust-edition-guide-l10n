@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/rust-2021/warnings-promoted-to-error.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/warnings-promoted-to-error.md:9
 msgid ""
@@ -80,7 +80,7 @@ msgstr ""
 
 #: src/rust-2021/warnings-promoted-to-error.md:42
 msgid "Migrations"
-msgstr ""
+msgstr "遷移"
 
 #: src/rust-2021/warnings-promoted-to-error.md:44
 msgid ""
