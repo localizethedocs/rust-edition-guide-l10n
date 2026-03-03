@@ -72,7 +72,7 @@ msgstr ""
 
 #: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:69
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/ownership-and-lifetimes/inference-in-structs.md:71
 msgid ""

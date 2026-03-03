@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/rust-2018/ownership-and-lifetimes/default-match-bindings.md:37
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/ownership-and-lifetimes/default-match-bindings.md:39
 msgid ""
