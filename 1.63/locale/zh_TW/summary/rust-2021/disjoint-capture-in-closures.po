@@ -37,7 +37,7 @@ msgstr ""
 
 #: src/rust-2021/disjoint-capture-in-closures.md:9
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/disjoint-capture-in-closures.md:11
 msgid ""
