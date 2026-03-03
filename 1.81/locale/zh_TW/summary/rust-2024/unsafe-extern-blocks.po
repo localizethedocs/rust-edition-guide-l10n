@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/rust-2024/unsafe-extern.md:12
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/unsafe-extern.md:14
 msgid ""
