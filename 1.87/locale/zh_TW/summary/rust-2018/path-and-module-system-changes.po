@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/rust-2018/path-changes.md:11
 msgid "Motivation"
-msgstr ""
+msgstr "動機"
 
 #: src/rust-2018/path-changes.md:13
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/rust-2018/path-changes.md:36
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/path-changes.md:38
 msgid "Let's talk about each new feature in turn."
@@ -200,7 +200,7 @@ msgstr ""
 
 #: src/rust-2018/path-changes.md:108
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: src/rust-2018/path-changes.md:110
 msgid ""
@@ -215,7 +215,7 @@ msgstr ""
 
 #: src/rust-2018/path-changes.md:133
 msgid "Renaming crates"
-msgstr ""
+msgstr "重新命名軟體箱"
 
 #: src/rust-2018/path-changes.md:135
 msgid "If you've been using `as` to rename your crate like this:"
