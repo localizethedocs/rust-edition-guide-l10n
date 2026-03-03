@@ -79,7 +79,7 @@ msgstr ""
 
 #: src/rust-2018/module-system/path-clarity.md:32
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/module-system/path-clarity.md:34
 msgid "Let's talk about each new feature in turn."
@@ -179,7 +179,7 @@ msgstr ""
 
 #: src/rust-2018/module-system/path-clarity.md:93
 msgid "Macros"
-msgstr ""
+msgstr "巨集"
 
 #: src/rust-2018/module-system/path-clarity.md:95
 msgid ""
