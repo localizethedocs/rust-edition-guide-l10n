@@ -21,7 +21,7 @@ msgstr "介紹"
 
 #: src/SUMMARY.md:5 src/SUMMARY.md:7
 msgid "What are editions?"
-msgstr ""
+msgstr "什麼是版次？"
 
 #: src/SUMMARY.md:8
 msgid "Creating a new project"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: src/SUMMARY.md:21
 msgid "New keywords"
-msgstr ""
+msgstr "新關鍵字"
 
 #: src/SUMMARY.md:22
 msgid "Method dispatch for raw pointers to inference variables"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/SUMMARY.md:23
 msgid "Cargo changes"
-msgstr ""
+msgstr "Cargo 變更"
 
 #: src/SUMMARY.md:25 src/SUMMARY.md:27
 msgid "Rust 2021"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/SUMMARY.md:33 src/SUMMARY.md:56
 msgid "Reserved syntax"
-msgstr ""
+msgstr "保留語法"
 
 #: src/SUMMARY.md:34
 msgid "Raw lifetimes"
@@ -113,7 +113,7 @@ msgstr ""
 
 #: src/SUMMARY.md:42
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: src/SUMMARY.md:43
 msgid "RPIT lifetime capture rules"
@@ -165,7 +165,7 @@ msgstr ""
 
 #: src/SUMMARY.md:55
 msgid "`gen` keyword"
-msgstr ""
+msgstr "`gen` 關鍵字"
 
 #: src/SUMMARY.md:57
 msgid "Standard library"
@@ -185,7 +185,7 @@ msgstr ""
 
 #: src/SUMMARY.md:61
 msgid "Cargo"
-msgstr ""
+msgstr "Cargo"
 
 #: src/SUMMARY.md:62
 msgid "Cargo: Rust-version aware resolver"
