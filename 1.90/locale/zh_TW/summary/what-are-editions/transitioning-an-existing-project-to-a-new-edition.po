@@ -42,7 +42,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:11
 msgid "Run `cargo fmt` to reformat your project."
-msgstr ""
+msgstr "執行 `cargo fmt` 來重新格式化您的專案。"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:13
 msgid ""
