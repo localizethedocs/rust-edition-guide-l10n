@@ -21,7 +21,7 @@ msgstr "介紹"
 
 #: src/SUMMARY.md:5 src/SUMMARY.md:7
 msgid "What are editions?"
-msgstr ""
+msgstr "什麼是版次？"
 
 #: src/SUMMARY.md:8
 msgid "Creating a new project"
