@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/rust-2021/reserving-syntax.md:13
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/reserving-syntax.md:15
 msgid ""
