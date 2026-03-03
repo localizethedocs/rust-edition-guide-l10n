@@ -107,7 +107,7 @@ msgstr ""
 
 #: src/rust-2018/slice-patterns.md:49
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/slice-patterns.md:51
 msgid "Exhaustive patterns"
