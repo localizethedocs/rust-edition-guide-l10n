@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2024/reserved-syntax.md:1
 msgid "Reserved syntax"
-msgstr ""
+msgstr "保留語法"
 
 #: src/rust-2024/reserved-syntax.md:3
 msgid "Summary"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: src/rust-2024/reserved-syntax.md:8
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/reserved-syntax.md:10
 msgid ""

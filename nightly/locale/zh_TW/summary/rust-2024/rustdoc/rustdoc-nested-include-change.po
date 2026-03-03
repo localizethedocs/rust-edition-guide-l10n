@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/rustdoc-nested-includes.md:9
 msgid ""
@@ -45,27 +45,27 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:13
 msgid "`Cargo.toml`"
-msgstr ""
+msgstr "`Cargo.toml`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:14
 msgid "`README.md`"
-msgstr ""
+msgstr "`README.md`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:15
 msgid "`src/`"
-msgstr ""
+msgstr "`src/`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:16
 msgid "`lib.rs`"
-msgstr ""
+msgstr "`lib.rs`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:17
 msgid "`examples/`"
-msgstr ""
+msgstr "`examples/`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:18
 msgid "`data.bin`"
-msgstr ""
+msgstr "`data.bin`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:20
 msgid "Let's say that `lib.rs` contains this:"
