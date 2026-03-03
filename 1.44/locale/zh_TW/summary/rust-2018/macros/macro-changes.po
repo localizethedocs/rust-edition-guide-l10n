@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/rust-2018/macros/macro-changes.md:79
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/macros/macro-changes.md:81
 msgid ""
