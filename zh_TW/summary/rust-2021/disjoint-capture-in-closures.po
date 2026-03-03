@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:02:24Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/disjoint-capture-in-closures.md:1
+msgid "Disjoint capture in closures"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2021/disjoint-capture-in-closures.md:5
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2021/disjoint-capture-in-closures.md:7
+msgid ""
+"[Closures](https://doc.rust-lang.org/book/ch13-01-closures.html) "
+"automatically capture anything that you refer to from within their body. For "
+"example, `|| a + 1` automatically captures a reference to `a` from the "
+"surrounding context."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:11
+msgid ""
+"Currently, this applies to whole structs, even when only using one field. "
+"For example, `|| a.x + 1` captures a reference to `a` and not just `a.x`. In "
+"some situations, this is a problem. When a field of the struct is already "
+"borrowed (mutably) or moved out of, the other fields can no longer be used "
+"in a closure, since that would capture the whole struct, which is no longer "
+"available."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:21
+msgid "// Move out of one field of the struct\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:23
+#: src/rust-2021/disjoint-capture-in-closures.md:25
+msgid "\"{}\""
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:23
+msgid "// Ok: Still use another field of the struct\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:25
+msgid "// Error: Tries to capture all of `a`\n"
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:29
+msgid ""
+"Starting in Rust 2021, closures will only capture the fields that they use. "
+"So, the above example will compile fine in Rust 2021."
+msgstr ""
+
+#: src/rust-2021/disjoint-capture-in-closures.md:32
+msgid ""
+"This new behavior is only activated in the new edition, since it can change "
+"the order in which fields are dropped. As for all edition changes, an "
+"automatic migration is available, which will update your closures for which "
+"this matters. It can insert `let _ = &a;` inside the closure to force the "
+"entire struct to be captured as before."
+msgstr ""
