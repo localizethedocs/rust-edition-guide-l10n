@@ -55,7 +55,7 @@ msgstr ""
 
 #: src/rust-2018/module-system/raw-identifiers.md:42
 msgid "Motivation"
-msgstr ""
+msgstr "動機"
 
 #: src/rust-2018/module-system/raw-identifiers.md:44
 msgid ""
@@ -68,7 +68,7 @@ msgstr ""
 
 #: src/rust-2018/module-system/raw-identifiers.md:50
 msgid "New keywords"
-msgstr ""
+msgstr "新關鍵字"
 
 #: src/rust-2018/module-system/raw-identifiers.md:52
 msgid "The new confirmed keywords in edition 2018 are:"

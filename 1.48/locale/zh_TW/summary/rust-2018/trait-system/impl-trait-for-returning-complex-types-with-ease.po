@@ -130,7 +130,7 @@ msgstr ""
 
 #: src/rust-2018/trait-system/impl-trait-for-returning-complex-types-with-ease.md:115
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/trait-system/impl-trait-for-returning-complex-types-with-ease.md:117
 msgid ""
