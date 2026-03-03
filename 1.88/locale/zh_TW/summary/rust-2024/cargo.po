@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2024/cargo.md:1
 msgid "Cargo"
-msgstr ""
+msgstr "Cargo"
 
 #: src/rust-2024/cargo.md:3
 msgid "The following chapters detail changes to Cargo in the 2024 Edition."
