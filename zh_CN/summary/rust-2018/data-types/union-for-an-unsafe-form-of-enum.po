@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:42:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:1
+msgid "`union` for an unsafe form of `enum`"
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:3
+msgid ""
+"![Minimum Rust version: 1.19](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.19-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:5
+msgid "Rust now supports `unions`:"
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:14
+msgid ""
+"Unions are kind of like enums, but they are “untagged”. Enums have a “tag” "
+"that stores which variant is the correct one at runtime; unions don't have "
+"this tag."
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:18
+msgid ""
+"Since we can interpret the data held in the union using the wrong variant "
+"and Rust can’t check this for us, that means reading a union’s field is "
+"unsafe:"
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:33
+msgid "Pattern matching works too:"
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:43
+msgid "\"ten\""
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:44
+msgid "\"{}\""
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:50
+msgid ""
+"When are unions useful? One major use-case is interoperability with C. C "
+"APIs can (and depending on the area, often do) expose unions, and so this "
+"makes writing API wrappers for those libraries significantly easier. "
+"Additionally, unions also simplify Rust implementations of space-efficient "
+"or cache-efficient structures relying on value representation, such as "
+"machine-word-sized unions using the least-significant bits of aligned "
+"pointers to distinguish cases."
+msgstr ""
+
+#: src/rust-2018/data-types/union-for-an-unsafe-form-of-enum.md:58
+msgid ""
+"There’s still more improvements to come. For now, unions can only include "
+"`Copy` types and may not implement `Drop`. We expect to lift these "
+"restrictions in the future."
+msgstr ""
