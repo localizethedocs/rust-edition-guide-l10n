@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:1
+msgid "`cargo check` for faster checking"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:3
+msgid ""
+"![Minimum Rust version: 1.16](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.16-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:5
+msgid ""
+"`cargo check` is a new subcommand should speed up the development workflow "
+"in many cases."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:8
+msgid ""
+"What does it do? Let's take a step back and talk about how `rustc` compiles "
+"your code. Compilation has many \"passes\", that is, there are many distinct "
+"steps that the compiler takes on the road from your source code to producing "
+"the final binary. However, you can think of this process in two big steps: "
+"first, `rustc` does all of its safety checks, makes sure your syntax is "
+"correct, all that stuff. Second, once it's satisfied that everything is in "
+"order, it produces the actual binary code that you end up executing."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:16
+msgid ""
+"It turns out that that second step takes a lot of time. And most of the "
+"time, it's not neccesary. That is, when you're working on some Rust code, "
+"many developers will get into a workflow like this:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:20
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:38
+msgid "Write some code."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:21
+msgid "Run `cargo build` to make sure it compiles."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:22
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:40
+msgid "Repeat 1-2 as needed."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:23
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:41
+msgid "Run `cargo test` to make sure your tests pass."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:24
+msgid "Try the binary yourself"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:25
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:43
+msgid "GOTO 1."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:27
+msgid ""
+"In step two, you never actually run your code. You're looking for feedback "
+"from the compiler, not to actually run the binary. `cargo check` supports "
+"exactly this use-case: it runs all of the compiler's checks, but doesn't "
+"produce the final binary. To use it:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:36
+msgid "where you may normally `cargo build`. The workflow now looks like:"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:39
+msgid "Run `cargo check` to make sure it compiles."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:42
+msgid "Run `cargo build` to build a binary and try it yourself"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:46
+msgid ""
+"So how much speedup do you actually get? Like most performance related "
+"questions, the answer is \"it depends.\" Here are some very un-scientific "
+"benchmarks at the time of writing."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:50
+msgid "build"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:50
+msgid "performance"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:50
+msgid "check performance"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:50
+msgid "speedup"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:52
+msgid "initial compile"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:52
+msgid "11s"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:52
+msgid "5.6s"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:52
+msgid "1.96x"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:53
+msgid "second compile (no changes)"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:53
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:54
+msgid "3s"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:53
+msgid "1.9s"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:53
+msgid "1.57x"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:54
+msgid "third compile with small change"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:54
+msgid "5.8s"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-check-for-faster-checking.md:54
+msgid "1.93x"
+msgstr ""

@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/cargo-and-crates-io/cargo-new-defaults-to-a-binary-project.md:1
+msgid "`cargo new` defaults to a binary project"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-new-defaults-to-a-binary-project.md:3
+msgid ""
+"![Minimum Rust version: 1.25](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.25-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-new-defaults-to-a-binary-project.md:5
+msgid ""
+"`cargo new` will now default to generating a binary, rather than a library. "
+"We try to keep Cargo’s CLI quite stable, but this change is important, and "
+"is unlikely to cause breakage."
+msgstr ""
+
+#: src/rust-2018/cargo-and-crates-io/cargo-new-defaults-to-a-binary-project.md:9
+msgid ""
+"For some background, cargo new accepts two flags: `--lib`, for creating "
+"libraries, and `--bin`, for creating binaries, or executables. If you don’t "
+"pass one of these flags, it used to default to `--lib`. At the time, we made "
+"this decision because each binary (often) depends on many libraries, and so "
+"we thought the library case would be more common. However, this is "
+"incorrect; each library is depended upon by many binaries. Furthermore, when "
+"getting started, what you often want is a program you can run and play "
+"around with. It’s not just new Rustaceans though; even very long-time "
+"community members have said that they find this default surprising. As such, "
+"we’ve changed it, and it now defaults to `--bin`."
+msgstr ""
