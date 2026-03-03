@@ -77,7 +77,7 @@ msgstr ""
 
 #: src/rust-2018/edition-changes.md:19
 msgid "Cargo"
-msgstr ""
+msgstr "Cargo"
 
 #: src/rust-2018/edition-changes.md:20
 msgid ""
