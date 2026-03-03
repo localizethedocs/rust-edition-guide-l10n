@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:56:17Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/introduction.md:1
+msgid "Introduction"
+msgstr "介紹"
+
+#: src/introduction.md:3
+msgid ""
+"Welcome to The Rust Edition Guide! \"Editions\" are Rust's way of "
+"introducing changes into the language that would not otherwise be backwards "
+"compatible."
+msgstr ""
+"歡迎閱讀《Rust 版次指南》！「版次（Edition）」是 Rust 引進語言變更的方式，這"
+"些變更在其他情況下可能無法向下相容。"
+
+#: src/introduction.md:7
+msgid "In this guide, we'll discuss:"
+msgstr "在這份指南中，我們將會討論："
+
+#: src/introduction.md:9
+msgid "What editions are"
+msgstr "版次是什麼"
+
+#: src/introduction.md:10
+msgid "Which changes are contained in each edition"
+msgstr "每個版次中包含哪些變更"
+
+#: src/introduction.md:11
+msgid "How to migrate your code from one edition to another"
+msgstr "如何將您的程式碼從一個版次遷移到另一個版次"
