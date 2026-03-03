@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:18
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/newly-unsafe-functions.md:20
 msgid ""

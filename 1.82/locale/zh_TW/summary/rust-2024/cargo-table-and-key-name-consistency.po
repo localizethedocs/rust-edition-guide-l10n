@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/rust-2024/cargo-table-key-names.md:15
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/cargo-table-key-names.md:17
 msgid ""
