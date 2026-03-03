@@ -88,7 +88,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:32
 msgid "Migrating a large project or workspace"
-msgstr ""
+msgstr "遷移大型專案或工作空間"
 
 #: src/editions/advanced-migrations.md:34
 msgid ""
@@ -366,7 +366,7 @@ msgstr ""
 
 #: src/editions/advanced-migrations.md:160
 msgid "// src/lib.rs\n"
-msgstr ""
+msgstr "// src/lib.rs\n"
 
 #: src/editions/advanced-migrations.md:164
 msgid ""

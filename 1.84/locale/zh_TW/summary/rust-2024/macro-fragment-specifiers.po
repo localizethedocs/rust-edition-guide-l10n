@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/rust-2024/macro-fragment-specifiers.md:13
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/macro-fragment-specifiers.md:15
 msgid ""

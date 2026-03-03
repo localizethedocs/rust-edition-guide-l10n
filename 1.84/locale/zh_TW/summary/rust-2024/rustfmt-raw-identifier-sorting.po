@@ -39,7 +39,7 @@ msgstr ""
 
 #: src/rust-2024/rustfmt-raw-identifier-sorting.md:13
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/rustfmt-raw-identifier-sorting.md:15
 msgid ""
