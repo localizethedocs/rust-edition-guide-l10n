@@ -37,7 +37,7 @@ msgstr "[`no_mangle`](../../reference/abi.html#the-no_mangle-attribute)"
 
 #: src/rust-2024/unsafe-attributes.md:14
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/unsafe-attributes.md:16
 msgid ""
