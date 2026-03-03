@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/rust-2024/prelude.md:14
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/prelude.md:16
 msgid ""
@@ -75,11 +75,11 @@ msgstr ""
 
 #: src/rust-2024/prelude.md:31
 msgid "[`std::future::Future`](../../std/future/trait.Future.html)"
-msgstr ""
+msgstr "[`std::future::Future`](../../std/future/trait.Future.html)"
 
 #: src/rust-2024/prelude.md:32
 msgid "[`std::future::IntoFuture`](../../std/future/trait.IntoFuture.html)"
-msgstr ""
+msgstr "[`std::future::IntoFuture`](../../std/future/trait.IntoFuture.html)"
 
 #: src/rust-2024/prelude.md:34
 msgid "Migration"
