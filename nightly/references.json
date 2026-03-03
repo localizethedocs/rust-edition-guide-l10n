@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-02 02:41:00 +0000",
-      "hash" : "ddd36bd57051f796850345b76c17e9402e28a9e4",
-      "title" : "Auto merge of #153157 - madsmtm:fix-eq-derive-comptime-regression, r=JonathanBrouwer"
+      "date" : "2026-03-03 02:39:40 +0000",
+      "hash" : "d3877ec33269edb7355ef8538d1cc5d157aa1ace",
+      "title" : "Auto merge of #151864 - aerooneqq:delegation-generics-propagation, r=petrochenkov"
     }
   },
   "type" : "branch",
