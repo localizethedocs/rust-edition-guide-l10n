@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:56:08Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/tyvar-behind-raw-pointer.md:1
+msgid "Method dispatch for raw pointers to inference variables"
+msgstr ""
+
+#: src/rust-2018/tyvar-behind-raw-pointer.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2018/tyvar-behind-raw-pointer.md:5
+msgid ""
+"The [`tyvar_behind_raw_pointer`](https://github.com/rust-lang/rust/"
+"issues/46906) lint is now a hard error."
+msgstr ""
+
+#: src/rust-2018/tyvar-behind-raw-pointer.md:9
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2018/tyvar-behind-raw-pointer.md:11
+msgid ""
+"See Rust issue [\\#46906](https://github.com/rust-lang/rust/issues/46906) "
+"for details."
+msgstr ""
