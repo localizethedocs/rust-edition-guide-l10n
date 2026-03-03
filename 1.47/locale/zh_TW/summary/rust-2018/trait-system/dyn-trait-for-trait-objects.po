@@ -52,7 +52,7 @@ msgstr ""
 
 #: src/rust-2018/trait-system/dyn-trait-for-trait-objects.md:30
 msgid "More details"
-msgstr ""
+msgstr "更多詳情"
 
 #: src/rust-2018/trait-system/dyn-trait-for-trait-objects.md:32
 msgid ""
