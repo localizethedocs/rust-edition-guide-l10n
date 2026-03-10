@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2024/standard-library.md:1
 msgid "Standard library"
-msgstr ""
+msgstr "標準程式庫"
 
 #: src/rust-2024/standard-library.md:3
 msgid ""
