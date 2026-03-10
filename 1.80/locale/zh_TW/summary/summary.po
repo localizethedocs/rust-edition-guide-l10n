@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/SUMMARY.md:47
 msgid "Cargo: Table and key name consistency"
-msgstr ""
+msgstr "Cargo：表格與鍵名一致性"
 
 #: src/SUMMARY.md:48
 msgid "Cargo: Reject unused inherited default-features"
