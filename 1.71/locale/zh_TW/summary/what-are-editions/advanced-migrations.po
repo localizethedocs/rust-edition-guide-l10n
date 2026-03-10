@@ -127,6 +127,11 @@ msgid ""
 "edition = \"2018\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[[bin]]\n"
+"name = \"my-binary\"\n"
+"edition = \"2018\"\n"
+"```"
 
 #: src/editions/advanced-migrations.md:50
 msgid ""
