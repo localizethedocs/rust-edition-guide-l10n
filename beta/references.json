@@ -37,9 +37,9 @@
     "branch" : "beta",
     "commit" : 
     {
-      "date" : "2026-02-26 23:14:10 +0000",
-      "hash" : "ec6e9883776ff64b7c97a33931f85cc02c31d05f",
-      "title" : "Auto merge of #153150 - cuviper:beta-next, r=cuviper"
+      "date" : "2026-03-08 21:32:40 +0000",
+      "hash" : "94a8e826a57fdc895506a0e9329246ae914740d5",
+      "title" : "Auto merge of #153530 - lnicola:lockfile-path-backport, r=Veykril"
     }
   },
   "type" : "branch",
