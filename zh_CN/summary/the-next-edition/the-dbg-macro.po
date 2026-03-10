@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:48:48Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-next/dbg-macro.md:1
+msgid "The dbg! macro"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:3
+msgid ""
+"![Minimum Rust version: 1.32](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.32-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:5
+msgid ""
+"The `dbg!` macro provides a nicer experience for debugging than `println!`:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:15
+msgid "If you run this program, you'll see:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:21
+msgid ""
+"You get the file and line number of where this was invoked, as well as the "
+"name and value. Additionally, `println!` prints to the standard output, so "
+"you really should be using `eprintln!` to print to standard error. `dbg!` "
+"does the right thing and goes to stderr."
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:26
+msgid ""
+"It even works in more complex circumstances. Consider this factorial example:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:38
+msgid ""
+"If we wanted to debug this, we might write it like this with `eprintln!`:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:42 src/rust-next/dbg-macro.md:51
+msgid "\"n: {}\""
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:45
+msgid "\"n <= 1\""
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:58
+msgid ""
+"We want to log `n` on each iteration, as well as have some kind of context "
+"for each of the branches. We see this output for `factorial(4)`:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:72
+msgid ""
+"This is servicable, but not particularly great. Maybe we could work on how "
+"we print out the context to make it more clear, but now we're not debugging "
+"our code, we're figuring out how to make our debugging code better."
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:76
+msgid "Consider this version using `dbg!`:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:88
+msgid ""
+"We simply wrap each of the various expressions we want to print with the "
+"macro. We get this output instead:"
+msgstr ""
+
+#: src/rust-next/dbg-macro.md:102
+msgid ""
+"Because the `dbg!` macro returns the value of what it's debugging, instead "
+"of `eprintln!` which returns `()`, we need to make no changes to the "
+"structure of our code. Additionally, we have vastly more useful output."
+msgstr ""
