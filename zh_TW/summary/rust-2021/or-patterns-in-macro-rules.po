@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:27Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/or-patterns-macro-rules.md:1
+msgid "Or patterns in macro-rules"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2021/or-patterns-macro-rules.md:5
+msgid "How patterns work in `macro_rules` macros changes slightly:"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:6
+msgid "`$_:pat` in `macro_rules` now matches usage of `|` too: e.g. `A | B`."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:7
+msgid ""
+"The new `$_:pat_param` behaves like `$_:pat` did before; it does not match "
+"(top level) `|`."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:8
+msgid "`$_:pat_param` is available in all editions."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:10
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2021/or-patterns-macro-rules.md:12
+msgid ""
+"Starting in Rust 1.53.0, [patterns](https://doc.rust-lang.org/stable/"
+"reference/patterns.html) are extended to support `|` nested anywhere in the "
+"pattern. This enables you to write `Some(1 | 2)` instead of `Some(1) | "
+"Some(2)`. Since this was simply not allowed before, this is not a breaking "
+"change."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:17
+msgid ""
+"However, this change also affects [`macro_rules` macros](https://doc.rust-"
+"lang.org/stable/reference/macros-by-example.html). Such macros can accept "
+"patterns using the `:pat` fragment specifier. Currently, `:pat` does _not_ "
+"match top level `|`, since before Rust 1.53, not all patterns (at all nested "
+"levels) could contain a `|`. Macros that accept patterns like `A | B`, such "
+"as [`matches!()`](https://doc.rust-lang.org/1.51.0/std/macro.matches.html) "
+"use something like `$($_:pat)|+`."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:25
+msgid ""
+"Because this would potentially break existing macros, the meaning of `:pat` "
+"did not change in Rust 1.53.0 to include `|`. Instead, that change happens "
+"in Rust 2021. In the new edition, the `:pat` fragment specifier _will_ match "
+"`A | B`."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:29
+msgid ""
+"`$_:pat` fragments in Rust 2021 cannot be followed by an explicit `|`. Since "
+"there are times that one still wishes to match pattern fragments followed by "
+"a `|`, the fragment specified `:pat_param` has been added to retain the "
+"older behavior."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:33
+msgid ""
+"It's important to remember that editions are _per crate_, so the only "
+"relevant edition is the edition of the crate where the macro is defined. The "
+"edition of the crate where the macro is used does not change how the macro "
+"works."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:37
+msgid "Migration"
+msgstr "遷移"
+
+#: src/rust-2021/or-patterns-macro-rules.md:39
+msgid ""
+"A lint, `rust_2021_incompatible_or_patterns`, gets triggered whenever there "
+"is a use `$_:pat` which will change meaning in Rust 2021."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:42
+msgid ""
+"You can automatically migrate your code to be Rust 2021 Edition compatible "
+"or ensure it is already compatible by running:"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:49
+msgid ""
+"If you have a macro which relies on `$_:pat` not matching the top level use "
+"of `|` in patterns, you'll need to change each occurrence of `$_:pat` to `$_:"
+"pat_param`."
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:52
+msgid "For example:"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:57
+msgid "// TODO: implementation\n"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:60
+msgid ""
+"// This macro works in Rust 2018 since `$x:pat` does not match against `|`:\n"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:63
+msgid ""
+"// In Rust 2021 however, the `$_:pat` fragment matches `|` and is not "
+"allowed\n"
+"// to be followed by a `|`. To make sure this macro still works in Rust "
+"2021\n"
+"// change the macro to the following:\n"
+msgstr ""
+
+#: src/rust-2021/or-patterns-macro-rules.md:68
+msgid ""
+"// <- this line is different\n"
+"\t\t// TODO: implementation\n"
+msgstr ""
