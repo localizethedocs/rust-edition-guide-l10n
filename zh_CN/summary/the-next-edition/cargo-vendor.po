@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:59:16Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-next/cargo-vendor.md:1
+msgid "cargo vendor"
+msgstr ""
+
+#: src/rust-next/cargo-vendor.md:3
+msgid ""
+"Initially added: ![Minimum Rust version: 1.37](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.37-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/cargo-vendor.md:5
+msgid ""
+"After being available [as a separate crate](https://crates.io/crates/cargo-"
+"vendor) for years, the `cargo vendor` command is now integrated directly "
+"into Cargo. The command fetches all your project's dependencies unpacking "
+"them into the `vendor/` directory, and shows the configuration snippet "
+"required to use the vendored code during builds."
+msgstr ""
+
+#: src/rust-next/cargo-vendor.md:7
+msgid ""
+"There are multiple cases where `cargo vendor` is already used in production: "
+"the Rust compiler `rustc` uses it to ship all its dependencies in release "
+"tarballs, and projects with monorepos use it to commit the dependencies' "
+"code in source control."
+msgstr ""

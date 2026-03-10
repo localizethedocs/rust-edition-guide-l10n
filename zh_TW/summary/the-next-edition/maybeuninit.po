@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:59:16Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-next/maybe-uninit.md:1
+msgid "MaybeUninit"
+msgstr ""
+
+#: src/rust-next/maybe-uninit.md:3
+msgid ""
+"Initially added: ![Minimum Rust version: 1.36](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.36-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-next/maybe-uninit.md:5
+msgid ""
+"In previous releases of Rust, the [`mem::uninitialized`](https://doc.rust-"
+"lang.org/std/mem/fn.uninitialized.html) function has allowed you to bypass "
+"Rust's initialization checks by pretending that you've initialized a value "
+"at type `T` without doing anything. One of the main uses of this function "
+"has been to lazily allocate arrays."
+msgstr ""
+
+#: src/rust-next/maybe-uninit.md:10
+msgid ""
+"However, [`mem::uninitialized`](https://doc.rust-lang.org/std/mem/fn."
+"uninitialized.html) is an incredibly dangerous operation that essentially "
+"cannot be used correctly as the Rust compiler assumes that values are "
+"properly initialized. For example, calling `mem::uninitialized::<bool>()` "
+"causes _instantaneous **undefined behavior**_ as, from Rust's point of view, "
+"the uninitialized bits are neither `0` (for `false`) nor `1` (for `true`) - "
+"the only two allowed bit patterns for `bool`."
+msgstr ""
+
+#: src/rust-next/maybe-uninit.md:17
+msgid ""
+"To remedy this situation, in Rust 1.36.0, the type [`MaybeUninit<T>`]"
+"(https://doc.rust-lang.org/std/mem/union.MaybeUninit.html) has been "
+"stabilized. The Rust compiler will understand that it should not assume that "
+"a [`MaybeUninit<T>`](https://doc.rust-lang.org/std/mem/union.MaybeUninit."
+"html) is a properly initialized `T`. Therefore, you can do gradual "
+"initialization more safely and eventually use `.assume_init()` once you are "
+"certain that `maybe_t: MaybeUninit<T>` contains an initialized `T`."
+msgstr ""
+
+#: src/rust-next/maybe-uninit.md:24
+msgid ""
+"As [`MaybeUninit<T>`](https://doc.rust-lang.org/std/mem/union.MaybeUninit."
+"html) is the safer alternative, starting with Rust 1.39, the function [`mem::"
+"uninitialized`](https://doc.rust-lang.org/std/mem/fn.uninitialized.html) "
+"will be deprecated."
+msgstr ""
