@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:51:36Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/editions/index.md:1
+msgid "What are Editions?"
+msgstr "什麼是版次？"
+
+#: src/editions/index.md:3
+msgid ""
+"In May 2015, the [release of Rust 1.0](https://blog.rust-lang.org/2015/05/15/"
+"Rust-1.0.html) established \"[stability without stagnation](https://blog."
+"rust-lang.org/2014/10/30/Stability.html)\" as a core Rust axiom. Since then, "
+"Rust has committed to a pivotal rule: once a feature is [released through "
+"stable](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html), "
+"contributors will continue to support that feature for all future releases."
+msgstr ""
+"在 2015 年 5 月，[Rust 1.0 的發行](https://blog.rust-lang.org/2015/05/15/"
+"Rust-1.0.html)確立了「[穩定而不停滯](https://blog.rust-lang.org/2014/10/30/"
+"Stability.html)」作為 Rust 的核心公理。從那時起，Rust 便致力於一項關鍵規則："
+"一旦某項功能透過穩定版發佈，貢獻者將在未來的所有發行版中持續支援該功能。"
+
+#: src/editions/index.md:5
+msgid ""
+"However, there are times when it's useful to make backwards-incompatible "
+"changes to the language. A common example is the introduction of a new "
+"keyword. For instance, early versions of Rust didn't feature the `async` and "
+"`await` keywords."
+msgstr ""
+
+#: src/editions/index.md:7
+msgid ""
+"If Rust had suddenly introduced these new keywords, some code would have "
+"broken: `let async = 1;` would no longer work."
+msgstr ""
+
+#: src/editions/index.md:9
+msgid ""
+"Rust uses **editions** to solve this problem. When there are backwards-"
+"incompatible changes, they are pushed into the next edition. Since editions "
+"are opt-in, existing crates won't use the changes unless they explicitly "
+"migrate into the new edition. For example, the latest version of Rust "
+"doesn't treat `async` as a keyword unless edition 2018 or later is chosen."
+msgstr ""
+
+#: src/editions/index.md:11
+msgid ""
+"Each crate chooses its edition [within its `Cargo.toml` file](https://doc."
+"rust-lang.org/cargo/reference/manifest.html#the-edition-field). When "
+"creating a new crate with Cargo, it will automatically select the newest "
+"stable edition."
+msgstr ""
+
+#: src/editions/index.md:13
+msgid "Editions do not split the ecosystem"
+msgstr "版次不會分裂生態系統"
+
+#: src/editions/index.md:15
+msgid ""
+"When creating editions, there is one most consequential rule: crates in one "
+"edition **must** seamlessly interoperate with those compiled with other "
+"editions."
+msgstr ""
+
+#: src/editions/index.md:17
+msgid ""
+"In other words, each crate can decide when to migrate to a new edition "
+"independently. This decision is 'private' - it won't affect other crates in "
+"the ecosystem."
+msgstr ""
+
+#: src/editions/index.md:19
+msgid ""
+"For Rust, this required compatibility implies some limits on the kinds of "
+"changes that can be featured in an edition. As a result, changes found in "
+"new Rust editions tend to be 'skin deep'. All Rust code - regardless of "
+"edition - will ultimately compile down to the same internal representation "
+"within the compiler."
+msgstr ""
+
+#: src/editions/index.md:21
+msgid "Edition migration is easy and largely automated"
+msgstr "版次遷移很簡單且大部分已自動化"
+
+#: src/editions/index.md:23
+msgid ""
+"Rust aims to make upgrading to a new edition an easy process. When a new "
+"edition releases, crate authors may use [automatic migration tooling within "
+"`cargo`](https://doc.rust-lang.org/cargo/commands/cargo-fix.html) to "
+"migrate. Cargo will then make minor changes to the code to make it "
+"compatible with the new version."
+msgstr ""
+
+#: src/editions/index.md:25
+msgid ""
+"For example, when migrating to Rust 2018, anything named `async` will now "
+"use the equivalent [raw identifier syntax](https://doc.rust-lang.org/rust-by-"
+"example/compatibility/raw_identifiers.html): `r#async`."
+msgstr ""
+
+#: src/editions/index.md:27
+msgid ""
+"Cargo's automatic migrations aren't perfect: there may still be corner cases "
+"where manual changes are required. It aims to avoid changes to semantics "
+"that could affect the correctness or performance of the code."
+msgstr ""
+"Cargo 的自動遷移並非完美：在某些極端情況下可能仍需要手動修改。其目標是避免對"
+"語義進行任何可能影響程式碼正確性或效能的變更。"
+
+#: src/editions/index.md:29
+msgid "What this guide covers"
+msgstr "本指南涵蓋的內容"
+
+#: src/editions/index.md:31
+msgid ""
+"In addition to tooling, this Rust Edition Guide also covers the changes that "
+"are part of each edition. It describes each change and links to additional "
+"details, if available. It also covers corner cases or tricky details crate "
+"authors should be aware of."
+msgstr ""
+
+#: src/editions/index.md:33
+msgid "Crate authors should find:"
+msgstr ""
+
+#: src/editions/index.md:35
+msgid "An overview of editions"
+msgstr ""
+
+#: src/editions/index.md:36
+msgid "A migration guide for specific editions"
+msgstr ""
+
+#: src/editions/index.md:37
+msgid "A quick troubleshooting reference when automated tooling isn't working."
+msgstr ""
