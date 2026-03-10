@@ -336,7 +336,7 @@ msgstr ""
 
 #: src/rust-2024/static-mut-references.md:341
 msgid "Safe references"
-msgstr ""
+msgstr "安全參考"
 
 #: src/rust-2024/static-mut-references.md:343
 msgid ""
