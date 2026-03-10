@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:50:40Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/intoiterator-box-slice.md:1
+msgid "Add `IntoIterator` for `Box<[T]>`"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:3
+msgid ""
+"🚧 The 2024 Edition has not yet been released and hence this section is "
+"still \"under construction\". More information may be found in the tracking "
+"issue at <https://github.com/rust-lang/rust/issues/123759>."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:6
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2024/intoiterator-box-slice.md:8
+msgid ""
+"Boxed slices implement [`IntoIterator`](../../std/iter/trait.IntoIterator."
+"html) in _all_ editions."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:9
+msgid ""
+"Calls to [`IntoIterator::into_iter`](../../std/iter/trait.IntoIterator."
+"html#tymethod.into_iter) are _hidden_ in editions prior to 2024 when using "
+"method call syntax (i.e., `boxed_slice.into_iter()`). So, `boxed_slice."
+"into_iter()` still resolves to `(&(*boxed_slice)).into_iter()` as it has "
+"before."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:10
+msgid ""
+"`boxed_slice.into_iter()` changes meaning to call [`IntoIterator::into_iter`]"
+"(../../std/iter/trait.IntoIterator.html#tymethod.into_iter) in Rust 2024."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:15
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2024/intoiterator-box-slice.md:17
+msgid ""
+"Until Rust 1.80, `IntoIterator` was not implemented for boxed slices. In "
+"prior versions, if you called `.into_iter()` on a boxed slice, the method "
+"call would automatically dereference from `Box<[T]>` to `&[T]`, and return "
+"an iterator that yielded references of `&T`. For example, the following "
+"worked in prior versions:"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:20
+msgid "// Example of behavior in previous editions.\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:21
+msgid "// Note: .into_iter() was required in versions older than 1.80\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:24
+msgid "// x is of type &u32 in editions prior to 2024\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:28
+msgid ""
+"In Rust 1.80, implementations of `IntoIterator` were added for boxed slices. "
+"This allows iterating over elements of the slice by-value instead of by-"
+"reference:"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:31
+msgid "// NEW as of 1.80, all editions\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:33
+msgid ""
+"// notice no need for calling .into_iter()\n"
+"    // x is of type u32\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:38
+msgid ""
+"This example is allowed on all editions because previously this was an error "
+"since `for` loops do not automatically dereference like the `.into_iter()` "
+"method call does."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:40
+msgid ""
+"However, this would normally be a breaking change because existing code that "
+"manually called `.into_iter()` on a boxed slice would change from having an "
+"iterator over references to an iterator over values. To resolve this "
+"problem, method calls of `.into_iter()` on boxed slices have edition-"
+"dependent behavior. In editions before 2024, it continues to return an "
+"iterator over references, and starting in Edition 2024 it returns an "
+"iterator over values."
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:44
+msgid "// Example of changed behavior in Edition 2024\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:45
+msgid "// Example of old code that still manually calls .into_iter()\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:48
+msgid "// x is now type u32 in Edition 2024\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:52
+msgid "Migration"
+msgstr "遷移"
+
+#: src/rust-2024/intoiterator-box-slice.md:54
+msgid ""
+"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-default."
+"html#boxed-slice-into-iter) lint will automatically modify any calls to `."
+"into_iter()` on boxed slices to call `.iter()` instead to retain the old "
+"behavior of yielding references. This lint is part of the `rust-2024-"
+"compatibility` lint group, which will automatically be applied when running "
+"`cargo fix --edition`. To migrate your code to be Rust 2024 Edition "
+"compatible, run:"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:60
+msgid "For example, this will change:"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:66
+#: src/rust-2024/intoiterator-box-slice.md:77
+msgid "// x is of type &u32\n"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:71
+msgid "to be:"
+msgstr ""
+
+#: src/rust-2024/intoiterator-box-slice.md:82
+msgid ""
+"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-default."
+"html#boxed-slice-into-iter) lint is defaulted to warn on all editions, so "
+"unless you have manually silenced the lint, you should already see it before "
+"you migrate."
+msgstr ""
