@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T07:59:56Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/static-mut-reference.md:1
+msgid "Disallow references to static mut"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:3
+msgid ""
+"🚧 The 2024 Edition has not yet been released and hence this section is "
+"still \"under construction\"."
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:5
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:7
+msgid ""
+"The [`static_mut_refs`](../../rustc/lints/listing/warn-by-default."
+"html#static-mut-refs) lint is now a hard error that cannot be disabled. This "
+"prevents taking a shared or mutable reference to a `static mut`."
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:12
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:14
+msgid ""
+"Taking a reference to a [`static mut`](../../reference/items/static-items."
+"html#mutable-statics) is no longer allowed:"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:22
+#: src/rust-2024/static-mut-reference.md:23
+#: src/rust-2024/static-mut-reference.md:24
+msgid "// ERROR: reference of mutable static\n"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:28
+msgid ""
+"Shared or mutable references of mutable static are almost always a mistake "
+"and can lead to undefined behavior and various other problems in your code. "
+"For example, another thread writing to the `static mut` will cause an "
+"aliasing violation and incur [Undefined Behavior](../../reference/behavior-"
+"considered-undefined.html)."
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:36
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/static-mut-reference.md:38
+msgid "🚧 The automatic migration for this has not yet been implemented."
+msgstr ""
