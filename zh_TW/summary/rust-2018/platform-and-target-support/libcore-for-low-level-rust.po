@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:03:51Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:1
+msgid "libcore for low-level Rust"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:3
+msgid ""
+"![Minimum Rust version: 1.6](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.6-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:5
+msgid ""
+"Rust’s standard library is two-tiered: there’s a small core library, "
+"`libcore`, and the full standard library, `libstd`, that builds on top of "
+"it. `libcore` is completely platform agnostic, and requires only a handful "
+"of external symbols to be defined. Rust’s `libstd` builds on top of "
+"`libcore`, adding support for things like memory allocation and I/O. "
+"Applications using Rust in the embedded space, as well as those writing "
+"operating systems, often eschew `libstd`, using only `libcore`."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:13
+msgid ""
+"As an additional note, while building _libraries_ with `libcore` is "
+"supported today, building full applications is not yet stable."
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:16
+msgid "To use `libcore`, add this flag to your crate root:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:22
+msgid ""
+"This will remove the standard library, and bring the `core` crate into your "
+"namespace for use:"
+msgstr ""
+
+#: src/rust-2018/platform-and-target-support/libcore-for-low-level-rust.md:31
+msgid ""
+"You can find `libcore`'s documentation [here](https://doc.rust-lang.org/"
+"core/)."
+msgstr ""
