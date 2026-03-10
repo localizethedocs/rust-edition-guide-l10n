@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-02 02:41:00 +0000",
-      "hash" : "ddd36bd57051f796850345b76c17e9402e28a9e4",
-      "title" : "Auto merge of #153157 - madsmtm:fix-eq-derive-comptime-regression, r=JonathanBrouwer"
+      "date" : "2026-03-10 06:20:10 +0000",
+      "hash" : "3bc6ea5673e3e292db1e5b6ecaaaa883ca5af0b8",
+      "title" : "Auto merge of #152954 - Kmeakin:km/unicode-data/case-mapping, r=Mark-Simulacrum"
     }
   },
   "type" : "branch",
