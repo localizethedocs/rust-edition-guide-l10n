@@ -36,7 +36,7 @@ msgstr ""
 msgid ""
 "Reference patterns (`&` or `&mut`) are only allowed within the fully-"
 "explicit prefix of a pattern."
-msgstr ""
+msgstr "參考模式（`&` 或 `&mut`）僅允許在模式的完全明確前綴內使用。"
 
 #: src/rust-2024/match-ergonomics.md:8
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: src/rust-2024/match-ergonomics.md:68
 msgid "`ref` / `ref mut` restriction"
-msgstr ""
+msgstr "`ref` / `ref mut` 限制"
 
 #: src/rust-2024/match-ergonomics.md:70
 msgid "In Rust 2021 and earlier editions, we allow:"
@@ -175,11 +175,11 @@ msgstr ""
 
 #: src/rust-2024/match-ergonomics.md:84
 msgid "Reference patterns restriction"
-msgstr ""
+msgstr "參考模式限制"
 
 #: src/rust-2024/match-ergonomics.md:89
 msgid "// x: (), y: &&()\n"
-msgstr ""
+msgstr "// x: (), y: &&()\n"
 
 #: src/rust-2024/match-ergonomics.md:92
 msgid ""

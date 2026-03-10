@@ -165,7 +165,7 @@ msgstr "`gen` 關鍵字"
 
 #: src/SUMMARY.md:56
 msgid "Standard library"
-msgstr ""
+msgstr "標準程式庫"
 
 #: src/SUMMARY.md:57
 msgid "Changes to the prelude"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: src/SUMMARY.md:62
 msgid "Cargo: Table and key name consistency"
-msgstr ""
+msgstr "Cargo：表格與鍵名一致性"
 
 #: src/SUMMARY.md:63
 msgid "Cargo: Reject unused inherited default-features"
