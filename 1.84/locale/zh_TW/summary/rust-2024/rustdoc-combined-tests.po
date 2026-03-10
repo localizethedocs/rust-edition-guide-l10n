@@ -91,7 +91,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-doctests.md:43
 msgid "`standalone_crate` tag"
-msgstr ""
+msgstr "`standalone_crate` 標記"
 
 #: src/rust-2024/rustdoc-doctests.md:45
 msgid ""
