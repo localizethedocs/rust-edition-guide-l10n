@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:1
 msgid "Rustfmt: Formatting fixes"
-msgstr ""
+msgstr "Rustfmt：格式化修復"
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:3
 msgid "Summary"
@@ -63,7 +63,7 @@ msgstr ""
 #: src/rust-2024/rustfmt-formatting-fixes.md:580
 #: src/rust-2024/rustfmt-formatting-fixes.md:616
 msgid "**Style edition 2021:**"
-msgstr ""
+msgstr "**風格版次 2021：**"
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:22
 msgid ""
@@ -75,12 +75,12 @@ msgstr ""
 #: src/rust-2024/rustfmt-formatting-fixes.md:25
 #: src/rust-2024/rustfmt-formatting-fixes.md:50
 msgid "// CREATE TABLE\n"
-msgstr ""
+msgstr "// 建立表格\n"
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:26
 #: src/rust-2024/rustfmt-formatting-fixes.md:51
 msgid "// DROP TABLE\n"
-msgstr ""
+msgstr "// 刪除表格\n"
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:27
 msgid ""
@@ -204,7 +204,7 @@ msgstr ""
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:111
 msgid "Long strings don't prevent formatting expressions"
-msgstr ""
+msgstr "長字串不會妨礙格式化表達式"
 
 #: src/rust-2024/rustfmt-formatting-fixes.md:118
 msgid ""
