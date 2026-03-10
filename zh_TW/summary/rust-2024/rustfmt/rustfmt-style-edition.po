@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/rustfmt-style-edition.md:1
+msgid "Rustfmt: Style edition"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2024/rustfmt-style-edition.md:5
+msgid "User can now control which style edition to use with `rustfmt`."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:7
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2024/rustfmt-style-edition.md:9
+msgid ""
+"The default formatting produced by Rustfmt is governed by the rules in the "
+"[Rust Style Guide](../../style-guide/index.html)."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:12
+msgid ""
+"Additionally, Rustfmt has a formatting stability guarantee that aims to "
+"avoid causing noisy formatting churn for users when updating a Rust "
+"toolchain. This stability guarantee essentially means that a newer version "
+"of Rustfmt cannot modify the _successfully formatted_ output that was "
+"produced by a previous version of Rustfmt."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:18
+msgid ""
+"The combination of those two constraints had historically locked both the "
+"Style Guide and the default formatting behavior in Rustfmt. This impasse "
+"caused various challenges, such as preventing the ability to iterate on "
+"style improvements, and requiring Rustfmt to maintain legacy formatting "
+"quirks that were obviated long ago (e.g. nested tuple access)."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:24
+msgid ""
+"[RFC 3338](https://rust-lang.github.io/rfcs/3338-style-evolution.html) "
+"resolved this impasse by establishing a mechanism for the Rust Style Guide "
+"to be aligned to Rust's Edition model wherein the Style Guide could evolve "
+"across Editions, and `rustfmt` would allow users to specify their desired "
+"Edition of the Style Guide, referred to as the Style Edition."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:29
+msgid ""
+"In the 2024 Edition, `rustfmt` now supports the ability for users to control "
+"the Style Edition used for formatting. The 2024 Edition of the Style Guide "
+"also includes enhancements to the Style Guide which are detailed elsewhere "
+"in this Edition Guide."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:33
+msgid ""
+"By default `rustfmt` will use the same Style Edition as the standard Rust "
+"Edition used for parsing, but the Style Edition can also be overridden and "
+"configured separately."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:36
+msgid "There are multiple ways to run `rustfmt` with the 2024 Style Edition:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:38
+msgid "With a `Cargo.toml` file that has `edition` set to `2024`, run:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:44
+msgid ""
+"Or run `rustfmt` directly with `2024` for the edition to use the 2024 "
+"edition for both parsing and the 2024 edition of the Style Guide:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:51
+msgid ""
+"The style edition can also be set in a `rustfmt.toml` or `.rustfmt.toml` "
+"configuration file:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:52
+msgid ""
+"```toml\n"
+"style_edition = \"2024\"\n"
+"```"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:56
+msgid "Which is then used when running `rustfmt` directly:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:61
+msgid ""
+"Alternatively, the style edition can be specified directly from `rustfmt` "
+"options:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:70
+msgid "Migration"
+msgstr "遷移"
+
+#: src/rust-2024/rustfmt-style-edition.md:72
+msgid ""
+"Running `cargo fmt` or `rustfmt` with the 2024 edition or style edition will "
+"automatically migrate formatting over to the 2024 style edition formatting."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:75
+msgid ""
+"Projects who have contributors that may utilize their editor's format-on-"
+"save features are also strongly encouraged to add a `rustfmt.toml` file to "
+"their project that includes the corresponding `style_edition` utilized "
+"within their project, or to encourage their users to ensure their local "
+"editor format-on-save feature is configured to use that same `style_edition`."
+msgstr ""
+
+#: src/rust-2024/rustfmt-style-edition.md:81
+msgid ""
+"This is to ensure that the editor format-on-save output is consistent with "
+"the output when `cargo fmt` is manually executed by the developer, or the "
+"project's CI process (many editors will run `rustfmt` directly which by "
+"default uses the 2015 edition, whereas `cargo fmt` uses the edition "
+"specified in the `Cargo.toml` file)"
+msgstr ""

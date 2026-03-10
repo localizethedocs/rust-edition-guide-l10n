@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-02T08:04:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2018/new-keywords.md:1
+msgid "New keywords"
+msgstr "新關鍵字"
+
+#: src/rust-2018/new-keywords.md:3
+msgid ""
+"![Minimum Rust version: 1.27](https://img.shields.io/badge/"
+"Minimum%20Rust%20Version-1.27-brightgreen.svg)"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:5
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2018/new-keywords.md:7
+msgid ""
+"`dyn` is a [strict keyword](https://doc.rust-lang.org/reference/keywords."
+"html#strict-keywords), in 2015 it is a [weak keyword](https://doc.rust-lang."
+"org/reference/keywords.html#weak-keywords)."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:8
+msgid ""
+"`async` and `await` are [strict keywords](https://doc.rust-lang.org/"
+"reference/keywords.html#strict-keywords)."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:9
+msgid ""
+"`try` is a [reserved keyword](https://doc.rust-lang.org/reference/keywords."
+"html#reserved-keywords)."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:15
+msgid "Motivation"
+msgstr "動機"
+
+#: src/rust-2018/new-keywords.md:17
+msgid "`dyn Trait` for trait objects"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:19
+msgid ""
+"The `dyn Trait` feature is the new syntax for using trait objects. In short:"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:21
+msgid "`Box<Trait>` becomes `Box<dyn Trait>`"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:22
+msgid "`&Trait` and `&mut Trait` become `&dyn Trait` and `&mut dyn Trait`"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:24
+msgid "And so on. In code:"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:30
+msgid "// old\n"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:35
+msgid "// new\n"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:42
+msgid "That's it!"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:44
+msgid "Why?"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:46
+msgid ""
+"Using just the trait name for trait objects turned out to be a bad decision. "
+"The current syntax is often ambiguous and confusing, even to veterans, and "
+"favors a feature that is not more frequently used than its alternatives, is "
+"sometimes slower, and often cannot be used at all when its alternatives can."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:51
+msgid ""
+"Furthermore, with `impl Trait` arriving, \"`impl Trait` vs `dyn Trait`\" is "
+"much more symmetric, and therefore a bit nicer, than \"`impl Trait` vs "
+"`Trait`\". `impl Trait` is explained [here](../../rust-by-example/trait/"
+"impl_trait.html)."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:55
+msgid ""
+"In the new edition, you should therefore prefer `dyn Trait` to just `Trait` "
+"where you need a trait object."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:60
+msgid "`async` and `await`"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:62
+msgid ""
+"These keywords are reserved to implement the async-await feature of Rust, "
+"which was ultimately [released to stable in 1.39.0](https://blog.rust-lang."
+"org/2019/11/07/Async-await-stable.html)."
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:64
+msgid "`try` keyword"
+msgstr ""
+
+#: src/rust-2018/new-keywords.md:66
+msgid ""
+"The `try` keyword is reserved for use in `try` blocks, which have not (as of "
+"this writing) been stabilized ([tracking issue](https://github.com/rust-lang/"
+"rust/issues/31436))"
+msgstr ""
