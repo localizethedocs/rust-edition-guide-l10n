@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:1
 msgid "Unsafe functions"
-msgstr ""
+msgstr "不安全函式"
 
 #: src/rust-2024/newly-unsafe-functions.md:3
 msgid "Summary"
@@ -24,20 +24,24 @@ msgid ""
 "The following functions are now marked [`unsafe`](../../reference/unsafe-"
 "keyword.html#unsafe-functions-unsafe-fn):"
 msgstr ""
+"以下函式現已標註為 [`unsafe`](../../reference/unsafe-keyword.html#unsafe-"
+"functions-unsafe-fn)："
 
 #: src/rust-2024/newly-unsafe-functions.md:6
 msgid "[`std::env::set_var`](../../std/env/fn.set_var.html)"
-msgstr ""
+msgstr "[`std::env::set_var`](../../std/env/fn.set_var.html)"
 
 #: src/rust-2024/newly-unsafe-functions.md:7
 msgid "[`std::env::remove_var`](../../std/env/fn.remove_var.html)"
-msgstr ""
+msgstr "[`std::env::remove_var`](../../std/env/fn.remove_var.html)"
 
 #: src/rust-2024/newly-unsafe-functions.md:8
 msgid ""
 "[`std::os::unix::process::CommandExt::before_exec`](../../std/os/unix/"
 "process/trait.CommandExt.html#method.before_exec)"
 msgstr ""
+"[`std::os::unix::process::CommandExt::before_exec`](../../std/os/unix/"
+"process/trait.CommandExt.html#method.before_exec)"
 
 #: src/rust-2024/newly-unsafe-functions.md:15
 msgid "Details"
@@ -55,7 +59,7 @@ msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:19
 msgid "`std::env::{set_var, remove_var}`"
-msgstr ""
+msgstr "`std::env::{set_var, remove_var}`"
 
 #: src/rust-2024/newly-unsafe-functions.md:21
 msgid ""
@@ -76,7 +80,7 @@ msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:27
 msgid "`std::os::unix::process::CommandExt::before_exec`"
-msgstr ""
+msgstr "`std::os::unix::process::CommandExt::before_exec`"
 
 #: src/rust-2024/newly-unsafe-functions.md:29
 msgid ""
