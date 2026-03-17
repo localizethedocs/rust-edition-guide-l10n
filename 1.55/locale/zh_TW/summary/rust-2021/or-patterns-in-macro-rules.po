@@ -110,7 +110,7 @@ msgstr ""
 
 #: src/rust-2021/or-patterns-macro-rules.md:52
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: src/rust-2021/or-patterns-macro-rules.md:57
 msgid "// TODO: implementation\n"
