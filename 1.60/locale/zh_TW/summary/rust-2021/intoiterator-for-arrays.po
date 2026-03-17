@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:71
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: src/rust-2021/IntoIterator-for-arrays.md:77
 msgid ""
