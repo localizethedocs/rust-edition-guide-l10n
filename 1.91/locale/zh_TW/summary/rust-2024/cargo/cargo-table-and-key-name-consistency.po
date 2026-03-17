@@ -70,7 +70,7 @@ msgstr ""
 
 #: src/rust-2024/cargo-table-key-names.md:21
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: src/rust-2024/cargo-table-key-names.md:23
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 
 #: src/rust-2024/cargo-table-key-names.md:28
 msgid "Should be changed to:"
-msgstr ""
+msgstr "應該變更為："
 
 #: src/rust-2024/cargo-table-key-names.md:30
 msgid ""
