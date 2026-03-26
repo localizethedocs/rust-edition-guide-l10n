@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-02 02:41:00 +0000",
-      "hash" : "ddd36bd57051f796850345b76c17e9402e28a9e4",
-      "title" : "Auto merge of #153157 - madsmtm:fix-eq-derive-comptime-regression, r=JonathanBrouwer"
+      "date" : "2026-03-24 04:54:28 +0000",
+      "hash" : "9df83179a4fd7ddee7532e72abb23c76b8426f9a",
+      "title" : "Auto merge of #154289 - jhpratt:rollup-JFDweJT, r=jhpratt"
     }
   },
   "type" : "branch",
