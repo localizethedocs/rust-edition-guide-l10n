@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-26T09:38:32Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:1
+msgid "Rustfmt: Raw identifier sorting"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:5
+msgid ""
+"`rustfmt` now properly sorts [raw identifiers](../../reference/identifiers."
+"html#raw-identifiers)."
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:9
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:11
+msgid ""
+"The [Rust Style Guide](../../style-guide/index.html) includes [rules for "
+"sorting](../../style-guide/index.html#sorting) that `rustfmt` applies in "
+"various contexts, such as on imports."
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:13
+msgid ""
+"Prior to the 2024 Edition, when sorting rustfmt would use the leading `r#` "
+"token instead of the ident which led to unwanted results. For example:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:21
+msgid "In the 2024 Edition, `rustfmt` now produces:"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:32
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/rustfmt-raw-identifier-sorting.md:34
+msgid ""
+"The change can be applied automatically by running `cargo fmt` or `rustfmt` "
+"with the 2024 Edition. See the [Style edition](rustfmt-style-edition.md) "
+"chapter for more information on migrating and how style editions work."
+msgstr ""
