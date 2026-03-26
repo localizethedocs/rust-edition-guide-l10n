@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/rust-2024/rustdoc-nested-includes.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:3
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/rust-2024/rustdoc-nested-includes.md:5
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2024/rustdoc-nested-includes.md:9
 msgid ""
@@ -45,27 +45,27 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:13
 msgid "`Cargo.toml`"
-msgstr ""
+msgstr "`Cargo.toml`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:14
 msgid "`README.md`"
-msgstr ""
+msgstr "`README.md`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:15
 msgid "`src/`"
-msgstr ""
+msgstr "`src/`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:16
 msgid "`lib.rs`"
-msgstr ""
+msgstr "`lib.rs`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:17
 msgid "`examples/`"
-msgstr ""
+msgstr "`examples/`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:18
 msgid "`data.bin`"
-msgstr ""
+msgstr "`data.bin`"
 
 #: src/rust-2024/rustdoc-nested-includes.md:20
 msgid "Let's say that `lib.rs` contains this:"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:23
 msgid "\"../README.md\""
-msgstr ""
+msgstr "\"../README.md\""
 
 #: src/rust-2024/rustdoc-nested-includes.md:26
 msgid "And assume this `README.md` file:"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-nested-includes.md:43
 msgid "Migration"
-msgstr ""
+msgstr "遷移"
 
 #: src/rust-2024/rustdoc-nested-includes.md:45
 msgid ""
@@ -114,6 +114,20 @@ msgid ""
 "  |                        ~~~~~~~~~~~~~~~~~~~\n"
 "````````````````````"
 msgstr ""
+"````````````````````text\n"
+"error: couldn't read `../examples/data.bin`: No such file or directory (os "
+"error 2)\n"
+" --> src/../README.md:2:24\n"
+"  |\n"
+"2 | let _ = include_bytes!(\"../examples/data.bin\");\n"
+"  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+"  = note: this error originates in the macro `include_bytes` (in Nightly "
+"builds, run with -Z macro-backtrace for more info)\n"
+"help: there is a file with the same name in a different directory\n"
+"  |\n"
+"2 | let _ = include_bytes!(\"examples/data.bin\");\n"
+"  |                        ~~~~~~~~~~~~~~~~~~~\n"
+"````````````````````"
 
 #: src/rust-2024/rustdoc-nested-includes.md:60
 msgid ""

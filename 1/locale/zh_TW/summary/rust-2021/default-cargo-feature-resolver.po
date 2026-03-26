@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/rust-2021/default-cargo-resolver.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/rust-2021/default-cargo-resolver.md:3
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/rust-2021/default-cargo-resolver.md:5
 msgid "`edition = \"2021\"` implies `resolver = \"2\"` in `Cargo.toml`."
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/rust-2021/default-cargo-resolver.md:7
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/default-cargo-resolver.md:9
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/rust-2021/default-cargo-resolver.md:30
 msgid "Migration"
-msgstr ""
+msgstr "遷移"
 
 #: src/rust-2021/default-cargo-resolver.md:32
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: src/rust-2021/default-cargo-resolver.md:50
 msgid "Build failures"
-msgstr ""
+msgstr "建置失敗"
 
 #: src/rust-2021/default-cargo-resolver.md:52
 msgid ""
@@ -210,6 +210,11 @@ msgid ""
 "diesel_migrations = \"1.4.0\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[dependencies]\n"
+"diesel = { version = \"1.4.7\", features = [\"postgres\"] }\n"
+"diesel_migrations = \"1.4.0\"\n"
+"```"
 
 #: src/rust-2021/default-cargo-resolver.md:106
 msgid ""
@@ -234,6 +239,10 @@ msgid ""
 "diesel = { version = \"1.4.7\", features = [\"postgres\"] }\n"
 "```"
 msgstr ""
+"```toml\n"
+"[build-dependencies]\n"
+"diesel = { version = \"1.4.7\", features = [\"postgres\"] }\n"
+"```"
 
 #: src/rust-2021/default-cargo-resolver.md:116
 msgid ""
@@ -316,6 +325,23 @@ msgid ""
 "└── bstr feature \"unicode\" (*)\n"
 "```"
 msgstr ""
+"```console\n"
+"> cargo tree -e features -i bstr\n"
+"bstr v0.2.16\n"
+"├── bstr feature \"default\"\n"
+"│   [build-dependencies]\n"
+"│   └── bar v0.1.0\n"
+"│       └── bar feature \"default\"\n"
+"│           └── foo v0.1.0 (/MyProjects/foo)\n"
+"├── bstr feature \"lazy_static\"\n"
+"│   └── bstr feature \"unicode\"\n"
+"│       └── bstr feature \"default\" (*)\n"
+"├── bstr feature \"regex-automata\"\n"
+"│   └── bstr feature \"unicode\" (*)\n"
+"├── bstr feature \"std\"\n"
+"│   └── bstr feature \"default\" (*)\n"
+"└── bstr feature \"unicode\" (*)\n"
+"```"
 
 #: src/rust-2021/default-cargo-resolver.md:175
 msgid ""

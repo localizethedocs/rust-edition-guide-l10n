@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:1
@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:8
 msgid "Run `cargo fix --edition`"
-msgstr ""
+msgstr "執行 `cargo fix --edition`"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:9
 msgid ""
@@ -42,7 +42,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:11
 msgid "Run `cargo fmt` to reformat your project."
-msgstr ""
+msgstr "執行 `cargo fmt` 來重新格式化您的專案。"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:13
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:20
 msgid "Starting the migration"
-msgstr ""
+msgstr "開始遷移"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:22
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:92
 msgid "Testing your code in the new edition"
-msgstr ""
+msgstr "在新的版次中測試您的程式碼"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:94
 msgid ""
@@ -191,7 +191,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:104
 msgid "Reformatting with rustfmt"
-msgstr ""
+msgstr "使用 rustfmt 進行重新格式化"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:106
 msgid ""
@@ -239,7 +239,7 @@ msgstr ""
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:128
 msgid "Run `cargo +nightly fix --edition`."
-msgstr ""
+msgstr "執行 `cargo +nightly fix --edition`。"
 
 #: src/editions/transitioning-an-existing-project-to-a-new-edition.md:129
 msgid ""

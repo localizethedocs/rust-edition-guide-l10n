@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/rust-2021/IntoIterator-for-arrays.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:3
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/rust-2021/IntoIterator-for-arrays.md:5
 msgid "Arrays implement `IntoIterator` in _all_ editions."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:11
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #: src/rust-2021/IntoIterator-for-arrays.md:13
 msgid ""
@@ -102,7 +102,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:53
 msgid "Migration"
-msgstr ""
+msgstr "遷移"
 
 #: src/rust-2021/IntoIterator-for-arrays.md:55
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:71
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: src/rust-2021/IntoIterator-for-arrays.md:77
 msgid ""
