@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-26T09:38:32Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2021/IntoIterator-for-arrays.md:1
+msgid "IntoIterator for arrays"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:5
+msgid "Arrays implement `IntoIterator` in _all_ editions."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:6
+msgid ""
+"Calls to `IntoIterator::into_iter` are _hidden_ in Rust 2015 and Rust 2018 "
+"when using method call syntax (i.e., `array.into_iter()`). So, `array."
+"into_iter()` still resolves to `(&array).into_iter()` as it has before."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:9
+msgid ""
+"`array.into_iter()` changes meaning to be the call to `IntoIterator::"
+"into_iter` in Rust 2021."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:11
+msgid "Details"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:13
+msgid ""
+"Until Rust 1.53, only _references_ to arrays implement `IntoIterator`. This "
+"means you can iterate over `&[1, 2, 3]` and `&mut [1, 2, 3]`, but not over "
+"`[1, 2, 3]` directly."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:18
+msgid "// Ok :)\n"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:20
+msgid "// Error :(\n"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:23
+msgid ""
+"This has been [a long-standing issue](https://github.com/rust-lang/rust/"
+"issues/25725), but the solution is not as simple as it seems. Just [adding "
+"the trait implementation](https://github.com/rust-lang/rust/pull/65819) "
+"would break existing code. `array.into_iter()` already compiles today "
+"because that implicitly calls `(&array).into_iter()` due to [how method call "
+"syntax works](https://doc.rust-lang.org/book/ch05-03-method-syntax."
+"html#wheres-the---operator). Adding the trait implementation would change "
+"the meaning."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:29
+msgid ""
+"Usually this type of breakage (adding a trait implementation) is categorized "
+"as 'minor' and acceptable. But in this case there is too much code that "
+"would be broken by it."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:32
+msgid ""
+"It has been suggested many times to \"only implement `IntoIterator` for "
+"arrays in Rust 2021\". However, this is simply not possible. You can't have "
+"a trait implementation exist in one edition and not in another, since "
+"editions can be mixed."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:37
+msgid ""
+"Instead, the trait implementation was added in _all_ editions (starting in "
+"Rust 1.53.0) but with a small hack to avoid breakage until Rust 2021. In "
+"Rust 2015 and 2018 code, the compiler will still resolve `array.into_iter()` "
+"to `(&array).into_iter()` like before, as if the trait implementation does "
+"not exist. This _only_ applies to the `.into_iter()` method call syntax. It "
+"does not affect any other syntax such as `for e in [1, 2, 3]`, `iter.zip([1, "
+"2, 3])` or `IntoIterator::into_iter([1, 2, 3])`. Those will start to work in "
+"_all_ editions."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:46
+msgid ""
+"While it's a shame that this required a small hack to avoid breakage, this "
+"solution keeps the difference between the editions to an absolute minimum."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:53
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:55
+msgid ""
+"A lint, `array_into_iter`, gets triggered whenever there is some call to "
+"`into_iter()` that will change meaning in Rust 2021. The `array_into_iter` "
+"lint has already been a warning by default on all editions since the 1.41 "
+"release (with several enhancements made in 1.55). If your code is already "
+"warning free, then it should already be ready to go for Rust 2021!"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:60
+msgid ""
+"You can automatically migrate your code to be Rust 2021 Edition compatible "
+"or ensure it is already compatible by running:"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:67
+msgid ""
+"Because the difference between editions is small, the migration to Rust 2021 "
+"is fairly straight-forward."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:69
+msgid ""
+"For method calls of `into_iter` on arrays, the elements being implemented "
+"will change from references to owned values."
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:71
+msgid "For example:"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:77
+msgid ""
+"// x is a `&u8` in Rust 2015 and Rust 2018\n"
+"    // x is a `u8` in Rust 2021\n"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:83
+msgid ""
+"The most straightforward way to migrate in Rust 2021, is by keeping the "
+"exact behavior from previous editions by calling `iter()` which also "
+"iterates over owned arrays by reference:"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:89
+msgid ""
+"// <- This line changed\n"
+"    // x is a `&u8` in all editions\n"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:95
+msgid "Optional migration"
+msgstr ""
+
+#: src/rust-2021/IntoIterator-for-arrays.md:97
+msgid ""
+"If you are using fully qualified method syntax (i.e., `IntoIterator::"
+"into_iter(array)`) in a previous edition, this can be upgraded to method "
+"call syntax (i.e., `array.into_iter()`)."
+msgstr ""
