@@ -1,0 +1,198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-26T09:38:32Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/rustdoc-doctests.md:1
+msgid "Rustdoc combined tests"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:5
+msgid ""
+"[Doctests](../../rustdoc/write-documentation/documentation-tests.html) are "
+"now combined into a single binary which should result in a significant "
+"performance improvement."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:7
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:9
+msgid ""
+"Prior to the 2024 Edition, rustdoc's \"test\" mode would compile each code "
+"block in your documentation as a separate executable. Although this was "
+"relatively simple to implement, it resulted in a significant performance "
+"burden when there were a large number of documentation tests. Starting with "
+"the 2024 Edition, rustdoc will attempt to combine documentation tests into a "
+"single binary, significantly reducing the overhead for compiling doctests."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:12
+msgid ""
+"/// Adds two numbers\n"
+"///\n"
+"/// ```\n"
+"/// assert_eq!(add(1, 1), 2);\n"
+"/// ```\n"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:20
+msgid ""
+"/// Subtracts two numbers\n"
+"///\n"
+"/// ```\n"
+"/// assert_eq!(subtract(2, 1), 1);\n"
+"/// ```\n"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:31
+msgid ""
+"In this example, the two doctests will now be compiled into a single "
+"executable. Rustdoc will essentially place each example in a separate "
+"function within a single binary. The tests still run in independent "
+"processes as they did before, so any global state (like global statics) "
+"should still continue to work correctly.[^implementation]"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:33
+msgid ""
+"This change is only available in the 2024 Edition to avoid potential "
+"incompatibilities with existing doctests which may not work in a combined "
+"executable. However, these incompatibilities are expected to be extremely "
+"rare."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:38
+msgid ""
+"For more information on the details of how this work, see [\"Doctests - How "
+"were they improved?\"](https://blog.guillaume-gomez.fr/"
+"articles/2024-08-17+Doctests+-+How+were+they+improved%3F)."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:40
+msgid "`standalone_crate` tag"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:42
+msgid ""
+"In some situations it is not possible for rustdoc to combine examples into a "
+"single executable. Rustdoc will attempt to automatically detect if this is "
+"not possible. For example, a test will not be combined with others if it:"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:44
+msgid ""
+"Uses the [`compile_fail`](../../rustdoc/write-documentation/documentation-"
+"tests.html#attributes) tag, which indicates that the example should fail to "
+"compile."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:45
+msgid ""
+"Uses an [`edition`](../../rustdoc/write-documentation/documentation-tests."
+"html#attributes) tag, which indicates the edition of the example.[^edition-"
+"tag]"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:46
+msgid ""
+"Uses global attributes, like the [`global_allocator`](../../std/alloc/trait."
+"GlobalAlloc.html) attribute, which could potentially interfere with other "
+"tests."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:47
+msgid "Defines any crate-wide attributes (like `#![feature(...)]`)."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:48
+msgid ""
+"Defines a macro that uses `$crate`, because the `$crate` path will not work "
+"correctly."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:50
+msgid ""
+"However, rustdoc is not able to automatically determine _all_ situations "
+"where an example cannot be combined with other examples. In these "
+"situations, you can add the `standalone_crate` language tag to indicate that "
+"the example should be built as a separate executable. For example:"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:53
+msgid ""
+"//! ```\n"
+"//! let location = std::panic::Location::caller();\n"
+"//! assert_eq!(location.line(), 5);\n"
+"//! ```\n"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:59
+msgid ""
+"This is sensitive to the code structure of how the example is compiled and "
+"won't work with the \"combined\" approach because the line numbers will "
+"shift depending on how the doctests are combined. In these situations, you "
+"can add the `standalone_crate` tag to force the example to be built "
+"separately just as it was in previous editions. E.g.:"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:62
+msgid ""
+"//! ```standalone_crate\n"
+"//! let location = std::panic::Location::caller();\n"
+"//! assert_eq!(location.line(), 5);\n"
+"//! ```\n"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:71
+msgid ""
+"Note that rustdoc will only combine tests if the entire crate is Edition "
+"2024 or greater. Using the `edition2024` tag in older editions will not "
+"result in those tests being combined."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:73
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:75
+msgid ""
+"There is no automatic migration to determine which doctests need to be "
+"annotated with the `standalone_crate` tag. It's very unlikely that any given "
+"doctest will not work correctly when migrated. We suggest that you update "
+"your crate to the 2024 Edition and then run your documentation tests and see "
+"if any fail. If one does, you will need to analyze whether it can be "
+"rewritten to be compatible with the combined approach, or alternatively, add "
+"the `standalone_crate` tag to retain the previous behavior."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:77
+msgid "Some things to watch out for and avoid are:"
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:79
+msgid ""
+"Checking the values of [`std::panic::Location`](https://doc.rust-lang.org/"
+"std/panic/struct.Location.html) or things that make use of `Location`. The "
+"location of the code is now different since multiple tests are now located "
+"in the same test crate."
+msgstr ""
+
+#: src/rust-2024/rustdoc-doctests.md:80
+msgid ""
+"Checking the value of [`std::any::type_name`](https://doc.rust-lang.org/std/"
+"any/fn.type_name.html), which now has a different module path."
+msgstr ""
