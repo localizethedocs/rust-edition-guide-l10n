@@ -37,9 +37,9 @@
     "branch" : "beta",
     "commit" : 
     {
-      "date" : "2026-03-19 21:25:41 +0000",
-      "hash" : "951adfe62e1187945e3b244dee924da3364cba0d",
-      "title" : "Auto merge of #153958 - fmease:beta-dyn-ace-gingerly-care, r=BoxyUwU"
+      "date" : "2026-05-17 13:19:02 +0000",
+      "hash" : "6be5f81e16dc5d238ff6a1f50030da2ff7de8cd2",
+      "title" : "Auto merge of #156625 - weihanglo:beta-1.96-backport, r=weihanglo"
     }
   },
   "type" : "branch",
