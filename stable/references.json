@@ -37,9 +37,9 @@
     "branch" : "stable",
     "commit" : 
     {
-      "date" : "2026-03-22 21:19:42 +0000",
-      "hash" : "409dedce21404e2eb6ae38d5dca772d5ae4bd4c8",
-      "title" : "Auto merge of #154211 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
+      "date" : "2026-09-01 06:56:03 +0000",
+      "hash" : "48a229ceaefd4985c50990b14116b6d856af0985",
+      "title" : "Auto merge of #161555 - lcnr:backport-erased-handling, r=Mark-Simulacrum"
     }
   },
   "type" : "branch",
