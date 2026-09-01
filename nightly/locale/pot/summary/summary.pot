@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Rust Edition Guide\n"
-"POT-Creation-Date: 2026-03-24T09:04:26Z\n"
+"POT-Creation-Date: 2026-09-01T13:19:33Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -196,7 +196,7 @@ msgid "Cargo: Table and key name consistency"
 msgstr ""
 
 #: src/SUMMARY.md:64
-msgid "Cargo: Reject unused inherited default-features"
+msgid "Cargo: Override inherited default-features"
 msgstr ""
 
 #: src/SUMMARY.md:65
