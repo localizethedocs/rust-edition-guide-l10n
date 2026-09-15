@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-24T09:04:26Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:1
+msgid "unsafe_op_in_unsafe_fn warning"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:3
+msgid "Summary"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:5
+msgid ""
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
+"html#unsafe-op-in-unsafe-fn) lint now warns by default. This warning detects "
+"calls to unsafe operations in unsafe functions without an explicit unsafe "
+"block."
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:10
+msgid "Details"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:12
+msgid ""
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
+"html#unsafe-op-in-unsafe-fn) lint will fire if there are [unsafe operations]"
+"(../../reference/unsafety.html) in an unsafe function without an explicit "
+"[`unsafe {}` block](../../reference/expressions/block-expr.html#unsafe-"
+"blocks)."
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:17
+msgid "// WARNING: requires unsafe block\n"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:21
+msgid "The solution is to wrap any unsafe operations in an `unsafe` block:"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:30
+msgid ""
+"This change is intended to help protect against accidental use of unsafe "
+"operations in an unsafe function. The `unsafe` function keyword was "
+"performing two roles. One was to declare that _calling_ the function "
+"requires unsafe, and that the caller is responsible to uphold additional "
+"safety requirements. The other role was to allow the use of unsafe "
+"operations inside of the function. This second role was determined to be too "
+"risky without explicit `unsafe` blocks."
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:36
+msgid ""
+"More information and motivation may be found in [RFC #2585](https://rust-"
+"lang.github.io/rfcs/2585-unsafe-block-in-unsafe-fn.html)."
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:42
+msgid "Migration"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:44
+msgid ""
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
+"html#unsafe-op-in-unsafe-fn) lint is part of the `rust-2024-compatibility` "
+"lint group. In order to migrate your code to be Rust 2024 Edition "
+"compatible, run:"
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:51
+msgid ""
+"Alternatively, you can manually enable the lint to find places where unsafe "
+"blocks need to be added, or switch it to `allow` to silence the lint "
+"completely."
+msgstr ""
+
+#: src/rust-2024/unsafe-op-in-unsafe-fn.md:54
+msgid "// Add this to the root of your crate to do a manual migration.\n"
+msgstr ""
