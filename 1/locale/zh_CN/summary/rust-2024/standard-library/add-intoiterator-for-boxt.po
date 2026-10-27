@@ -21,17 +21,17 @@ msgstr ""
 
 #: src/rust-2024/intoiterator-box-slice.md:5
 msgid ""
-"Boxed slices implement [`IntoIterator`](../../std/iter/trait.IntoIterator."
-"html) in _all_ editions."
+"Boxed slices implement [`IntoIterator`](../../std/iter/"
+"trait.IntoIterator.html) in _all_ editions."
 msgstr ""
 
 #: src/rust-2024/intoiterator-box-slice.md:6
 msgid ""
-"Calls to [`IntoIterator::into_iter`](../../std/iter/trait.IntoIterator."
-"html#tymethod.into_iter) are _hidden_ in editions prior to 2024 when using "
-"method call syntax (i.e., `boxed_slice.into_iter()`). So, `boxed_slice."
-"into_iter()` still resolves to `(&(*boxed_slice)).into_iter()` as it has "
-"before."
+"Calls to [`IntoIterator::into_iter`](../../std/iter/"
+"trait.IntoIterator.html#tymethod.into_iter) are _hidden_ in editions prior "
+"to 2024 when using method call syntax (i.e., `boxed_slice.into_iter()`). So, "
+"`boxed_slice.into_iter()` still resolves to `(&(*boxed_slice)).into_iter()` "
+"as it has before."
 msgstr ""
 
 #: src/rust-2024/intoiterator-box-slice.md:7
@@ -118,10 +118,10 @@ msgstr ""
 
 #: src/rust-2024/intoiterator-box-slice.md:50
 msgid ""
-"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-default."
-"html#boxed-slice-into-iter) lint will automatically modify any calls to `."
-"into_iter()` on boxed slices to call `.iter()` instead to retain the old "
-"behavior of yielding references. This lint is part of the `rust-2024-"
+"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-"
+"default.html#boxed-slice-into-iter) lint will automatically modify any calls "
+"to `.into_iter()` on boxed slices to call `.iter()` instead to retain the "
+"old behavior of yielding references. This lint is part of the `rust-2024-"
 "compatibility` lint group, which will automatically be applied when running "
 "`cargo fix --edition`. To migrate your code to be Rust 2024 Edition "
 "compatible, run:"
@@ -142,8 +142,8 @@ msgstr ""
 
 #: src/rust-2024/intoiterator-box-slice.md:78
 msgid ""
-"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-default."
-"html#boxed-slice-into-iter) lint is defaulted to warn on all editions, so "
-"unless you have manually silenced the lint, you should already see it before "
-"you migrate."
+"The [`boxed_slice_into_iter`](../../rustc/lints/listing/warn-by-"
+"default.html#boxed-slice-into-iter) lint is defaulted to warn on all "
+"editions, so unless you have manually silenced the lint, you should already "
+"see it before you migrate."
 msgstr ""

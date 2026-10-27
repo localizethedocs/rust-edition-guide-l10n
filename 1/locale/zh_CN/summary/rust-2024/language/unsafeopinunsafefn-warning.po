@@ -21,10 +21,10 @@ msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:5
 msgid ""
-"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
-"html#unsafe-op-in-unsafe-fn) lint now warns by default. This warning detects "
-"calls to unsafe operations in unsafe functions without an explicit unsafe "
-"block."
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-"
+"default.html#unsafe-op-in-unsafe-fn) lint now warns by default. This warning "
+"detects calls to unsafe operations in unsafe functions without an explicit "
+"unsafe block."
 msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:10
@@ -33,11 +33,11 @@ msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:12
 msgid ""
-"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
-"html#unsafe-op-in-unsafe-fn) lint will fire if there are [unsafe operations]"
-"(../../reference/unsafety.html) in an unsafe function without an explicit "
-"[`unsafe {}` block](../../reference/expressions/block-expr.html#unsafe-"
-"blocks)."
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-"
+"default.html#unsafe-op-in-unsafe-fn) lint will fire if there are [unsafe "
+"operations](../../reference/unsafety.html) in an unsafe function without an "
+"explicit [`unsafe {}` block](../../reference/expressions/block-"
+"expr.html#unsafe-blocks)."
 msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:17
@@ -71,10 +71,10 @@ msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:44
 msgid ""
-"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-default."
-"html#unsafe-op-in-unsafe-fn) lint is part of the `rust-2024-compatibility` "
-"lint group. In order to migrate your code to be Rust 2024 Edition "
-"compatible, run:"
+"The [`unsafe_op_in_unsafe_fn`](../../rustc/lints/listing/allowed-by-"
+"default.html#unsafe-op-in-unsafe-fn) lint is part of the `rust-2024-"
+"compatibility` lint group. In order to migrate your code to be Rust 2024 "
+"Edition compatible, run:"
 msgstr ""
 
 #: src/rust-2024/unsafe-op-in-unsafe-fn.md:51

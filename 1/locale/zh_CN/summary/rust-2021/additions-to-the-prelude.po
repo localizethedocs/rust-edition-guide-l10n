@@ -71,20 +71,20 @@ msgstr ""
 
 #: src/rust-2021/prelude.md:29
 msgid ""
-"[`std::convert::TryInto`](https://doc.rust-lang.org/stable/std/convert/trait."
-"TryInto.html)"
+"[`std::convert::TryInto`](https://doc.rust-lang.org/stable/std/convert/"
+"trait.TryInto.html)"
 msgstr ""
 
 #: src/rust-2021/prelude.md:30
 msgid ""
-"[`std::convert::TryFrom`](https://doc.rust-lang.org/stable/std/convert/trait."
-"TryFrom.html)"
+"[`std::convert::TryFrom`](https://doc.rust-lang.org/stable/std/convert/"
+"trait.TryFrom.html)"
 msgstr ""
 
 #: src/rust-2021/prelude.md:31
 msgid ""
-"[`std::iter::FromIterator`](https://doc.rust-lang.org/stable/std/iter/trait."
-"FromIterator.html)"
+"[`std::iter::FromIterator`](https://doc.rust-lang.org/stable/std/iter/"
+"trait.FromIterator.html)"
 msgstr ""
 
 #: src/rust-2021/prelude.md:33
@@ -191,8 +191,8 @@ msgid ""
 "object does not require that the trait be in scope. The code above works as "
 "long as there is no trait in scope with a conflicting method name. When the "
 "`TryInto` trait is in scope (which is the case in Rust 2021), this causes an "
-"ambiguity. Should the call be to `MyTrait::try_into` or `std::convert::"
-"TryInto::try_into`?"
+"ambiguity. Should the call be to `MyTrait::try_into` or "
+"`std::convert::TryInto::try_into`?"
 msgstr ""
 
 #: src/rust-2021/prelude.md:106
@@ -270,11 +270,11 @@ msgstr ""
 
 #: src/rust-2021/prelude.md:150
 msgid ""
-"Inherent methods that take `self` will take priority over `TryInto::"
-"try_into` as inherent methods take priority over trait methods, but inherent "
-"methods that take `&self` or `&mut self` won't take priority due to "
-"requiring a auto-reference (while `TryInto::try_into` does not, as it takes "
-"`self`)"
+"Inherent methods that take `self` will take priority over "
+"`TryInto::try_into` as inherent methods take priority over trait methods, "
+"but inherent methods that take `&self` or `&mut self` won't take priority "
+"due to requiring a auto-reference (while `TryInto::try_into` does not, as it "
+"takes `self`)"
 msgstr ""
 
 #: src/rust-2021/prelude.md:151

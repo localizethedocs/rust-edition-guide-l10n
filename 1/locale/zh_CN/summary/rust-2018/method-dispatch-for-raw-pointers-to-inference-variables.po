@@ -21,8 +21,8 @@ msgstr ""
 
 #: src/rust-2018/tyvar-behind-raw-pointer.md:5
 msgid ""
-"The [`tyvar_behind_raw_pointer`](https://github.com/rust-lang/rust/"
-"issues/46906) lint is now a hard error."
+"The [`tyvar_behind_raw_pointer`](https://github.com/rust-lang/rust/issues/"
+"46906) lint is now a hard error."
 msgstr ""
 
 #: src/rust-2018/tyvar-behind-raw-pointer.md:9

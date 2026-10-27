@@ -21,8 +21,8 @@ msgstr ""
 
 #: src/rust-2024/macro-fragment-specifiers.md:5
 msgid ""
-"The `expr` [fragment specifier](../../reference/macros-by-example."
-"html#metavariables) now also supports `const` and `_` expressions."
+"The `expr` [fragment specifier](../../reference/macros-by-"
+"example.html#metavariables) now also supports `const` and `_` expressions."
 msgstr ""
 
 #: src/rust-2024/macro-fragment-specifiers.md:6
