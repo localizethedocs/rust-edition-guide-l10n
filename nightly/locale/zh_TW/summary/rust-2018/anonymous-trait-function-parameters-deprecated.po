@@ -38,9 +38,9 @@ msgstr "詳情"
 
 #: src/rust-2018/trait-fn-parameters.md:14
 msgid ""
-"In accordance with RFC [\\#1685](https://github.com/rust-lang/rfcs/"
-"pull/1685), parameters in trait method declarations are no longer allowed to "
-"be anonymous."
+"In accordance with RFC [\\#1685](https://github.com/rust-lang/rfcs/pull/"
+"1685), parameters in trait method declarations are no longer allowed to be "
+"anonymous."
 msgstr ""
 
 #: src/rust-2018/trait-fn-parameters.md:17

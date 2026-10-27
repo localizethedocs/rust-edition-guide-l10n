@@ -35,12 +35,12 @@ msgstr ""
 
 #: src/rust-2024/reserved-syntax.md:10
 msgid ""
-"[RFC 3593](https://rust-lang.github.io/rfcs/3593-unprefixed-guarded-strings."
-"html) reserved syntax in the 2024 Edition for guarded string literals that "
-"do not have a prefix to make room for possible future language changes. The "
-"2021 Edition [reserved syntax](../rust-2021/reserved-syntax.md) for guarded "
-"strings with a prefix, such as `ident##\"foo\"##`. The 2024 Edition extends "
-"that to also reserve strings without the `ident` prefix."
+"[RFC 3593](https://rust-lang.github.io/rfcs/3593-unprefixed-guarded-"
+"strings.html) reserved syntax in the 2024 Edition for guarded string "
+"literals that do not have a prefix to make room for possible future language "
+"changes. The 2021 Edition [reserved syntax](../rust-2021/reserved-syntax.md) "
+"for guarded strings with a prefix, such as `ident##\"foo\"##`. The 2024 "
+"Edition extends that to also reserve strings without the `ident` prefix."
 msgstr ""
 
 #: src/rust-2024/reserved-syntax.md:12

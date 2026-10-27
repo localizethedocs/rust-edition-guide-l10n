@@ -105,9 +105,9 @@ msgstr ""
 
 #: src/editions/creating-a-new-project.md:52
 msgid ""
-"You can change the value of the `edition` key by simply editing the `Cargo."
-"toml` file. For example, to cause your package to be built using the Rust "
-"2015 edition, you would set the key as in the following example:"
+"You can change the value of the `edition` key by simply editing the "
+"`Cargo.toml` file. For example, to cause your package to be built using the "
+"Rust 2015 edition, you would set the key as in the following example:"
 msgstr ""
 
 #: src/editions/creating-a-new-project.md:56

@@ -21,8 +21,8 @@ msgstr ""
 
 #: src/rust-2024/rustfmt-raw-identifier-sorting.md:5
 msgid ""
-"`rustfmt` now properly sorts [raw identifiers](../../reference/identifiers."
-"html#raw-identifiers)."
+"`rustfmt` now properly sorts [raw identifiers](../../reference/"
+"identifiers.html#raw-identifiers)."
 msgstr ""
 
 #: src/rust-2024/rustfmt-raw-identifier-sorting.md:9

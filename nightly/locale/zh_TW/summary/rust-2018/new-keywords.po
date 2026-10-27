@@ -27,9 +27,9 @@ msgstr "摘要"
 
 #: src/rust-2018/new-keywords.md:7
 msgid ""
-"`dyn` is a [strict keyword](https://doc.rust-lang.org/reference/keywords."
-"html#strict-keywords), in 2015 it is a [weak keyword](https://doc.rust-lang."
-"org/reference/keywords.html#weak-keywords)."
+"`dyn` is a [strict keyword](https://doc.rust-lang.org/reference/"
+"keywords.html#strict-keywords), in 2015 it is a [weak keyword](https://"
+"doc.rust-lang.org/reference/keywords.html#weak-keywords)."
 msgstr ""
 
 #: src/rust-2018/new-keywords.md:8
@@ -40,8 +40,8 @@ msgstr ""
 
 #: src/rust-2018/new-keywords.md:9
 msgid ""
-"`try` is a [reserved keyword](https://doc.rust-lang.org/reference/keywords."
-"html#reserved-keywords)."
+"`try` is a [reserved keyword](https://doc.rust-lang.org/reference/"
+"keywords.html#reserved-keywords)."
 msgstr ""
 
 #: src/rust-2018/new-keywords.md:15
@@ -114,8 +114,8 @@ msgstr ""
 #: src/rust-2018/new-keywords.md:62
 msgid ""
 "These keywords are reserved to implement the async-await feature of Rust, "
-"which was ultimately [released to stable in 1.39.0](https://blog.rust-lang."
-"org/2019/11/07/Async-await-stable.html)."
+"which was ultimately [released to stable in 1.39.0](https://blog.rust-"
+"lang.org/2019/11/07/Async-await-stable.html)."
 msgstr ""
 
 #: src/rust-2018/new-keywords.md:64

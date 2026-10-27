@@ -31,11 +31,11 @@ msgstr ""
 
 #: src/rust-2024/gen-keyword.md:11
 msgid ""
-"The `gen` keyword has been reserved as part of [RFC #3513](https://rust-lang."
-"github.io/rfcs/3513-gen-blocks.html) to introduce \"gen blocks\" in a future "
-"release of Rust. `gen` blocks will provide a way to make it easier to write "
-"certain kinds of iterators. Reserving the keyword now will make it easier to "
-"stabilize `gen` blocks before the next edition."
+"The `gen` keyword has been reserved as part of [RFC #3513](https://rust-"
+"lang.github.io/rfcs/3513-gen-blocks.html) to introduce \"gen blocks\" in a "
+"future release of Rust. `gen` blocks will provide a way to make it easier to "
+"write certain kinds of iterators. Reserving the keyword now will make it "
+"easier to stabilize `gen` blocks before the next edition."
 msgstr ""
 
 #: src/rust-2024/gen-keyword.md:15
@@ -53,12 +53,12 @@ msgstr ""
 
 #: src/rust-2024/gen-keyword.md:19
 msgid ""
-"The [`keyword_idents_2024`](../../rustc/lints/listing/allowed-by-default."
-"html#keyword-idents-2024) lint will automatically modify any identifier "
-"named `gen` to be `r#gen` so that code continues to work on both editions. "
-"This lint is part of the `rust-2024-compatibility` lint group, which will "
-"automatically be applied when running `cargo fix --edition`. To migrate your "
-"code to be Rust 2024 Edition compatible, run:"
+"The [`keyword_idents_2024`](../../rustc/lints/listing/allowed-by-"
+"default.html#keyword-idents-2024) lint will automatically modify any "
+"identifier named `gen` to be `r#gen` so that code continues to work on both "
+"editions. This lint is part of the `rust-2024-compatibility` lint group, "
+"which will automatically be applied when running `cargo fix --edition`. To "
+"migrate your code to be Rust 2024 Edition compatible, run:"
 msgstr ""
 
 #: src/rust-2024/gen-keyword.md:25
