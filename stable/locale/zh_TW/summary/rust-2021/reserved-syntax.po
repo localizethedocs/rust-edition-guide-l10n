@@ -78,10 +78,10 @@ msgstr ""
 
 #: src/rust-2021/reserved-syntax.md:31
 msgid ""
-"Other than turning these into a tokenization error, [the RFC](https://github."
-"com/rust-lang/rfcs/pull/3101) does not attach a meaning to any prefix yet. "
-"Assigning meaning to specific prefixes is left to future proposals, which "
-"will now—thanks to reserving these prefixes—not be breaking changes."
+"Other than turning these into a tokenization error, [the RFC](https://"
+"github.com/rust-lang/rfcs/pull/3101) does not attach a meaning to any prefix "
+"yet. Assigning meaning to specific prefixes is left to future proposals, "
+"which will now—thanks to reserving these prefixes—not be breaking changes."
 msgstr ""
 
 #: src/rust-2021/reserved-syntax.md:36
@@ -100,8 +100,8 @@ msgstr ""
 
 #: src/rust-2021/reserved-syntax.md:44
 msgid ""
-"`f\"\"` as a short-hand for a format string. For example, `f\"hello "
-"{name}\"` as a short-hand for the equivalent `format!()` invocation."
+"`f\"\"` as a short-hand for a format string. For example, `f\"hello {name}"
+"\"` as a short-hand for the equivalent `format!()` invocation."
 msgstr ""
 
 #: src/rust-2021/reserved-syntax.md:47

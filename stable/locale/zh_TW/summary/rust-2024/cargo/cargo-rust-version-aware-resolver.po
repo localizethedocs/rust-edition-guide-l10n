@@ -31,11 +31,11 @@ msgstr "詳情"
 
 #: src/rust-2024/cargo-resolver.md:9
 msgid ""
-"Since Rust 1.84.0, Cargo has opt-in support for compatibility with [`package."
-"rust-version`](../../cargo/reference/rust-version.html) to be considered "
-"when selecting dependency versions by setting [`resolver.incompatible-rust-"
-"version = \"fallback\"`](../../cargo/reference/config."
-"html#resolverincompatible-rust-versions) in `.cargo/config.toml`."
+"Since Rust 1.84.0, Cargo has opt-in support for compatibility with "
+"[`package.rust-version`](../../cargo/reference/rust-version.html) to be "
+"considered when selecting dependency versions by setting "
+"[`resolver.incompatible-rust-version = \"fallback\"`](../../cargo/reference/"
+"config.html#resolverincompatible-rust-versions) in `.cargo/config.toml`."
 msgstr ""
 
 #: src/rust-2024/cargo-resolver.md:13

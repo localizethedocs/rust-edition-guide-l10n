@@ -42,8 +42,8 @@ msgid ""
 "[`cstr`](https://crates.io/crates/cstr) crate was a popular solution, but "
 "that required compiling a proc-macro which was quite expensive. Now, C-"
 "strings can be written directly using literal syntax notation, which will "
-"generate a value of type [`&core::ffi::CStr`](../../core/ffi/struct.CStr."
-"html) which is automatically terminated with a NUL byte."
+"generate a value of type [`&core::ffi::CStr`](../../core/ffi/"
+"struct.CStr.html) which is automatically terminated with a NUL byte."
 msgstr ""
 
 #: src/rust-2021/c-string-literals.md:20

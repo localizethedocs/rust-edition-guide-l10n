@@ -273,9 +273,9 @@ msgstr ""
 msgid ""
 "[Auto traits](https://doc.rust-lang.org/nightly/reference/special-types-and-"
 "traits.html#auto-traits) like [`Send`](https://doc.rust-lang.org/std/marker/"
-"trait.Send.html), [`Sync`](https://doc.rust-lang.org/std/marker/trait.Sync."
-"html), and [`UnwindSafe`](https://doc.rust-lang.org/std/panic/trait."
-"UnwindSafe.html): if all captured values implement the given trait."
+"trait.Send.html), [`Sync`](https://doc.rust-lang.org/std/marker/"
+"trait.Sync.html), and [`UnwindSafe`](https://doc.rust-lang.org/std/panic/"
+"trait.UnwindSafe.html): if all captured values implement the given trait."
 msgstr ""
 
 #: src/rust-2021/disjoint-capture-in-closures.md:144

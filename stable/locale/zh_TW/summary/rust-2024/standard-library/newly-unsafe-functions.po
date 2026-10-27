@@ -63,19 +63,20 @@ msgstr "`std::env::{set_var, remove_var}`"
 
 #: src/rust-2024/newly-unsafe-functions.md:21
 msgid ""
-"It can be unsound to call [`std::env::set_var`](../../std/env/fn.set_var."
-"html) or [`std::env::remove_var`](../../std/env/fn.remove_var.html) in a "
-"multithreaded program due to safety limitations of the way the process "
-"environment is handled on some platforms. The standard library originally "
-"defined these as safe functions, but it was later determined that was not "
-"correct."
+"It can be unsound to call [`std::env::set_var`](../../std/env/"
+"fn.set_var.html) or [`std::env::remove_var`](../../std/env/"
+"fn.remove_var.html) in a multithreaded program due to safety limitations of "
+"the way the process environment is handled on some platforms. The standard "
+"library originally defined these as safe functions, but it was later "
+"determined that was not correct."
 msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:23
 msgid ""
 "It is important to ensure that these functions are not called when any other "
-"thread might be running. See the [Safety](../../std/env/fn.set_var."
-"html#safety) section of the function documentation for more details."
+"thread might be running. See the [Safety](../../std/env/"
+"fn.set_var.html#safety) section of the function documentation for more "
+"details."
 msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:27
@@ -88,8 +89,9 @@ msgid ""
 "process/trait.CommandExt.html#method.before_exec) function is a unix-"
 "specific function which provides a way to run a closure before calling "
 "`exec`. This function was deprecated in the 1.37 release, and replaced with "
-"[`pre_exec`](../../std/os/unix/process/trait.CommandExt.html#tymethod."
-"pre_exec) which does the same thing, but is marked as `unsafe`."
+"[`pre_exec`](../../std/os/unix/process/"
+"trait.CommandExt.html#tymethod.pre_exec) which does the same thing, but is "
+"marked as `unsafe`."
 msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:31
@@ -103,8 +105,8 @@ msgstr ""
 #: src/rust-2024/newly-unsafe-functions.md:33
 msgid ""
 "There are very strict safety requirements for the `before_exec` closure to "
-"satisfy. See the [Safety section](../../std/os/unix/process/trait.CommandExt."
-"html#notes-and-safety) for more details."
+"satisfy. See the [Safety section](../../std/os/unix/process/"
+"trait.CommandExt.html#notes-and-safety) for more details."
 msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:38
@@ -130,12 +132,12 @@ msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:44
 msgid ""
-"The [`deprecated_safe_2024`](../../rustc/lints/listing/allowed-by-default."
-"html#deprecated-safe-2024) lint will automatically modify any use of these "
-"functions to be wrapped in an `unsafe` block so that it can compile on both "
-"editions. This lint is part of the `rust-2024-compatibility` lint group, "
-"which will automatically be applied when running `cargo fix --edition`. To "
-"migrate your code to be Rust 2024 Edition compatible, run:"
+"The [`deprecated_safe_2024`](../../rustc/lints/listing/allowed-by-"
+"default.html#deprecated-safe-2024) lint will automatically modify any use of "
+"these functions to be wrapped in an `unsafe` block so that it can compile on "
+"both editions. This lint is part of the `rust-2024-compatibility` lint "
+"group, which will automatically be applied when running `cargo fix --"
+"edition`. To migrate your code to be Rust 2024 Edition compatible, run:"
 msgstr ""
 
 #: src/rust-2024/newly-unsafe-functions.md:50
