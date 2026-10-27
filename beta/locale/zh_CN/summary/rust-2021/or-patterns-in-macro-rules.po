@@ -104,8 +104,8 @@ msgstr ""
 #: src/rust-2021/or-patterns-macro-rules.md:49
 msgid ""
 "If you have a macro which relies on `$_:pat` not matching the top level use "
-"of `|` in patterns, you'll need to change each occurrence of `$_:pat` to `$_:"
-"pat_param`."
+"of `|` in patterns, you'll need to change each occurrence of `$_:pat` to "
+"`$_:pat_param`."
 msgstr ""
 
 #: src/rust-2021/or-patterns-macro-rules.md:52

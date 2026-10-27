@@ -129,10 +129,10 @@ msgstr ""
 
 #: src/rust-2018/path-changes.md:65
 msgid ""
-"Now, to add a new crate to your project, you can add it to your `Cargo."
-"toml`, and then there is no step two. If you're not using Cargo, you already "
-"had to pass `--extern` flags to give `rustc` the location of external "
-"crates, so you'd just keep doing what you were doing there as well."
+"Now, to add a new crate to your project, you can add it to your "
+"`Cargo.toml`, and then there is no step two. If you're not using Cargo, you "
+"already had to pass `--extern` flags to give `rustc` the location of "
+"external crates, so you'd just keep doing what you were doing there as well."
 msgstr ""
 
 #: src/rust-2018/path-changes.md:70
@@ -246,8 +246,8 @@ msgstr ""
 #: src/rust-2018/path-changes.md:160
 msgid ""
 "The prefix `::` previously referred to either the crate root or an external "
-"crate; it now unambiguously refers to an external crate. For instance, `::"
-"foo::bar` always refers to the name `bar` inside the external crate `foo`."
+"crate; it now unambiguously refers to an external crate. For instance, "
+"`::foo::bar` always refers to the name `bar` inside the external crate `foo`."
 msgstr ""
 
 #: src/rust-2018/path-changes.md:164
@@ -303,8 +303,8 @@ msgstr ""
 #: src/rust-2018/path-changes.md:221
 msgid ""
 "It can live in `foo.rs` or `foo/mod.rs`. If it has submodules of its own, it "
-"_must_ be `foo/mod.rs`. So a `bar` submodule of `foo` would live at `foo/bar."
-"rs`."
+"_must_ be `foo/mod.rs`. So a `bar` submodule of `foo` would live at `foo/"
+"bar.rs`."
 msgstr ""
 
 #: src/rust-2018/path-changes.md:225

@@ -18,9 +18,9 @@ msgstr ""
 #: src/rust-2024/rpit-lifetime-capture.md:3
 msgid ""
 "This chapter describes changes related to the **Lifetime Capture Rules "
-"2024** introduced in [RFC 3498](https://github.com/rust-lang/rfcs/"
-"pull/3498), including how to use opaque type _precise capturing_ (introduced "
-"in [RFC 3617](https://github.com/rust-lang/rfcs/pull/3617)) to migrate your "
+"2024** introduced in [RFC 3498](https://github.com/rust-lang/rfcs/pull/"
+"3498), including how to use opaque type _precise capturing_ (introduced in "
+"[RFC 3617](https://github.com/rust-lang/rfcs/pull/3617)) to migrate your "
 "code."
 msgstr ""
 

@@ -78,8 +78,8 @@ msgstr ""
 #: src/rust-2024/rustdoc-doctests.md:38
 msgid ""
 "For more information on the details of how this work, see [\"Doctests - How "
-"were they improved?\"](https://blog.guillaume-gomez.fr/"
-"articles/2024-08-17+Doctests+-+How+were+they+improved%3F)."
+"were they improved?\"](https://blog.guillaume-gomez.fr/articles/"
+"2024-08-17+Doctests+-+How+were+they+improved%3F)."
 msgstr ""
 
 #: src/rust-2024/rustdoc-doctests.md:40
@@ -102,16 +102,16 @@ msgstr ""
 
 #: src/rust-2024/rustdoc-doctests.md:45
 msgid ""
-"Uses an [`edition`](../../rustdoc/write-documentation/documentation-tests."
-"html#attributes) tag, which indicates the edition of the example.[^edition-"
-"tag]"
+"Uses an [`edition`](../../rustdoc/write-documentation/documentation-"
+"tests.html#attributes) tag, which indicates the edition of the example."
+"[^edition-tag]"
 msgstr ""
 
 #: src/rust-2024/rustdoc-doctests.md:46
 msgid ""
-"Uses global attributes, like the [`global_allocator`](../../std/alloc/trait."
-"GlobalAlloc.html) attribute, which could potentially interfere with other "
-"tests."
+"Uses global attributes, like the [`global_allocator`](../../std/alloc/"
+"trait.GlobalAlloc.html) attribute, which could potentially interfere with "
+"other tests."
 msgstr ""
 
 #: src/rust-2024/rustdoc-doctests.md:47

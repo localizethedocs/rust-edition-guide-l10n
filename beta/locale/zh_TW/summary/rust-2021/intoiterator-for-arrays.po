@@ -26,14 +26,15 @@ msgstr ""
 #: src/rust-2021/IntoIterator-for-arrays.md:6
 msgid ""
 "Calls to `IntoIterator::into_iter` are _hidden_ in Rust 2015 and Rust 2018 "
-"when using method call syntax (i.e., `array.into_iter()`). So, `array."
-"into_iter()` still resolves to `(&array).into_iter()` as it has before."
+"when using method call syntax (i.e., `array.into_iter()`). So, "
+"`array.into_iter()` still resolves to `(&array).into_iter()` as it has "
+"before."
 msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:9
 msgid ""
-"`array.into_iter()` changes meaning to be the call to `IntoIterator::"
-"into_iter` in Rust 2021."
+"`array.into_iter()` changes meaning to be the call to "
+"`IntoIterator::into_iter` in Rust 2021."
 msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:11
@@ -62,9 +63,9 @@ msgid ""
 "the trait implementation](https://github.com/rust-lang/rust/pull/65819) "
 "would break existing code. `array.into_iter()` already compiles today "
 "because that implicitly calls `(&array).into_iter()` due to [how method call "
-"syntax works](https://doc.rust-lang.org/book/ch05-03-method-syntax."
-"html#wheres-the---operator). Adding the trait implementation would change "
-"the meaning."
+"syntax works](https://doc.rust-lang.org/book/ch05-03-method-"
+"syntax.html#wheres-the---operator). Adding the trait implementation would "
+"change the meaning."
 msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:29
@@ -160,7 +161,7 @@ msgstr ""
 
 #: src/rust-2021/IntoIterator-for-arrays.md:97
 msgid ""
-"If you are using fully qualified method syntax (i.e., `IntoIterator::"
-"into_iter(array)`) in a previous edition, this can be upgraded to method "
-"call syntax (i.e., `array.into_iter()`)."
+"If you are using fully qualified method syntax (i.e., "
+"`IntoIterator::into_iter(array)`) in a previous edition, this can be "
+"upgraded to method call syntax (i.e., `array.into_iter()`)."
 msgstr ""
