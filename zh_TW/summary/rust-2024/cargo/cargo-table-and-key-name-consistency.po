@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Edition Guide\n"
+"POT-Creation-Date: 2026-03-24T08:57:29Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/rust-2024/cargo-table-key-names.md:1
+msgid "Cargo: Table and key name consistency"
+msgstr "Cargo：表格與鍵名一致性"
+
+#: src/rust-2024/cargo-table-key-names.md:3
+msgid "Summary"
+msgstr "摘要"
+
+#: src/rust-2024/cargo-table-key-names.md:5
+msgid ""
+"Several table and key names in `Cargo.toml` have been removed where there "
+"were previously two ways to specify the same thing."
+msgstr ""
+
+#: src/rust-2024/cargo-table-key-names.md:6
+msgid "Removed `[project]`; use `[package]` instead."
+msgstr "已移除 `[project]`；請改用 `[package]`。"
+
+#: src/rust-2024/cargo-table-key-names.md:7
+msgid "Removed `default_features`; use `default-features` instead."
+msgstr "已移除 `default_features`；請改用 `default-features`。"
+
+#: src/rust-2024/cargo-table-key-names.md:8
+msgid "Removed `crate_type`; use `crate-type` instead."
+msgstr "已移除 `crate_type`；請改用 `crate-type`。"
+
+#: src/rust-2024/cargo-table-key-names.md:9
+msgid "Removed `proc_macro`; use `proc-macro` instead."
+msgstr "已移除 `proc_macro`；請改用 `proc-macro`。"
+
+#: src/rust-2024/cargo-table-key-names.md:10
+msgid "Removed `dev_dependencies`; use `dev-dependencies` instead."
+msgstr "已移除 `dev_dependencies`；請改用 `dev-dependencies`。"
+
+#: src/rust-2024/cargo-table-key-names.md:11
+msgid "Removed `build_dependencies`; use `build-dependencies` instead."
+msgstr "已移除 `build_dependencies`；請改用 `build-dependencies`。"
+
+#: src/rust-2024/cargo-table-key-names.md:13
+msgid "Details"
+msgstr "詳情"
+
+#: src/rust-2024/cargo-table-key-names.md:15
+msgid ""
+"Several table and keys names are no longer allowed in the 2024 Edition. "
+"There were two ways to specify these tables or keys, and this helps ensure "
+"there is only one way to specify them."
+msgstr ""
+
+#: src/rust-2024/cargo-table-key-names.md:18
+msgid ""
+"Some were due to a change in decisions over time, and some were inadvertent "
+"implementation artifacts. In order to avoid confusion, and to enforce a "
+"single style for specifying these tables and keys, only one variant is now "
+"allowed."
+msgstr ""
+
+#: src/rust-2024/cargo-table-key-names.md:21
+msgid "For example:"
+msgstr "例如："
+
+#: src/rust-2024/cargo-table-key-names.md:23
+msgid ""
+"```toml\n"
+"[dev_dependencies]\n"
+"rand = { version = \"0.8.5\", default_features = false }\n"
+"```"
+msgstr ""
+"```toml\n"
+"[dev_dependencies]\n"
+"rand = { version = \"0.8.5\", default_features = false }\n"
+"```"
+
+#: src/rust-2024/cargo-table-key-names.md:28
+msgid "Should be changed to:"
+msgstr "應該變更為："
+
+#: src/rust-2024/cargo-table-key-names.md:30
+msgid ""
+"```toml\n"
+"[dev-dependencies]\n"
+"rand = { version = \"0.8.5\", default-features = false }\n"
+"```"
+msgstr ""
+"```toml\n"
+"[dev-dependencies]\n"
+"rand = { version = \"0.8.5\", default-features = false }\n"
+"```"
+
+#: src/rust-2024/cargo-table-key-names.md:35
+msgid ""
+"Notice that the underscores were changed to dashes for `dev_dependencies` "
+"and `default_features`."
+msgstr ""
+
+#: src/rust-2024/cargo-table-key-names.md:37
+msgid "Migration"
+msgstr "遷移"
+
+#: src/rust-2024/cargo-table-key-names.md:39
+msgid ""
+"When using `cargo fix --edition`, Cargo will automatically update your "
+"`Cargo.toml` file to use the preferred table and key names."
+msgstr ""
+
+#: src/rust-2024/cargo-table-key-names.md:41
+msgid ""
+"If you prefer to update your `Cargo.toml` manually, be sure to go through "
+"the list above and make sure only the new forms are used."
+msgstr ""
